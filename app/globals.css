@@ -1310,3 +1310,73 @@ body:has(.mobile-menu) .wa-float {
     grid-template-columns: 1fr !important;
   }
 }
+
+
+/* JAD KRONO 3.4 Brand Navigation + Final Polish */
+.brand-ticker-nav {
+  display: flex;
+  align-items: center;
+}
+
+.brand-ticker-nav a {
+  flex: 0 0 auto;
+  color: rgba(244,239,230,.62);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 23px;
+  transition: color .2s ease, border-color .2s ease;
+  scroll-snap-align: start;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+}
+
+.brand-ticker-nav a:hover,
+.brand-ticker-nav a.active {
+  color: var(--ivory);
+  border-color: var(--gold);
+}
+
+.status-badge.sold {
+  color: #050505 !important;
+  background: rgba(244,239,230,.85) !important;
+  border-color: rgba(244,239,230,.85) !important;
+}
+
+.status-badge.reserved {
+  color: #050505 !important;
+  background: var(--gold) !important;
+  border-color: var(--gold) !important;
+}
+
+.status-badge.available {
+  color: var(--gold) !important;
+}
+
+.status-badge.sourcing,
+.status-badge.private-enquiry {
+  color: var(--muted) !important;
+}
+
+/* tighter mobile brand strip */
+@media(max-width:720px) {
+  .brand-ticker-nav {
+    gap: 28px !important;
+    padding-top: 18px !important;
+    padding-bottom: 18px !important;
+  }
+
+  .brand-ticker-nav a {
+    font-size: 22px !important;
+  }
+
+  .brand-ticker-nav a:first-child {
+    margin-left: 0;
+  }
+
+  .collection-toolbar {
+    gap: 16px;
+  }
+
+  .filters button {
+    padding: 10px 12px;
+  }
+}

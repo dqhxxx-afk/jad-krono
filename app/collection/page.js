@@ -1,17 +1,25 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import WatchCard from "../../components/WatchCard";
 import { useLanguage } from "../../components/useLanguage";
+import { useSearchParams } from "next/navigation";
+import { BrandTicker } from "../../components/BrandTicker";
 import { useWatches } from "../../components/useWatches";
 
 export default function CollectionPage() {
   const { t } = useLanguage();
   const { watches, loading } = useWatches();
-  const [filter, setFilter] = useState("all");
+  const searchParams = useSearchParams();
+  const brandFromUrl = searchParams.get("brand") || "all";
+  const [filter, setFilter] = useState(brandFromUrl);
   const [query, setQuery] = useState("");
+
+  useEffect(() => {
+    setFilter(brandFromUrl);
+  }, [brandFromUrl]);
 
   const shownProducts = useMemo(() => {
     return watches
@@ -28,6 +36,8 @@ export default function CollectionPage() {
           <h1>{t.collection.title}</h1>
           <p>{loading ? "Loading collection..." : t.collection.copy}</p>
         </section>
+
+        <BrandTicker activeBrand={filter} />
 
         <section className="collection-section compact">
           <div className="collection-toolbar">

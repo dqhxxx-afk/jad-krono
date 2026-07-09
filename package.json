@@ -12,6 +12,6 @@
     "@supabase/supabase-js": "latest"
   },
   "devDependencies": {},
-  "name": "jad-krono-3-3-mobile-ui-fix",
-  "version": "3.3.0"
+  "name": "jad-krono-3-4-brand-navigation",
+  "version": "3.4.0"
 }

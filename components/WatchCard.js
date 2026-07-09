@@ -13,7 +13,7 @@ export default function WatchCard({ product, enquireText = "Enquire", large = fa
         ) : (
           <div className="watch-placeholder" />
         )}
-        <span>{product.status}</span>
+        <span className={`status-badge ${String(product.status).toLowerCase().replace(/\s+/g, "-")}`}>{product.status}</span>
       </a>
 
       <div className="watch-info">

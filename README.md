@@ -1,21 +1,34 @@
-# JAD KRONO 3.3 Mobile UI Fix
+# JAD KRONO 3.4 Brand Navigation + Final Polish
 
-This update fixes the mobile UI issues reported after 3.2.
+## New
 
-## Fixed
+- Brand ticker is now clickable
+- Rolex / Patek / AP / RM links go to filtered Collection
+- Collection reads brand from URL:
+  `/collection?brand=rolex`
+- Added All Watches link
+- Active brand is highlighted
+- Mobile brand strip scrolls horizontally
+- Status badges improved
 
-- Brand ticker no longer gets chopped on the right side
-- Brand names are horizontally scrollable on mobile
-- Removed duplicate logo inside mobile menu
-- Reduced mobile menu font size
-- Floating WhatsApp hides while mobile menu is open
-- Mobile menu spacing is cleaner
+## Examples
 
-## Upload to GitHub
+- `/collection?brand=rolex`
+- `/collection?brand=patek`
+- `/collection?brand=ap`
+- `/collection?brand=rm`
 
-Upload the contents of this folder to the repository root.
+## Still included
 
-Important files included:
+- Supabase admin from 3.0
+- npm install fix from 3.2
+- mobile UI fixes from 3.3
+
+## Upload
+
+Upload all contents to GitHub repository root.
+Make sure these files are included:
+
 - app/
 - components/
 - data/

@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import WatchCard from "../components/WatchCard";
 import SocialContactPanel from "../components/SocialContactPanel";
+import { BrandTicker } from "../components/BrandTicker";
 import { useLanguage } from "../components/useLanguage";
 import { useWatches } from "../components/useWatches";
 import { services, brandStories, site } from "../data/site";
@@ -41,11 +42,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="ticker">
-          {["Rolex", "Patek Philippe", "Audemars Piguet", "Richard Mille", "Tudor", "Hublot"].map((brand) => (
-            <span key={brand}>{brand}</span>
-          ))}
-        </section>
+        <BrandTicker />
 
         <section className="collection-section">
           <div className="section-heading">
