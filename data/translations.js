@@ -1,47 +1,30 @@
-export const t = {
-  nav: {
-    home: "Home",
-    collection: "Collection",
-    brands: "Brands",
-    services: "Services",
-    sell: "Sell",
-    insights: "Insights",
-    about: "About",
-    contact: "Contact"
+export const translations = {
+  en: {
+    nav: { home: "Home", collection: "Collection", brands: "Brands", services: "Services", sell: "Sell", insights: "Insights", about: "About", contact: "Contact" },
+    hero: { eyebrow: "Private Luxury Watch Dealer", title: "Private access to exceptional timepieces.", copy: "JAD KRONO is a Singapore-based private watch dealer for collectors seeking discretion, clarity and carefully selected references.", primary: "Explore Private Collection", secondary: "Enquire via WhatsApp" },
+    collection: { eyebrow: "Private Collection", title: "Selected references, reviewed with discretion.", copy: "Availability changes quickly. Contact us for current condition, set details and market guidance.", search: "Search brand, model or reference", all: "All", enquire: "Enquire", noResults: "No watches matched your search." },
+    services: { eyebrow: "Services", title: "A private route to buy, sell, consign and source.", items: [["Buy Watches","Acquire carefully selected watches with clear condition, accessories and market context."],["Sell Your Watch","Receive a discreet valuation based on current demand, condition and set completeness."],["Consignment","Place your watch with suitable buyers while keeping the process private and controlled."],["Rare Sourcing","Source difficult references through trusted private channels."],["Market Advisory","Understand retail, premium, liquidity and long-term collector demand."],["Private Viewing","Arrange appointment-only viewing in Singapore for selected pieces."]] },
+    trust: { title: "Quiet confidence, not noise.", copy: "Every conversation is handled with discretion. Every watch is assessed with an authentication-first mindset.", points: ["Authentication-first review", "Private appointments", "Market-aware pricing", "Discreet transactions"] },
+    process: { eyebrow: "Consignment", title: "A controlled process for important watches.", items: [["Submit Details","Share brand, reference, condition, accessories and expected range."],["Market Review","We review market demand, recent transactions and collector positioning."],["Private Introduction","The watch is shown selectively to suitable buyers."],["Secure Closing","Inspection, payment and handover are coordinated with care."]] },
+    authenticity: { eyebrow: "Authenticity", title: "Every piece is reviewed before presentation.", copy: "We review serial information, reference correctness, accessories, service history, visible condition and market consistency.", items: ["Serial and reference review", "Box, papers and accessory check", "Condition grading", "Market comparison"] },
+    brands: { eyebrow: "Brands", title: "Important names, selected references." },
+    insights: { eyebrow: "Market Notes", title: "For collectors who watch the market." },
+    sell: { eyebrow: "Sell Your Watch", title: "Request a private valuation.", copy: "Send the brand, model, reference, year, condition and photos. We will review the details and respond via WhatsApp.", button: "Send via WhatsApp" },
+    contact: { eyebrow: "Appointment Only", title: "Start a private enquiry.", copy: "Tell us what you are looking to buy, sell or consign. JAD KRONO will respond directly and discreetly.", button: "Book Private Viewing" },
+    footer: { line: "Private watch dealing for serious collectors.", disclaimer: "Rolex, Patek Philippe, Audemars Piguet, Richard Mille, Tudor, Hublot and other names are trademarks of their respective owners. JAD KRONO is an independent watch dealer and is not an authorized dealer unless explicitly stated." }
   },
-  hero: {
-    eyebrow: "Singapore Private Watch Dealer",
-    title: "Exceptional watches, quietly sourced.",
-    copy: "JAD KRONO specialises in carefully selected modern and collectible timepieces.",
-    primary: "View Collection"
-  },
-  collection: {
-    eyebrow: "Collection",
-    title: "Selected references.",
-    copy: "Availability changes quickly. Contact us for current details.",
-    search: "Search brand, model or reference",
-    all: "All",
-    enquire: "Enquire",
-    details: "Details",
-    noResults: "No watches matched your search."
-  },
-  services: {
-    eyebrow: "Services",
-    title: "Private, precise, discreet."
-  },
-  about: {
-    eyebrow: "About",
-    title: "A private dealer for collectors.",
-    copy: "JAD KRONO is a Singapore-based private watch dealer specialising in carefully selected luxury timepieces. We focus on authenticity, discretion and long-term relationships."
-  },
-  contact: {
-    eyebrow: "Contact",
-    title: "By appointment only.",
-    copy: "For buying, selling, sourcing or consignment enquiries, contact JAD KRONO directly.",
-    button: "Book Private Viewing"
-  },
-  footer: {
-    line: "Singapore • By Appointment Only",
-    disclaimer: "JAD KRONO is an independent watch dealer. Brand names are trademarks of their respective owners."
+  vi: {
+    nav: { home: "Trang chủ", collection: "Bộ sưu tập", brands: "Thương hiệu", services: "Dịch vụ", sell: "Bán đồng hồ", insights: "Thị trường", about: "Giới thiệu", contact: "Liên hệ" },
+    hero: { eyebrow: "Private Luxury Watch Dealer", title: "Quyền tiếp cận riêng tới những mẫu đồng hồ đặc biệt.", copy: "JAD KRONO là private watch dealer tại Singapore dành cho nhà sưu tầm cần sự kín đáo, rõ ràng và reference được tuyển chọn kỹ.", primary: "Khám phá bộ sưu tập riêng", secondary: "Liên hệ WhatsApp" },
+    collection: { eyebrow: "Private Collection", title: "Reference chọn lọc, được xem xét kín đáo.", copy: "Tình trạng hàng thay đổi nhanh. Liên hệ để biết condition, full set và định hướng thị trường hiện tại.", search: "Tìm thương hiệu, model hoặc reference", all: "Tất cả", enquire: "Hỏi mua", noResults: "Không có mẫu phù hợp." },
+    services: { eyebrow: "Dịch vụ", title: "Cách riêng tư để mua, bán, ký gửi và sourcing.", items: [["Mua đồng hồ","Mua các mẫu được tuyển chọn kỹ với tình trạng, phụ kiện và bối cảnh thị trường rõ ràng."],["Bán đồng hồ","Nhận định giá kín đáo dựa trên nhu cầu hiện tại, tình trạng và độ đầy đủ của set."],["Ký gửi","Đưa đồng hồ tới đúng người mua trong quy trình riêng tư và kiểm soát tốt."],["Sourcing mẫu hiếm","Tìm các reference khó thông qua những kênh riêng đáng tin cậy."],["Tư vấn thị trường","Hiểu retail, premium, thanh khoản và nhu cầu sưu tầm dài hạn."],["Private Viewing","Sắp xếp xem đồng hồ theo lịch hẹn riêng tại Singapore."]] },
+    trust: { title: "Niềm tin kín đáo, không ồn ào.", copy: "Mỗi cuộc trao đổi được xử lý riêng tư. Mỗi chiếc đồng hồ được xem xét với ưu tiên xác thực.", points: ["Ưu tiên xác thực", "Lịch hẹn riêng", "Giá sát thị trường", "Giao dịch kín đáo"] },
+    process: { eyebrow: "Ký gửi", title: "Quy trình kiểm soát cho đồng hồ giá trị cao.", items: [["Gửi thông tin","Gửi thương hiệu, reference, tình trạng, phụ kiện và khoảng giá mong muốn."],["Đánh giá thị trường","Chúng tôi xem nhu cầu, giao dịch gần đây và vị thế sưu tầm."],["Giới thiệu riêng","Đồng hồ được giới thiệu chọn lọc tới khách phù hợp."],["Hoàn tất an toàn","Kiểm tra, thanh toán và bàn giao được điều phối cẩn thận."]] },
+    authenticity: { eyebrow: "Xác thực", title: "Mỗi chiếc đều được xem xét trước khi giới thiệu.", copy: "Chúng tôi xem serial, reference, phụ kiện, lịch sử service, tình trạng nhìn thấy và độ hợp lý so với thị trường.", items: ["Kiểm tra serial và reference", "Kiểm tra hộp, giấy và phụ kiện", "Đánh giá tình trạng", "So sánh thị trường"] },
+    brands: { eyebrow: "Thương hiệu", title: "Những tên tuổi quan trọng, những reference chọn lọc." },
+    insights: { eyebrow: "Ghi chú thị trường", title: "Dành cho người sưu tầm theo dõi thị trường." },
+    sell: { eyebrow: "Bán đồng hồ", title: "Yêu cầu định giá riêng.", copy: "Gửi thương hiệu, model, reference, năm, tình trạng và ảnh. Chúng tôi sẽ xem thông tin và phản hồi qua WhatsApp.", button: "Gửi qua WhatsApp" },
+    contact: { eyebrow: "Theo lịch hẹn riêng", title: "Bắt đầu yêu cầu riêng.", copy: "Cho chúng tôi biết bạn muốn mua, bán hay ký gửi mẫu nào. JAD KRONO sẽ phản hồi trực tiếp và kín đáo.", button: "Đặt lịch xem riêng" },
+    footer: { line: "Private watch dealer dành cho nhà sưu tầm nghiêm túc.", disclaimer: "Rolex, Patek Philippe, Audemars Piguet, Richard Mille, Tudor, Hublot và các tên thương hiệu khác là nhãn hiệu của chủ sở hữu tương ứng. JAD KRONO là dealer đồng hồ độc lập và không phải đại lý chính hãng trừ khi được nêu rõ." }
   }
 };

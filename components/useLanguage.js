@@ -1,7 +1,11 @@
 "use client";
 
-import { t } from "../data/translations";
+import { translations } from "../data/translations";
 
 export function useLanguage() {
-  return { lang: "en", t };
+  const lang = "en";
+  const setLang = () => {};
+  const t = translations.en;
+
+  return { lang, setLang, t };
 }
