@@ -24,10 +24,10 @@ export default function Home() {
             <p className="eyebrow">{t.hero.eyebrow}</p>
             <h1>{t.hero.title}</h1>
             <p>{t.hero.copy}</p>
-            <div className="hero-buttons"><a href="/collection" className="btn gold">{t.hero.primary}</a><a href={site.whatsapp} target="_blank" className="btn ghost">{t.hero.secondary}</a></div>
+            <div className="hero-buttons"><a href="/collection" className="btn gold">{t.hero.primary}</a><a href={site.whatsapp} target="_blank" className="btn ghost">{t.hero.secondary}</a></div><div className="hero-note"><span>Singapore</span><span>Appointment Only</span><span>Private Sourcing</span></div>
           </div>
           <div className="hero-feature">{heroProducts.map((product) => <div className="hero-watch" key={product.id}><span>{product.brand}</span><strong>{product.reference}</strong></div>)}</div>
-        </section>
+        <div className="scroll-cue">Scroll</div></section>
 
         <section className="brand-ticker">{["Rolex","Patek Philippe","Audemars Piguet","Richard Mille","Tudor","Hublot","Cartier","Omega"].map((b) => <span key={b}>{b}</span>)}</section>
 

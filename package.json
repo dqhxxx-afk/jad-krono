@@ -10,5 +10,7 @@
     "react-dom": "latest",
     "lucide-react": "latest"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "name": "jad-krono-v7-luxury-polish",
+  "version": "7.0.0"
 }

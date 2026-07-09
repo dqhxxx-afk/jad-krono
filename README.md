@@ -1,21 +1,17 @@
-# JAD KRONO Next.js Signature V6 Complete
+# JAD KRONO Next.js V7 Luxury Polish
 
-This is the complete V6 Signature Edition.
+This is the V7 Luxury Polish upgrade.
 
-## Included
+## What changed from V6
 
-- Private luxury dealer design
-- Mobile menu
-- EN / VI bilingual content
-- Collection search and filters
-- Brand stories
-- Services pages
-- Market insights
-- Sell your watch form
-- WhatsApp floating button
-- SEO metadata
-- JSON-LD structured data
-- Easy product editing in `data/site.js`
+- More premium hero section
+- Cleaner mobile spacing
+- Improved luxury visual rhythm
+- Better CTA hierarchy
+- Stronger trust and dealer positioning
+- More polished product cards
+- Improved responsive behavior
+- README clearly identifies V7
 
 ## Upload to GitHub
 
@@ -32,16 +28,18 @@ Upload the contents of this folder to your GitHub repository root:
 
 Do not upload the parent folder itself.
 
-## Add product images
+## Product editing
+
+Edit:
+
+data/site.js
+
+## Product images
 
 Put images into:
 
 public/products/
 
-Then edit product entries inside:
+Then edit the product image path:
 
-data/site.js
-
-Example:
-
-image: "/products/daytona.jpg"
+image: "/products/your-image.jpg"
