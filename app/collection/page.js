@@ -9,7 +9,20 @@ import { useWatches } from "../../components/useWatches";
 import { getWatchCategory, getWatchId, brandLabel } from "../../lib/watchUtils";
 import { site } from "../../data/site";
 
-const brands = ["all", "rolex", "patek", "ap", "cartier", "tudor", "iwc", "hublot", "breitling", "franck-muller", "chopard", "sinn"];
+const brands = [
+  "all",
+  "rolex",
+  "patek",
+  "ap",
+  "cartier",
+  "tudor",
+  "iwc",
+  "hublot",
+  "breitling",
+  "franck-muller",
+  "chopard",
+  "sinn"
+];
 
 export default function CollectionPage() {
   const { t } = useLanguage();
@@ -34,41 +47,56 @@ export default function CollectionPage() {
       .filter((p) => `${p.brand} ${p.model} ${p.reference}`.toLowerCase().includes(query.toLowerCase()));
   }, [watches, filter, query]);
 
-  const sourcingMessage = encodeURIComponent(`Hello JAD KRONO, I would like to request private sourcing${filter !== "all" ? ` for ${brandLabel(filter)}` : ""}.`);
+  const sourcingMessage = encodeURIComponent(
+    `Hello JAD KRONO, I would like to request private sourcing${filter !== "all" ? ` for ${brandLabel(filter)}` : ""}.`
+  );
 
   return (
     <>
       <Header t={t} />
-      <main className="page-shell collection-page-final v27-collection-page">
-        <section className="page-hero collection-hero-final">
+      <main className="page-shell collection-page-v29">
+        <section className="page-hero collection-hero-v29">
           <p className="eyebrow">{t.collection.eyebrow}</p>
           <h1>{t.collection.title}</h1>
           <p>{loading ? "Loading collection..." : t.collection.copy}</p>
         </section>
 
-        <section className="collection-section compact v27-collection-section">
-          <div className="v27-filter-panel">
-            <div className="v27-brand-rail" aria-label="Collection filter">
+        <section className="collection-section compact collection-v29-section">
+          <div className="collection-toolbar-v29">
+            <nav className="brand-filter-v29" aria-label="Filter by brand">
               {brands.map((item) => (
-                <button key={item} onClick={() => changeFilter(item)} className={filter === item ? "active" : ""}>
+                <button
+                  key={item}
+                  type="button"
+                  onClick={() => changeFilter(item)}
+                  className={filter === item ? "active" : ""}
+                >
                   {brandLabel(item)}
                 </button>
               ))}
-            </div>
-            <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder={t.collection.search} />
+            </nav>
+
+            <input
+              className="collection-search-v29"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder={t.collection.search}
+            />
           </div>
 
-          <div className="watch-grid final-watch-grid v27-watch-grid">
+          <div className="watch-grid final-watch-grid">
             {shownProducts.map((product) => (
               <WatchCard key={getWatchId(product)} product={product} enquireText={t.collection.enquire} />
             ))}
           </div>
 
           {shownProducts.length === 0 ? (
-            <div className="empty-sourcing v27-empty-state">
+            <div className="empty-sourcing">
               <h3>{t.collection.noResults}</h3>
               <p>{t.collection.sourcingCopy}</p>
-              <a className="btn gold" href={`${site.whatsapp}?text=${sourcingMessage}`} target="_blank" rel="noreferrer">{t.collection.sourcingButton}</a>
+              <a className="btn gold" href={`${site.whatsapp}?text=${sourcingMessage}`} target="_blank" rel="noreferrer">
+                {t.collection.sourcingButton}
+              </a>
             </div>
           ) : null}
         </section>

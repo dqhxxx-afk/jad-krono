@@ -3491,3 +3491,418 @@ body main > .brand-ticker-nav {
     margin-left: 0 !important;
   }
 }
+
+
+/* JAD KRONO V2.9 Brand + Contact + Footer Final */
+
+/* Kill oversized homepage brand ticker under hero */
+main > .brand-strip,
+main > .brand-ticker-nav,
+.hero + .brand-strip,
+.hero + .brand-ticker-nav,
+.ticker.brand-ticker-nav {
+  display: none !important;
+}
+
+/* Collection page brand filters: one clean section only */
+.collection-page-v29 .brand-strip,
+.collection-page-v29 .brand-ticker-nav,
+.collection-page-v29 .ticker.brand-ticker-nav {
+  display: none !important;
+}
+
+.collection-v29-section {
+  padding-top: 38px !important;
+}
+
+.collection-toolbar-v29 {
+  display: grid !important;
+  grid-template-columns: 1fr minmax(260px, 390px) !important;
+  gap: 28px !important;
+  align-items: start !important;
+  margin-bottom: 36px !important;
+}
+
+.brand-filter-v29 {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 8px 10px !important;
+  align-items: center !important;
+  border-top: 1px solid rgba(255,255,255,.08) !important;
+  border-bottom: 1px solid rgba(255,255,255,.08) !important;
+  padding: 16px 0 !important;
+}
+
+.brand-filter-v29 button {
+  min-height: 34px !important;
+  padding: 8px 10px !important;
+  border: 0 !important;
+  border-bottom: 1px solid transparent !important;
+  background: transparent !important;
+  color: rgba(244,239,230,.58) !important;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 12px !important;
+  line-height: 1 !important;
+  letter-spacing: .15px !important;
+  text-transform: none !important;
+  white-space: nowrap !important;
+}
+
+.brand-filter-v29 button.active {
+  color: #f4efe6 !important;
+  border-bottom-color: rgba(203,135,107,.78) !important;
+}
+
+.brand-filter-v29 button:hover {
+  color: #f4efe6 !important;
+  border-bottom-color: rgba(203,135,107,.45) !important;
+}
+
+.collection-search-v29 {
+  min-height: 44px !important;
+  border: 1px solid rgba(255,255,255,.10) !important;
+  background: #050505 !important;
+  color: #f4efe6 !important;
+  padding: 0 16px !important;
+}
+
+/* Contact page: boutique, balanced, Facebook visible */
+.contact-page-v29 {
+  padding-bottom: 0 !important;
+}
+
+.contact-v29 {
+  display: grid !important;
+  grid-template-columns: .82fr 1.18fr !important;
+  gap: 70px !important;
+  align-items: start !important;
+  padding: 100px 7% 72px !important;
+}
+
+.contact-v29-copy h1 {
+  font-size: clamp(52px, 4.6vw, 78px) !important;
+  line-height: .96 !important;
+  max-width: 560px !important;
+}
+
+.contact-v29-copy p:not(.eyebrow) {
+  color: var(--muted) !important;
+  max-width: 520px !important;
+  margin: 22px 0 28px !important;
+  font-size: 16.5px !important;
+  line-height: 1.7 !important;
+}
+
+.contact-v29-grid {
+  display: grid !important;
+  grid-template-columns: 1.16fr .92fr .92fr !important;
+  gap: 14px !important;
+}
+
+.contact-v29-card {
+  border: 1px solid rgba(255,255,255,.10) !important;
+  background:
+    radial-gradient(circle at 88% 0%, rgba(203,135,107,.07), transparent 34%),
+    #070707 !important;
+  min-height: 230px !important;
+  padding: 28px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+}
+
+.contact-v29-card.enquiry {
+  min-height: 272px !important;
+}
+
+.contact-v29-card span {
+  color: var(--gold) !important;
+  letter-spacing: 4px !important;
+  text-transform: uppercase !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+}
+
+.contact-v29-card h2 {
+  font-size: clamp(33px, 2.8vw, 46px) !important;
+  line-height: 1.03 !important;
+  max-width: 520px !important;
+}
+
+.contact-v29-card h3 {
+  font-size: 27px !important;
+  line-height: 1.15 !important;
+}
+
+.contact-v29-card p {
+  color: var(--muted) !important;
+  line-height: 1.65 !important;
+  max-width: 500px !important;
+}
+
+.contact-v29-actions,
+.inline-links {
+  display: flex !important;
+  gap: 12px !important;
+  flex-wrap: wrap !important;
+}
+
+.contact-v29-card a:not(.btn),
+.inline-links a {
+  color: var(--gold) !important;
+  font-weight: 700 !important;
+}
+
+/* Sourcing band */
+.sourcing-v29-band {
+  margin: 0 7% 84px !important;
+  padding: 30px 34px !important;
+  border: 1px solid rgba(255,255,255,.10) !important;
+  background:
+    radial-gradient(circle at 92% 0%, rgba(203,135,107,.08), transparent 30%),
+    #070707 !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  gap: 28px !important;
+  align-items: center !important;
+}
+
+.sourcing-v29-band h2 {
+  font-size: clamp(30px, 2.6vw, 44px) !important;
+  line-height: 1.05 !important;
+}
+
+.sourcing-v29-band p:not(.eyebrow) {
+  color: var(--muted) !important;
+  margin-top: 10px !important;
+  max-width: 620px !important;
+}
+
+/* Homepage contact */
+.home-contact-v29 {
+  display: grid !important;
+  grid-template-columns: .9fr 1.1fr !important;
+  gap: 56px !important;
+  padding: 78px 7% !important;
+  border-top: 1px solid var(--line) !important;
+  background: #050505 !important;
+}
+
+.home-contact-v29 p:not(.eyebrow) {
+  color: var(--muted) !important;
+  max-width: 600px !important;
+  margin-top: 18px !important;
+}
+
+.home-contact-v29-links {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 12px !important;
+}
+
+.home-contact-v29-links a {
+  border: 1px solid rgba(255,255,255,.10) !important;
+  background: #070707 !important;
+  padding: 22px !important;
+  color: var(--ivory) !important;
+}
+
+/* Footer compact with Facebook */
+.jk-footer-v29.site-footer {
+  display: block !important;
+  padding: 34px 7% 30px !important;
+  border-top: 1px solid var(--line) !important;
+  background: #050505 !important;
+}
+
+.footer-v29-main {
+  display: flex !important;
+  justify-content: space-between !important;
+  gap: 32px !important;
+  align-items: flex-start !important;
+}
+
+.footer-v29-brand img {
+  height: 34px !important;
+  display: block !important;
+  margin-bottom: 12px !important;
+}
+
+.footer-v29-brand p {
+  color: rgba(244,239,230,.68) !important;
+  font-size: 13px !important;
+  line-height: 1.45 !important;
+  margin: 0 0 3px !important;
+}
+
+.footer-v29-social {
+  display: flex !important;
+  gap: 20px !important;
+  flex-wrap: wrap !important;
+  justify-content: flex-end !important;
+}
+
+.footer-v29-social a {
+  color: rgba(244,239,230,.70) !important;
+  font-size: 13px !important;
+}
+
+.footer-v29-disclaimer {
+  border-top: 1px solid rgba(255,255,255,.08) !important;
+  margin: 20px 0 14px !important;
+  padding-top: 16px !important;
+  max-width: 980px !important;
+  color: rgba(244,239,230,.50) !important;
+  font-size: 12px !important;
+  line-height: 1.6 !important;
+}
+
+.footer-v29-bottom {
+  display: flex !important;
+  justify-content: space-between !important;
+  gap: 24px !important;
+  color: rgba(244,239,230,.58) !important;
+  font-size: 12px !important;
+}
+
+.footer-v29-bottom p {
+  margin: 0 !important;
+  font-size: 12px !important;
+}
+
+.footer-v29-bottom nav {
+  display: flex !important;
+  gap: 8px !important;
+  flex-wrap: wrap !important;
+}
+
+.footer-v29-bottom a,
+.footer-v29-bottom span {
+  color: rgba(244,239,230,.62) !important;
+  font-size: 12px !important;
+}
+
+/* WhatsApp button */
+.wa-float {
+  right: 32px !important;
+  bottom: 34px !important;
+  transform: scale(.92) !important;
+}
+
+@media (max-width: 1080px) {
+  .collection-toolbar-v29 {
+    grid-template-columns: 1fr !important;
+  }
+
+  .contact-v29 {
+    grid-template-columns: 1fr !important;
+    gap: 42px !important;
+    padding: 88px 5.5% 68px !important;
+  }
+
+  .contact-v29-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .sourcing-v29-band {
+    margin-left: 5.5% !important;
+    margin-right: 5.5% !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  .footer-v29-main,
+  .footer-v29-bottom {
+    flex-direction: column !important;
+  }
+
+  .footer-v29-social {
+    justify-content: flex-start !important;
+  }
+}
+
+@media (max-width: 720px) {
+  .collection-v29-section {
+    padding-top: 26px !important;
+  }
+
+  .collection-toolbar-v29 {
+    gap: 16px !important;
+  }
+
+  .brand-filter-v29 {
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    padding: 14px 0 !important;
+  }
+
+  .brand-filter-v29::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .brand-filter-v29 button {
+    flex: 0 0 auto !important;
+    min-height: 40px !important;
+    padding: 10px 12px !important;
+    font-size: 13px !important;
+  }
+
+  .contact-v29 {
+    padding: 70px 5% 54px !important;
+  }
+
+  .contact-v29-copy h1 {
+    font-size: 44px !important;
+  }
+
+  .contact-v29-copy p:not(.eyebrow) {
+    font-size: 16px !important;
+  }
+
+  .contact-v29-card {
+    min-height: auto !important;
+    padding: 22px !important;
+    gap: 20px !important;
+  }
+
+  .contact-v29-card h2 {
+    font-size: 32px !important;
+  }
+
+  .contact-v29-card h3 {
+    font-size: 23px !important;
+  }
+
+  .sourcing-v29-band {
+    margin: 0 5% 62px !important;
+    padding: 24px !important;
+  }
+
+  .home-contact-v29 {
+    grid-template-columns: 1fr !important;
+    gap: 26px !important;
+    padding: 64px 5% !important;
+  }
+
+  .home-contact-v29-links {
+    grid-template-columns: 1fr !important;
+  }
+
+  .jk-footer-v29.site-footer {
+    padding: 30px 5% 92px !important;
+  }
+
+  .footer-v29-social {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10px 18px !important;
+  }
+
+  .wa-float {
+    right: 18px !important;
+    bottom: 78px !important;
+    transform: scale(.88) !important;
+  }
+}
