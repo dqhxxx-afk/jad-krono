@@ -1218,3 +1218,95 @@ h2 {
     padding: 20px;
   }
 }
+
+
+/* JAD KRONO 3.3 Mobile UI Fix */
+
+/* Brand ticker: make mobile readable instead of chopping brand names */
+.ticker {
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  scroll-snap-type: x proximity;
+}
+
+.ticker::-webkit-scrollbar {
+  display: none;
+}
+
+.ticker span {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+
+/* Cleaner mobile menu */
+.mobile-panel,
+.mobile-panel.open {
+  display: none !important;
+}
+
+.mobile-menu {
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.mobile-menu-top {
+  justify-content: flex-end !important;
+  min-height: 52px !important;
+}
+
+.mobile-menu-top img,
+.mobile-menu > img {
+  display: none !important;
+}
+
+.mobile-menu-nav {
+  align-content: start !important;
+  padding-top: 30px !important;
+  gap: 18px !important;
+}
+
+.mobile-menu-nav a {
+  font-size: clamp(36px, 10.5vw, 50px) !important;
+  line-height: 1.05 !important;
+}
+
+.mobile-menu-social {
+  margin-top: 24px !important;
+}
+
+/* Hide floating WhatsApp when menu is open */
+body:has(.mobile-menu) .wa-float {
+  display: none !important;
+}
+
+@media (max-width: 720px) {
+  .ticker {
+    display: flex !important;
+    gap: 34px !important;
+    padding: 20px 5% !important;
+    white-space: nowrap !important;
+  }
+
+  .ticker span {
+    font-size: 24px !important;
+  }
+
+  .collection-section {
+    overflow-x: hidden;
+  }
+
+  .section-heading h2 {
+    word-break: normal;
+    overflow-wrap: normal;
+  }
+
+  .mobile-menu {
+    padding: 22px 5% 32px !important;
+  }
+
+  .mobile-menu-social {
+    grid-template-columns: 1fr !important;
+  }
+}

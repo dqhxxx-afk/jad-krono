@@ -34,9 +34,6 @@ export default function Header({ t }) {
       {open ? (
         <div className="mobile-menu" role="dialog" aria-modal="true">
           <div className="mobile-menu-top">
-            <a href="/" onClick={() => setOpen(false)} aria-label="JAD KRONO Home">
-              <img src="/assets/jad-krono-logo.png" alt="JAD KRONO" />
-            </a>
             <button className="mobile-close" onClick={() => setOpen(false)} aria-label="Close menu">
               <X size={32} />
             </button>

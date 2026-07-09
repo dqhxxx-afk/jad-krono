@@ -1,28 +1,29 @@
-# JAD KRONO 3.2 NPM Install Fixed
+# JAD KRONO 3.3 Mobile UI Fix
 
-This version fixes the Vercel `npm install` failure.
+This update fixes the mobile UI issues reported after 3.2.
 
-## What was fixed
+## Fixed
 
-- Removed internal/private registry URLs from `package-lock.json`
-- Added `.npmrc` pointing to the public npm registry
-- Keeps Supabase admin dashboard from V3
-- Keeps the build fixes from V3.1
+- Brand ticker no longer gets chopped on the right side
+- Brand names are horizontally scrollable on mobile
+- Removed duplicate logo inside mobile menu
+- Reduced mobile menu font size
+- Floating WhatsApp hides while mobile menu is open
+- Mobile menu spacing is cleaner
 
 ## Upload to GitHub
 
-Upload the contents of this folder to your repository root.
+Upload the contents of this folder to the repository root.
 
-Important: make sure these files are included:
-
-- package.json
-- package-lock.json
-- .npmrc
+Important files included:
 - app/
 - components/
 - data/
 - lib/
 - public/
 - supabase/
-
-Then commit and let Vercel redeploy.
+- package.json
+- package-lock.json
+- .npmrc
+- next.config.js
+- README.md
