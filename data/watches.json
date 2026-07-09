@@ -1,0 +1,68 @@
+[
+  {
+    "id": "rolex-daytona-126500ln",
+    "brand": "Rolex",
+    "model": "Cosmograph Daytona",
+    "reference": "126500LN",
+    "year": "2026",
+    "condition": "Excellent",
+    "set": "Full Set",
+    "status": "Available",
+    "price": "Price on request",
+    "category": "rolex",
+    "featured": true,
+    "image": "",
+    "gallery": [],
+    "specs": {
+      "case": "40mm",
+      "movement": "Automatic Chronograph",
+      "material": "Oystersteel",
+      "bracelet": "Oyster Bracelet"
+    },
+    "description": "A modern sports chronograph with strong global recognition and collector demand."
+  },
+  {
+    "id": "patek-nautilus-5711",
+    "brand": "Patek Philippe",
+    "model": "Nautilus",
+    "reference": "5711/1A",
+    "year": "Discontinued",
+    "condition": "Collector Grade",
+    "set": "Full Set",
+    "status": "Private Enquiry",
+    "price": "Price on request",
+    "category": "patek",
+    "featured": true,
+    "image": "",
+    "gallery": [],
+    "specs": {
+      "case": "40mm",
+      "movement": "Automatic",
+      "material": "Stainless Steel",
+      "bracelet": "Integrated Bracelet"
+    },
+    "description": "An icon of the luxury sports category, known for scarcity and collector appeal."
+  },
+  {
+    "id": "rolex-gmt-master-ii-batman",
+    "brand": "Rolex",
+    "model": "GMT-Master II Batman",
+    "reference": "126710BLNR",
+    "year": "2024",
+    "condition": "Excellent",
+    "set": "Full Set",
+    "status": "Sourcing",
+    "price": "Price on request",
+    "category": "rolex",
+    "featured": true,
+    "image": "",
+    "gallery": [],
+    "specs": {
+      "case": "40mm",
+      "movement": "Automatic GMT",
+      "material": "Oystersteel",
+      "bracelet": "Jubilee / Oyster"
+    },
+    "description": "A highly wearable GMT reference with strong everyday versatility."
+  }
+]

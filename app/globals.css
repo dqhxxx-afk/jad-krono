@@ -805,3 +805,180 @@ h2 {
     display: grid;
   }
 }
+
+
+/* JAD KRONO 2.1 Mobile Fix */
+.mobile-panel,
+.mobile-panel.open {
+  display: none !important;
+}
+
+.site-header {
+  isolation: isolate;
+}
+
+.menu-btn {
+  border: 1px solid rgba(196,161,95,.28);
+  width: 48px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #050505;
+  color: var(--ivory);
+  min-height: 100dvh;
+  width: 100vw;
+  overflow-y: auto;
+  padding: 28px 5% 40px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 36px;
+}
+
+.mobile-menu-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 58px;
+}
+
+.mobile-menu-top img {
+  height: 42px;
+  width: auto;
+  display: block;
+}
+
+.mobile-close {
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  background: transparent;
+  border: 1px solid rgba(196,161,95,.28);
+  color: var(--ivory);
+}
+
+.mobile-menu-nav {
+  display: grid;
+  align-content: center;
+  gap: 20px;
+  padding: 18px 0 30px;
+}
+
+.mobile-menu-nav a {
+  display: block;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(42px, 13vw, 68px);
+  line-height: 1;
+  color: var(--ivory);
+  letter-spacing: -1.4px;
+}
+
+.mobile-menu-social {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  border-top: 1px solid rgba(255,255,255,.1);
+  padding-top: 22px;
+}
+
+.mobile-menu-social a {
+  border: 1px solid rgba(255,255,255,.12);
+  color: var(--muted);
+  padding: 14px 12px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.mobile-contact-links {
+  display: none !important;
+}
+
+@media (max-width: 1080px) {
+  .site-header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .desktop-nav {
+    display: none !important;
+  }
+
+  .menu-btn {
+    display: inline-flex !important;
+  }
+}
+
+@media (max-width: 720px) {
+  body:has(.mobile-menu) {
+    overflow: hidden;
+  }
+
+  .site-header {
+    padding: 16px 5%;
+  }
+
+  .brand img {
+    height: 38px;
+  }
+
+  .mobile-menu {
+    padding-top: 24px;
+  }
+
+  .mobile-menu-top img {
+    height: 40px;
+  }
+
+  .mobile-menu-nav {
+    gap: 18px;
+  }
+
+  .mobile-menu-social {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* JAD KRONO 2.2 Easy Inventory */
+.guide-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  padding-bottom: 100px;
+}
+
+.guide-section article {
+  border: 1px solid var(--line);
+  background: #080808;
+  padding: 28px;
+}
+
+.guide-section span {
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.guide-section h3 {
+  font-size: 30px;
+  margin: 16px 0 10px;
+}
+
+.guide-section p {
+  color: var(--muted);
+}
+
+@media(max-width:720px) {
+  .guide-section {
+    grid-template-columns: 1fr;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
