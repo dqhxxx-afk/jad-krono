@@ -1,6 +1,18 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { t } from "../data/translations";
+
+const t = {
+  nav: {
+    collection: "Collection",
+    services: "Services",
+    about: "About",
+    contact: "Contact"
+  },
+  footer: {
+    line: "Singapore • By Appointment Only",
+    disclaimer: "JAD KRONO is an independent watch dealer. Brand names are trademarks of their respective owners."
+  }
+};
 
 export default function NotFound() {
   return (

@@ -1,3 +1,25 @@
 "use client";
-import Header from "../../components/Header";import Footer from "../../components/Footer";import { useLanguage } from "../../components/useLanguage";import { site } from "../../data/site";
-export default function SellPage(){const{lang,t}=useLanguage();return <><Header t={t} /><main className="page-shell"><section className="page-hero"><p className="eyebrow">{t.sell.eyebrow}</p><h1>{t.sell.title}</h1><p>{t.sell.copy}</p></section><section className="form-section"><form className="valuation-form" action={site.whatsapp} target="_blank"><div><input placeholder="Name / Tên"/><input placeholder="WhatsApp / Phone"/></div><div><input placeholder="Brand, e.g. Rolex"/><input placeholder="Model / Reference"/></div><div><input placeholder="Year / Set"/><input placeholder="Expected Price"/></div><textarea placeholder="Condition, service history, accessories and notes"/><button className="btn gold" type="submit">{t.sell.button}</button></form></section></main><Footer t={t}/></>;}
+
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
+import { useLanguage } from "../../components/useLanguage";
+import { site } from "../../data/site";
+
+export default function SellPage() {
+  const { t } = useLanguage();
+
+  return (
+    <>
+      <Header t={t} />
+      <main className="page-shell">
+        <section className="page-hero">
+          <p className="eyebrow">Sell</p>
+          <h1>Private valuation.</h1>
+          <p>Send the brand, reference, condition and photos. JAD KRONO will respond discreetly.</p>
+          <a className="btn gold" href={site.whatsapp} target="_blank">Start on WhatsApp</a>
+        </section>
+      </main>
+      <Footer t={t} />
+    </>
+  );
+}

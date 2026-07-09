@@ -2,19 +2,10 @@ import { products } from "../data/site";
 
 export default function sitemap() {
   const baseUrl = "https://jadkrono.com";
-  const staticRoutes = [
-    "",
-    "/collection",
-    "/brands",
-    "/services",
-    "/sell-your-watch",
-    "/market-insights",
-    "/about",
-    "/contact"
-  ];
+  const routes = ["", "/collection", "/services", "/about", "/contact", "/sell-your-watch"];
 
   return [
-    ...staticRoutes.map((route) => ({
+    ...routes.map((route) => ({
       url: `${baseUrl}${route}`,
       lastModified: new Date()
     })),

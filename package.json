@@ -8,9 +8,10 @@
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "lucide-react": "latest"
+    "lucide-react": "latest",
+    "@supabase/supabase-js": "latest"
   },
   "devDependencies": {},
-  "name": "jad-krono-v13-english-clean-header",
-  "version": "13.0.0"
+  "name": "jad-krono-3-1-build-fixed",
+  "version": "3.1.0"
 }
