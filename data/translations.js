@@ -10,7 +10,7 @@ export const translations = {
     brands: { eyebrow: "Brands", title: "Important names, selected references." },
     insights: { eyebrow: "Market Notes", title: "For collectors who watch the market." },
     sell: { eyebrow: "Sell Your Watch", title: "Request a private valuation.", copy: "Send the brand, model, reference, year, condition and photos. We will review the details and respond via WhatsApp.", button: "Send via WhatsApp" },
-    contact: { eyebrow: "Appointment Only", title: "Start with a private enquiry.", copy: "Tell us what you are looking to buy, sell or consign. JAD KRONO will respond directly via WhatsApp.", button: "Book Private Viewing" },
+    contact: { eyebrow: "Appointment Only", title: "Start a private enquiry.", copy: "Tell us what you are looking to buy, sell or consign. JAD KRONO will respond directly and discreetly.", button: "Book Private Viewing" },
     footer: { line: "Private watch dealing for serious collectors.", disclaimer: "Rolex, Patek Philippe, Audemars Piguet, Richard Mille, Tudor, Hublot and other names are trademarks of their respective owners. JAD KRONO is an independent watch dealer and is not an authorized dealer unless explicitly stated." }
   },
   vi: {
@@ -24,7 +24,7 @@ export const translations = {
     brands: { eyebrow: "Thương hiệu", title: "Những tên tuổi quan trọng, những reference chọn lọc." },
     insights: { eyebrow: "Ghi chú thị trường", title: "Dành cho người sưu tầm theo dõi thị trường." },
     sell: { eyebrow: "Bán đồng hồ", title: "Yêu cầu định giá riêng.", copy: "Gửi thương hiệu, model, reference, năm, tình trạng và ảnh. Chúng tôi sẽ xem thông tin và phản hồi qua WhatsApp.", button: "Gửi qua WhatsApp" },
-    contact: { eyebrow: "Theo lịch hẹn riêng", title: "Bắt đầu bằng một yêu cầu riêng.", copy: "Cho chúng tôi biết bạn muốn mua, bán hay ký gửi mẫu nào. JAD KRONO sẽ phản hồi trực tiếp qua WhatsApp.", button: "Đặt lịch xem riêng" },
+    contact: { eyebrow: "Theo lịch hẹn riêng", title: "Bắt đầu yêu cầu riêng.", copy: "Cho chúng tôi biết bạn muốn mua, bán hay ký gửi mẫu nào. JAD KRONO sẽ phản hồi trực tiếp và kín đáo.", button: "Đặt lịch xem riêng" },
     footer: { line: "Private watch dealer dành cho nhà sưu tầm nghiêm túc.", disclaimer: "Rolex, Patek Philippe, Audemars Piguet, Richard Mille, Tudor, Hublot và các tên thương hiệu khác là nhãn hiệu của chủ sở hữu tương ứng. JAD KRONO là dealer đồng hồ độc lập và không phải đại lý chính hãng trừ khi được nêu rõ." }
   }
 };
