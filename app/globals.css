@@ -1483,3 +1483,399 @@ body:has(.mobile-menu) .wa-float {
     padding-bottom: 72px;
   }
 }
+
+
+/* JAD KRONO V2.0 Desktop & Mobile Collector Edition */
+:root {
+  --copper: #CB876B;
+  --gold: #CB876B;
+  --gold-soft: rgba(203,135,107,.25);
+}
+
+.site-header {
+  min-height: 76px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.brand img {
+  height: 43px;
+  transition: opacity .2s ease, transform .2s ease;
+}
+
+.brand:hover img {
+  opacity: .86;
+}
+
+.desktop-nav {
+  gap: clamp(22px, 2.2vw, 38px);
+  font-size: 13px;
+  letter-spacing: .2px;
+}
+
+.hero {
+  min-height: 84vh;
+  padding-top: 150px;
+  padding-bottom: 78px;
+  background:
+    linear-gradient(90deg, rgba(5,5,5,.96) 0%, rgba(5,5,5,.82) 42%, rgba(5,5,5,.42) 100%),
+    radial-gradient(circle at 82% 48%, rgba(203,135,107,.20), transparent 30%),
+    linear-gradient(120deg, #050505, #11100e 55%, #050505);
+}
+
+.hero-content {
+  max-width: 860px;
+}
+
+.hero-content h1 {
+  max-width: 760px;
+}
+
+.hero-content p:not(.eyebrow):not(.hero-note) {
+  max-width: 620px;
+}
+
+.hero-note {
+  margin-top: 20px !important;
+  color: rgba(244,239,230,.68) !important;
+}
+
+.hero-orbit {
+  opacity: .32;
+  right: 7%;
+  top: 24%;
+}
+
+.collection-section,
+.services-section,
+.about-section,
+.contact-section,
+.related-section {
+  padding-top: 88px;
+  padding-bottom: 88px;
+}
+
+.section-heading {
+  margin-bottom: 34px;
+}
+
+.watch-grid {
+  gap: 26px;
+}
+
+.watch-card {
+  background: #070707;
+}
+
+.watch-image {
+  height: 365px;
+  overflow: hidden;
+}
+
+.watch-image img {
+  transition: transform .35s ease, opacity .35s ease;
+}
+
+.watch-card:hover .watch-image img {
+  transform: scale(1.018);
+}
+
+.watch-card.large .watch-image {
+  height: 460px;
+}
+
+.watch-info {
+  padding: 20px 22px 22px;
+}
+
+.watch-info h3 {
+  font-size: clamp(28px, 2.4vw, 36px);
+}
+
+.watch-meta {
+  margin: 14px 0 10px;
+}
+
+.watch-actions {
+  margin-top: 16px;
+}
+
+.sourcing-cta-section {
+  padding: 88px 5.5%;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background:
+    radial-gradient(circle at 82% 10%, rgba(203,135,107,.10), transparent 26%),
+    #070707;
+}
+
+.sourcing-cta-section > div {
+  max-width: 780px;
+}
+
+.sourcing-cta-section p {
+  color: var(--muted);
+  font-size: 18px;
+  max-width: 640px;
+  margin-top: 20px;
+}
+
+.service-grid {
+  gap: 16px;
+}
+
+.service-grid article {
+  min-height: 190px;
+  padding: 24px;
+}
+
+.service-grid h3 {
+  font-size: clamp(25px, 2vw, 31px);
+}
+
+.about-section {
+  gap: 54px;
+}
+
+.contact-panel a {
+  transition: border-color .2s ease, transform .2s ease;
+}
+
+.contact-panel a:hover {
+  border-color: rgba(203,135,107,.45);
+  transform: translateY(-2px);
+}
+
+.site-footer {
+  padding: 34px 5.5% 28px;
+  grid-template-columns: 1.15fr .55fr .55fr;
+  gap: 28px;
+}
+
+.site-footer img {
+  height: 38px;
+  margin-bottom: 10px;
+}
+
+.site-footer p,
+.site-footer a {
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.disclaimer {
+  padding-top: 16px;
+  margin-top: 4px;
+  line-height: 1.6;
+  opacity: .82;
+}
+
+.legal-links {
+  padding-top: 0;
+  margin-top: -6px;
+}
+
+@media (min-width: 1440px) {
+  .hero,
+  .collection-section,
+  .services-section,
+  .brand-section,
+  .about-section,
+  .contact-section,
+  .related-section,
+  .sourcing-cta-section,
+  .page-shell,
+  .product-shell,
+  .site-footer,
+  .site-header,
+  .ticker {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+
+  .watch-image {
+    height: 390px;
+  }
+
+  .watch-card.large .watch-image {
+    height: 500px;
+  }
+}
+
+@media (max-width:1080px) {
+  .site-header {
+    min-height: 70px;
+  }
+
+  .brand img {
+    height: 40px;
+  }
+
+  .hero {
+    min-height: 82vh;
+  }
+
+  .watch-grid,
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .watch-card.large {
+    grid-column: span 2;
+  }
+
+  .site-footer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width:720px) {
+  .site-header {
+    min-height: 66px;
+  }
+
+  .brand img {
+    height: 37px;
+  }
+
+  .hero {
+    min-height: 82vh;
+    padding-top: 128px;
+    padding-bottom: 58px;
+    background:
+      linear-gradient(180deg, rgba(5,5,5,.94) 0%, rgba(5,5,5,.80) 52%, rgba(5,5,5,.98) 100%),
+      radial-gradient(circle at 78% 44%, rgba(203,135,107,.16), transparent 35%),
+      #050505;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(42px, 12vw, 58px);
+    letter-spacing: -1.1px;
+  }
+
+  .hero-content p:not(.eyebrow):not(.hero-note) {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-top: 18px;
+  }
+
+  .hero-note {
+    max-width: 290px !important;
+    letter-spacing: 1.2px;
+  }
+
+  .hero-orbit {
+    opacity: .18;
+    right: -120px;
+    top: 28%;
+  }
+
+  .btn {
+    min-height: 48px;
+    padding: 14px 18px;
+  }
+
+  .ticker,
+  .brand-ticker-nav {
+    padding: 18px 5% !important;
+    gap: 28px !important;
+  }
+
+  .brand-ticker-nav a {
+    font-size: 21px !important;
+  }
+
+  .collection-toolbar {
+    grid-template-columns: 1fr;
+  }
+
+  .filters {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 4px;
+  }
+
+  .filters::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filters button {
+    flex: 0 0 auto;
+  }
+
+  .watch-grid,
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .watch-card.large {
+    grid-column: span 1;
+  }
+
+  .watch-image,
+  .watch-card.large .watch-image {
+    height: 310px;
+  }
+
+  .watch-info {
+    padding: 19px;
+  }
+
+  .watch-info h3 {
+    font-size: 30px;
+  }
+
+  .sourcing-cta-section {
+    padding: 70px 5%;
+  }
+
+  .sourcing-cta-section h2 {
+    font-size: 36px;
+  }
+
+  .sourcing-cta-section p {
+    font-size: 16px;
+  }
+
+  .collection-section,
+  .services-section,
+  .about-section,
+  .contact-section,
+  .related-section {
+    padding-top: 68px;
+    padding-bottom: 68px;
+  }
+
+  .about-section,
+  .contact-section {
+    gap: 32px;
+  }
+
+  .contact-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .site-footer {
+    grid-template-columns: 1fr;
+    padding: 30px 5% 26px;
+    gap: 18px;
+  }
+
+  .site-footer img {
+    height: 36px;
+  }
+
+  .disclaimer {
+    padding-top: 14px;
+  }
+
+  .mobile-menu-nav a {
+    font-size: clamp(34px, 10vw, 46px) !important;
+  }
+
+  .mobile-menu {
+    padding-top: 20px !important;
+  }
+}

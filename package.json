@@ -12,6 +12,6 @@
     "@supabase/supabase-js": "latest"
   },
   "devDependencies": {},
-  "name": "jad-krono-v15-launch-polish",
-  "version": "15.0.0"
+  "name": "jad-krono-v2-desktop-mobile-collector",
+  "version": "2.0.0"
 }

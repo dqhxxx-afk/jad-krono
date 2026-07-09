@@ -11,8 +11,8 @@ export const t = {
   },
   hero: {
     eyebrow: "Singapore Private Watch Dealer",
-    title: "Exceptional timepieces. Carefully sourced. Privately offered.",
-    copy: "JAD KRONO specialises in carefully selected luxury timepieces for collectors worldwide.",
+    title: "Carefully selected. Quietly sourced.",
+    copy: "Independent Singapore private watch dealer specialising in modern and collectible luxury timepieces. Viewing by appointment only.",
     primary: "View Collection",
     note: "Available Inventory • Private Sourcing • Private Viewings by Appointment"
   },
@@ -45,6 +45,6 @@ export const t = {
   },
   footer: {
     line: "Based in Singapore. Built on discretion, authenticity, and long-term relationships with collectors.",
-    disclaimer: "JAD KRONO is an independent luxury watch dealer and is not affiliated with any watch manufacturer or authorised retailer. All trademarks remain the property of their respective owners."
+    disclaimer: "JAD KRONO is an independent Singapore private watch dealer and is not affiliated with or endorsed by any watch manufacturer. All trademarks, brand names and model names remain the property of their respective owners and are used solely for identification purposes."
   }
 };

@@ -2,9 +2,8 @@ import "./globals.css";
 
 export const metadata = {
   metadataBase: new URL("https://jadkrono.com"),
-  title: "JAD KRONO | Private Watch Dealer Singapore",
-  description:
-    "JAD KRONO is a Singapore-based private watch dealer specialising in carefully selected luxury and collectible timepieces.",
+  title: "JAD KRONO | Independent Singapore Private Watch Dealer",
+  description: "Carefully selected modern and collectible luxury timepieces. Private sourcing and private viewings by appointment in Singapore.",
   keywords: [
     "JAD KRONO",
     "private watch dealer Singapore",
@@ -14,8 +13,8 @@ export const metadata = {
     "sell watch Singapore"
   ],
   openGraph: {
-    title: "JAD KRONO | Private Watch Dealer Singapore",
-    description: "Exceptional watches, quietly sourced.",
+    title: "JAD KRONO | Independent Singapore Private Watch Dealer",
+    description: "Carefully selected modern and collectible luxury timepieces. Private sourcing and private viewings by appointment in Singapore.",
     type: "website",
     url: "https://jadkrono.com",
     images: ["/assets/jad-krono-logo.png"]

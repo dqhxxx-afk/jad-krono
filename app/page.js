@@ -69,6 +69,15 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="sourcing-cta-section">
+          <div>
+            <p className="eyebrow">Private Sourcing</p>
+            <h2>Looking for a specific reference?</h2>
+            <p>We source carefully selected modern and collectible timepieces through our trusted international network.</p>
+            <a className="btn gold" href={`${site.whatsapp}?text=Hello%20JAD%20KRONO%2C%20I%20would%20like%20to%20request%20private%20sourcing.`} target="_blank">Request Private Sourcing</a>
+          </div>
+        </section>
+
         <section className="services-section">
           <div className="section-heading small">
             <p className="eyebrow">{t.services.eyebrow}</p>

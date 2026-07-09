@@ -19,7 +19,7 @@ export default function WatchCard({ product, enquireText = "Enquire", large = fa
       <div className="watch-info">
         <p>{product.brand}</p>
         <h3>{product.model}</h3>
-        <strong>{product.reference}</strong>
+        <strong>Ref. {product.reference}</strong>
 
         <div className="watch-meta">
           <em>{product.year}</em>

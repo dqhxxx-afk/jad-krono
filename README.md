@@ -1,36 +1,18 @@
-# JAD KRONO V15 Launch Polish
+# JAD KRONO V2.0 Desktop & Mobile Collector Edition
 
-This is the launch-polish version focused on quiet luxury and final content refinement.
+## Main changes
 
-## Changes
-
-- Hero copy updated
-- Added "Available Inventory • Private Sourcing • Private Viewings by Appointment"
-- Removed Brand Stories section from homepage
-- Services updated:
-  - Private Viewings
-  - Private Sourcing
-  - Sell Your Watch
-  - Consignment
-  - Trade & Upgrade
-- Removed Authentication service
-- Brand navigation updated:
-  - Rolex
-  - Patek Philippe
-  - Audemars Piguet
-  - Cartier
-  - Tudor
-  - IWC
-  - Hublot
-  - Franck Muller
-  - Breitling
-  - Chopard
-  - Sinn
-- Empty brand collection now shows sourcing enquiry CTA
-- Footer disclaimer updated
-- Added Privacy Policy
-- Added Terms & Conditions
-- Added FAQ
+- Desktop hero improved
+- Mobile hero spacing refined
+- Header logo slightly larger
+- Footer height reduced
+- Product card catalogue feel improved
+- Hover effects kept subtle
+- Brand filter mobile scrolling improved
+- Private Sourcing CTA added
+- Footer legal links include FAQ
+- Metadata refined
+- Copper brand colour aligned closer to logo
 
 ## Upload
 
