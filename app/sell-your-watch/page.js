@@ -14,9 +14,9 @@ export default function SellPage() {
       <main className="page-shell">
         <section className="page-hero">
           <p className="eyebrow">Sell</p>
-          <h1>Private valuation.</h1>
-          <p>Send the brand, reference, condition and photos. JAD KRONO will respond discreetly.</p>
-          <a className="btn gold" href={site.whatsapp} target="_blank">Start on WhatsApp</a>
+          <h1>Sell Your Watch</h1>
+          <p>Fair market valuation with complete discretion. Share your watch details and JAD KRONO will respond privately.</p>
+          <a className="btn gold" href={site.whatsapp} target="_blank">Request a Valuation</a>
         </section>
       </main>
       <Footer t={t} />

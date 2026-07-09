@@ -1380,3 +1380,106 @@ body:has(.mobile-menu) .wa-float {
     padding: 10px 12px;
   }
 }
+
+
+/* JAD KRONO V15 Launch Polish */
+.hero-note {
+  color: var(--muted);
+  font-size: 12px !important;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  margin-top: 18px !important;
+  max-width: none !important;
+}
+
+.brand-section {
+  display: none !important;
+}
+
+.service-grid {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.empty-sourcing {
+  margin-top: 34px;
+  border: 1px solid var(--line);
+  background: #080808;
+  padding: 30px;
+  max-width: 680px;
+}
+
+.empty-sourcing h3 {
+  font-size: 34px;
+  margin-bottom: 12px;
+}
+
+.empty-sourcing p {
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.legal-links {
+  grid-column: 1 / -1;
+  color: var(--muted);
+  font-size: 12px !important;
+}
+
+.legal-links a {
+  display: inline;
+  color: var(--muted);
+}
+
+.faq-section,
+.legal-copy {
+  max-width: 900px;
+  padding-bottom: 100px;
+}
+
+.faq-section article {
+  border-top: 1px solid var(--line);
+  padding: 26px 0;
+}
+
+.faq-section h3,
+.legal-copy h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.faq-section p,
+.legal-copy p {
+  color: var(--muted);
+  margin-bottom: 24px;
+}
+
+.legal-page .page-hero {
+  padding-bottom: 36px;
+}
+
+@media(max-width:1080px) {
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width:720px) {
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-note {
+    font-size: 11px !important;
+    line-height: 1.8;
+  }
+
+  .empty-sourcing {
+    padding: 24px;
+  }
+
+  .faq-section,
+  .legal-copy {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 72px;
+  }
+}

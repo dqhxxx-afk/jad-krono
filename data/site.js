@@ -16,26 +16,37 @@ export const products = watches;
 
 export const services = [
   {
-    title: "Authentication",
-    copy: "Independent inspection before every acquisition."
+    title: "Private Viewings",
+    copy: "Private viewings by appointment only in Singapore."
   },
   {
-    title: "Private Showroom",
-    copy: "Viewings by appointment in Singapore."
+    title: "Private Sourcing",
+    copy: "We source exceptional timepieces through our trusted international network, including current production, discontinued and highly sought-after references."
   },
   {
-    title: "Sourcing",
-    copy: "Rare references sourced through private channels."
+    title: "Sell Your Watch",
+    copy: "Receive a fair market valuation with complete discretion."
   },
   {
     title: "Consignment",
-    copy: "Confidential selling for selected timepieces."
+    copy: "Confidential consignment for carefully selected luxury timepieces."
+  },
+  {
+    title: "Trade & Upgrade",
+    copy: "Upgrade your collection through carefully considered trade opportunities."
   }
 ];
 
 export const brandStories = [
-  { name: "Rolex", copy: "Professional icons with global recognition." },
-  { name: "Patek Philippe", copy: "Collector references with lasting appeal." },
-  { name: "Audemars Piguet", copy: "Modern haute horlogerie with architectural presence." },
-  { name: "Richard Mille", copy: "Contemporary watchmaking with unmistakable impact." }
+  { name: "Rolex", copy: "Selected professional and collectible references." },
+  { name: "Patek Philippe", copy: "Important modern and collectible timepieces." },
+  { name: "Audemars Piguet", copy: "Royal Oak and selected high horology references." },
+  { name: "Cartier", copy: "Elegant icons and modern collector pieces." },
+  { name: "Tudor", copy: "Strong value-driven sports references." },
+  { name: "IWC", copy: "Pilot, Portugieser and selected complications." },
+  { name: "Hublot", copy: "Bold modern luxury references." },
+  { name: "Franck Muller", copy: "Distinctive designs and collector favourites." },
+  { name: "Breitling", copy: "Professional aviation and sports watches." },
+  { name: "Chopard", copy: "Elegant luxury and selected sports pieces." },
+  { name: "Sinn", copy: "Tool watches with strong enthusiast appeal." }
 ];

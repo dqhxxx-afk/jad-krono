@@ -8,7 +8,7 @@ import SocialContactPanel from "../components/SocialContactPanel";
 import { BrandTicker } from "../components/BrandTicker";
 import { useLanguage } from "../components/useLanguage";
 import { useWatches } from "../components/useWatches";
-import { services, brandStories, site } from "../data/site";
+import { services, site } from "../data/site";
 
 export default function Home() {
   const { t } = useLanguage();
@@ -38,7 +38,7 @@ export default function Home() {
             <p className="eyebrow">{t.hero.eyebrow}</p>
             <h1>{t.hero.title}</h1>
             <p>{t.hero.copy}</p>
-            <a href="/collection" className="btn gold">{t.hero.primary}</a>
+            <a href="/collection" className="btn gold">{t.hero.primary}</a><p className="hero-note">{t.hero.note}</p>
           </div>
         </section>
 
@@ -80,17 +80,6 @@ export default function Home() {
               <article key={service.title}>
                 <h3>{service.title}</h3>
                 <p>{service.copy}</p>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section className="brand-section">
-          <div className="brand-grid">
-            {brandStories.map((brand) => (
-              <article key={brand.name}>
-                <h3>{brand.name}</h3>
-                <p>{brand.copy}</p>
               </article>
             ))}
           </div>

@@ -22,7 +22,7 @@ export default function Footer({ t }) {
         <a href={site.googleMaps} target="_blank">Google Maps</a>
       </div>
 
-      <p className="disclaimer">{t.footer.disclaimer}</p>
+      <p className="disclaimer">{t.footer.disclaimer}</p><p className="legal-links"><a href="/privacy-policy">Privacy Policy</a> · <a href="/terms-conditions">Terms & Conditions</a></p>
     </footer>
   );
 }

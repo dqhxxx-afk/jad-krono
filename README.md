@@ -1,21 +1,36 @@
-# JAD KRONO 3.5 Build-Safe Brand Navigation
+# JAD KRONO V15 Launch Polish
 
-This fixes the 3.4 Vercel build failure.
+This is the launch-polish version focused on quiet luxury and final content refinement.
 
-## Fixed
+## Changes
 
-- Removed `useSearchParams()` from Collection page
-- Brand navigation still works:
-  - `/collection?brand=rolex`
-  - `/collection?brand=patek`
-  - `/collection?brand=ap`
-  - `/collection?brand=rm`
-- Avoids Next.js Suspense/static build issue
-- Keeps all previous fixes:
-  - npm install fix
-  - mobile menu fix
-  - brand ticker clickable
-  - Supabase admin
+- Hero copy updated
+- Added "Available Inventory • Private Sourcing • Private Viewings by Appointment"
+- Removed Brand Stories section from homepage
+- Services updated:
+  - Private Viewings
+  - Private Sourcing
+  - Sell Your Watch
+  - Consignment
+  - Trade & Upgrade
+- Removed Authentication service
+- Brand navigation updated:
+  - Rolex
+  - Patek Philippe
+  - Audemars Piguet
+  - Cartier
+  - Tudor
+  - IWC
+  - Hublot
+  - Franck Muller
+  - Breitling
+  - Chopard
+  - Sinn
+- Empty brand collection now shows sourcing enquiry CTA
+- Footer disclaimer updated
+- Added Privacy Policy
+- Added Terms & Conditions
+- Added FAQ
 
 ## Upload
 

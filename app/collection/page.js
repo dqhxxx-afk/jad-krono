@@ -40,9 +40,9 @@ export default function CollectionPage() {
         <section className="collection-section compact">
           <div className="collection-toolbar">
             <div className="filters">
-              {["all", "rolex", "patek", "ap", "rm", "tudor", "hublot", "cartier", "omega"].map((item) => (
+              {["all", "rolex", "patek", "ap", "cartier", "tudor", "iwc", "hublot", "franck-muller", "breitling", "chopard", "sinn"].map((item) => (
                 <button key={item} onClick={() => setFilter(item)} className={filter === item ? "active" : ""}>
-                  {item === "all" ? "All" : item === "patek" ? "Patek Philippe" : item === "ap" ? "AP" : item === "rm" ? "RM" : item.toUpperCase()}
+                  {item === "all" ? "All" : item === "patek" ? "Patek Philippe" : item === "ap" ? "AP" : item === "franck-muller" ? "Franck Muller" : item.toUpperCase()}
                 </button>
               ))}
             </div>
@@ -55,7 +55,13 @@ export default function CollectionPage() {
             ))}
           </div>
 
-          {shownProducts.length === 0 ? <p className="empty">{t.collection.noResults}</p> : null}
+          {shownProducts.length === 0 ? (
+            <div className="empty-sourcing">
+              <h3>{t.collection.noResults}</h3>
+              <p>{t.collection.sourcingCopy}</p>
+              <a className="btn gold" href="https://wa.me/6586996868?text=Hello%20JAD%20KRONO%2C%20I%20would%20like%20to%20request%20private%20sourcing." target="_blank">{t.collection.sourcingButton}</a>
+            </div>
+          ) : null}
         </section>
       </main>
       <Footer t={t} />
