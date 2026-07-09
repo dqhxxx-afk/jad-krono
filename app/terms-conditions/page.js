@@ -25,7 +25,7 @@ export default function TermsPage() {
           <h2>Appointments</h2>
           <p>Private viewings are arranged by appointment only in Singapore.</p>
           <h2>Independent Dealer</h2>
-          <p>JAD KRONO is an independent luxury watch dealer and is not affiliated with any watch manufacturer or authorised retailer. All trademarks remain the property of their respective owners.</p>
+          <p>JAD KRONO is an independent Singapore private watch dealer and is not affiliated with or endorsed by Rolex, Patek Philippe, Audemars Piguet, Cartier or any other watch manufacturer. All trademarks remain the property of their respective owners and are used solely for identification purposes.</p>
           <h2>Governing Law</h2>
           <p>These terms are governed by the laws of Singapore.</p>
         </section>

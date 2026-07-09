@@ -1,27 +1,20 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import WatchCard from "../components/WatchCard";
-import SocialContactPanel from "../components/SocialContactPanel";
 import { BrandTicker } from "../components/BrandTicker";
 import { useLanguage } from "../components/useLanguage";
 import { useWatches } from "../components/useWatches";
 import { services, site } from "../data/site";
+import { getWatchId } from "../lib/watchUtils";
 
 export default function Home() {
   const { t } = useLanguage();
   const { watches } = useWatches();
-  const [filter, setFilter] = useState("all");
-  const [query, setQuery] = useState("");
 
-  const shownProducts = useMemo(() => {
-    return watches
-      .filter((p) => p.featured)
-      .filter((p) => filter === "all" || p.category === filter)
-      .filter((p) => `${p.brand} ${p.model} ${p.reference}`.toLowerCase().includes(query.toLowerCase()));
-  }, [watches, filter, query]);
+  const shownProducts = useMemo(() => watches.filter((p) => p.featured).slice(0, 6), [watches]);
 
   return (
     <>
@@ -50,21 +43,9 @@ export default function Home() {
             <h2>{t.collection.title}</h2>
             <p>{t.collection.copy}</p>
           </div>
-
-          <div className="collection-toolbar">
-            <div className="filters">
-              {["all", "rolex", "patek", "ap", "rm"].map((item) => (
-                <button key={item} onClick={() => setFilter(item)} className={filter === item ? "active" : ""}>
-                  {item === "all" ? "All" : item === "patek" ? "Patek Philippe" : item === "ap" ? "AP" : item === "rm" ? "RM" : item.toUpperCase()}
-                </button>
-              ))}
-            </div>
-            <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder={t.collection.search} />
-          </div>
-
-          <div className="watch-grid">
+          <div className="watch-grid final-watch-grid">
             {shownProducts.map((product, index) => (
-              <WatchCard key={product.id} product={product} enquireText={t.collection.enquire} large={index === 0} />
+              <WatchCard key={getWatchId(product)} product={product} enquireText={t.collection.enquire} />
             ))}
           </div>
         </section>
@@ -102,13 +83,18 @@ export default function Home() {
           <p>{t.about.copy}</p>
         </section>
 
-        <section className="contact-section">
+        <section className="home-contact-v25">
           <div>
-            <p className="eyebrow">{t.contact.eyebrow}</p>
-            <h2>{t.contact.title}</h2>
-            <p>{t.contact.copy}</p>
+            <p className="eyebrow">Contact</p>
+            <h2>Private enquiries.</h2>
+            <p>For buying, selling, sourcing, consignment or private viewing appointments, contact JAD KRONO directly.</p>
           </div>
-          <SocialContactPanel t={t} />
+          <div className="home-contact-v25-links">
+            <a href={site.whatsapp} target="_blank" rel="noreferrer">WhatsApp</a>
+            <a href="mailto:contact@jadkrono.com">Email</a>
+            <a href={site.instagram} target="_blank" rel="noreferrer">Instagram</a>
+            <a href={site.googleMaps} target="_blank" rel="noreferrer">Google Maps</a>
+          </div>
         </section>
       </main>
 

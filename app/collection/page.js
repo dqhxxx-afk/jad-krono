@@ -7,6 +7,10 @@ import WatchCard from "../../components/WatchCard";
 import { useLanguage } from "../../components/useLanguage";
 import { BrandTicker } from "../../components/BrandTicker";
 import { useWatches } from "../../components/useWatches";
+import { getWatchCategory, getWatchId, brandLabel } from "../../lib/watchUtils";
+import { site } from "../../data/site";
+
+const brands = ["all", "rolex", "patek", "ap", "cartier", "tudor", "iwc", "hublot", "breitling", "franck-muller", "chopard", "sinn"];
 
 export default function CollectionPage() {
   const { t } = useLanguage();
@@ -19,17 +23,25 @@ export default function CollectionPage() {
     setFilter(params.get("brand") || "all");
   }, []);
 
+  function changeFilter(item) {
+    setFilter(item);
+    const url = item === "all" ? "/collection" : `/collection?brand=${item}`;
+    window.history.replaceState(null, "", url);
+  }
+
   const shownProducts = useMemo(() => {
     return watches
-      .filter((p) => filter === "all" || p.category === filter)
+      .filter((p) => filter === "all" || getWatchCategory(p) === filter)
       .filter((p) => `${p.brand} ${p.model} ${p.reference}`.toLowerCase().includes(query.toLowerCase()));
   }, [watches, filter, query]);
+
+  const sourcingMessage = encodeURIComponent(`Hello JAD KRONO, I would like to request private sourcing${filter !== "all" ? ` for ${brandLabel(filter)}` : ""}.`);
 
   return (
     <>
       <Header t={t} />
-      <main className="page-shell">
-        <section className="page-hero">
+      <main className="page-shell collection-page-final">
+        <section className="page-hero collection-hero-final">
           <p className="eyebrow">{t.collection.eyebrow}</p>
           <h1>{t.collection.title}</h1>
           <p>{loading ? "Loading collection..." : t.collection.copy}</p>
@@ -38,30 +50,20 @@ export default function CollectionPage() {
         <BrandTicker activeBrand={filter} />
 
         <section className="collection-section compact">
-          <div className="collection-toolbar">
-            <div className="filters">
-              {["all", "rolex", "patek", "ap", "cartier", "tudor", "iwc", "hublot", "breitling", "franck-muller", "chopard", "sinn"].map((item) => (
-                <button key={item} onClick={() => setFilter(item)} className={filter === item ? "active" : ""}>
-                  {item === "all" ? "All" : item === "patek" ? "Patek Philippe" : item === "ap" ? "AP" : item === "franck-muller" ? "Franck Muller" : item.toUpperCase()}
-                </button>
+          <div className="collection-toolbar final-toolbar">
+            <div className="filters brand-chip-filters">
+              {brands.map((item) => (
+                <button key={item} onClick={() => changeFilter(item)} className={filter === item ? "active" : ""}>{brandLabel(item)}</button>
               ))}
             </div>
             <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder={t.collection.search} />
           </div>
 
-          <div className="watch-grid">
-            {shownProducts.map((product) => (
-              <WatchCard key={product.id} product={product} enquireText={t.collection.enquire} />
-            ))}
+          <div className="watch-grid final-watch-grid">
+            {shownProducts.map((product) => <WatchCard key={getWatchId(product)} product={product} enquireText={t.collection.enquire} />)}
           </div>
 
-          {shownProducts.length === 0 ? (
-            <div className="empty-sourcing">
-              <h3>{t.collection.noResults}</h3>
-              <p>{t.collection.sourcingCopy}</p>
-              <a className="btn gold" href="https://wa.me/6586996868?text=Hello%20JAD%20KRONO%2C%20I%20would%20like%20to%20request%20private%20sourcing." target="_blank">{t.collection.sourcingButton}</a>
-            </div>
-          ) : null}
+          {shownProducts.length === 0 ? <div className="empty-sourcing"><h3>{t.collection.noResults}</h3><p>{t.collection.sourcingCopy}</p><a className="btn gold" href={`${site.whatsapp}?text=${sourcingMessage}`} target="_blank" rel="noreferrer">{t.collection.sourcingButton}</a></div> : null}
         </section>
       </main>
       <Footer t={t} />

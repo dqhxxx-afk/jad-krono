@@ -2762,3 +2762,107 @@ body:has(.mobile-menu) .wa-float {
     line-height: 1.7;
   }
 }
+
+
+/* JAD KRONO V2.5 Final Fix */
+:root { --gold: #CB876B; --gold-soft: rgba(203,135,107,.22); }
+
+.brand-strip {
+  display: flex !important;
+  align-items: center;
+  gap: 10px !important;
+  padding: 18px 5.5% !important;
+  border-block: 1px solid var(--line);
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+  background: rgba(5,5,5,.95);
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif !important;
+}
+.brand-strip::-webkit-scrollbar { display: none; }
+.brand-strip a {
+  flex: 0 0 auto;
+  border: 1px solid rgba(255,255,255,.10);
+  color: rgba(244,239,230,.64);
+  padding: 10px 14px;
+  font-size: 12px !important;
+  line-height: 1;
+  letter-spacing: .2px;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif !important;
+  transition: border-color .2s ease, color .2s ease, background .2s ease;
+}
+.brand-strip a:hover, .brand-strip a.active {
+  color: var(--ivory);
+  border-color: rgba(203,135,107,.50);
+  background: rgba(203,135,107,.08);
+}
+.brand-ticker-nav { display: none !important; }
+
+.collection-hero-final { padding-bottom: 28px !important; }
+.final-toolbar { grid-template-columns: 1fr minmax(260px, 380px) !important; align-items: start; }
+.brand-chip-filters { display:flex; flex-wrap:wrap; gap:10px; }
+.brand-chip-filters button {
+  border: 1px solid rgba(255,255,255,.10) !important;
+  color: rgba(244,239,230,.64) !important;
+  background: transparent !important;
+  padding: 11px 14px !important;
+  font-size: 12px !important;
+}
+.brand-chip-filters button.active { color: var(--ivory) !important; border-color: rgba(203,135,107,.50) !important; background: rgba(203,135,107,.08) !important; }
+.final-watch-grid { align-items: stretch; }
+.final-watch-grid .watch-card.large { grid-column: span 1 !important; }
+.final-watch-grid .watch-image, .final-watch-grid .watch-card.large .watch-image { height: 360px !important; }
+
+.contact-page-final-v25 { padding-bottom: 0 !important; }
+.contact-v25-hero { padding: 110px 7% 40px !important; max-width: 920px; }
+.contact-v25-hero h1 { font-size: clamp(56px, 5.5vw, 86px); }
+.contact-v25-hero p { color: var(--muted); max-width: 620px; margin-top: 22px; }
+.contact-v25-grid { padding: 0 7% 88px; display:grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 18px; }
+.contact-v25-card { border: 1px solid var(--line); background: #070707; padding: 30px; min-height: 270px; display:flex; flex-direction:column; justify-content:space-between; }
+.contact-v25-card span { color: var(--gold); text-transform: uppercase; letter-spacing:4px; font-size:11px; font-weight:800; }
+.contact-v25-card h2 { font-size: clamp(40px, 3.8vw, 58px); max-width: 560px; }
+.contact-v25-card h3 { font-size: 32px; }
+.contact-v25-card p { color: var(--muted); max-width: 520px; }
+.contact-v25-actions, .inline-links { display:flex; gap:14px; flex-wrap:wrap; align-items:center; }
+.contact-v25-card a:not(.btn) { color: var(--gold); font-weight:700; }
+.main-card { grid-column: span 1; }
+.v25-band { margin-top: 0 !important; }
+
+.home-contact-v25 { display:grid; grid-template-columns:.9fr 1.1fr; gap:70px; padding:88px 5.5%; border-top:1px solid var(--line); }
+.home-contact-v25 p:not(.eyebrow) { color: var(--muted); max-width:620px; margin-top:20px; }
+.home-contact-v25-links { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+.home-contact-v25-links a { border:1px solid var(--line); background:#070707; padding:24px; color:var(--ivory); }
+
+.jk-footer-v25.site-footer { display:block !important; padding:40px 7% 34px !important; border-top:1px solid var(--line); background:#050505; }
+.footer-v25-top { display:flex; justify-content:space-between; gap:40px; align-items:flex-start; }
+.footer-v25-brand img { height:38px; display:block; margin-bottom:14px; }
+.footer-v25-brand p { color:rgba(244,239,230,.70); font-size:14px; margin:0 0 4px; }
+.footer-v25-links { display:flex; gap:24px; }
+.footer-v25-links a { color:rgba(244,239,230,.72); font-size:14px; }
+.footer-v25-disclaimer { border-top:1px solid rgba(255,255,255,.08); margin:24px 0 18px; padding-top:18px; max-width:980px; color:rgba(244,239,230,.52); font-size:12.5px; line-height:1.65; }
+.footer-v25-bottom { display:flex; justify-content:space-between; gap:24px; color:rgba(244,239,230,.58); font-size:12.5px; }
+.footer-v25-bottom p { margin:0; font-size:12.5px; }
+.footer-v25-bottom nav { display:flex; gap:8px; flex-wrap:wrap; }
+.footer-v25-bottom a, .footer-v25-bottom span { color:rgba(244,239,230,.62); font-size:12.5px; }
+.jk-footer-final:not(.jk-footer-v25), .jk-footer-minimal, .jk-footer-compact { display:none !important; }
+
+@media (max-width: 1080px) {
+  .contact-v25-grid { grid-template-columns:1fr; }
+  .footer-v25-top, .footer-v25-bottom { flex-direction:column; }
+}
+@media (max-width: 720px) {
+  .brand-strip { padding:16px 5% !important; gap:8px !important; }
+  .brand-strip a { padding:10px 12px; font-size:11px !important; }
+  .final-toolbar { grid-template-columns:1fr !important; }
+  .final-watch-grid .watch-image, .final-watch-grid .watch-card.large .watch-image { height:310px !important; }
+  .contact-v25-hero { padding:72px 5% 28px !important; }
+  .contact-v25-hero h1 { font-size:46px; }
+  .contact-v25-grid { padding:0 5% 62px; gap:14px; }
+  .contact-v25-card { min-height:auto; padding:22px; gap:22px; }
+  .contact-v25-card h2 { font-size:34px; }
+  .contact-v25-card h3 { font-size:24px; }
+  .home-contact-v25 { grid-template-columns:1fr; gap:28px; padding:68px 5%; }
+  .home-contact-v25-links { grid-template-columns:1fr; }
+  .jk-footer-v25.site-footer { padding:32px 5% 92px !important; }
+  .footer-v25-links { display:grid; grid-template-columns:1fr 1fr; gap:12px 18px; }
+}

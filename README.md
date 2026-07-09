@@ -1,19 +1,15 @@
-# JAD KRONO V2.4 Live Reset
+# JAD KRONO V2.5 Final Fix
 
-This is a hard reset patch intended to replace old live copy and redesign Contact/Footer.
+Fixes requested from the desktop/mobile screenshots:
 
-## Key fixes
+- Contact page redesigned into Enquiry / Visit / Follow blocks
+- Footer simplified and rebuilt
+- Brand tabs restyled as compact chips
+- Product View routing fixed with stable watch slugs
+- Brand filtering fixed with normalized category logic
+- Google Maps links fixed
+- Homepage contact section cleaned up
+- Terms disclaimer synchronized
 
-- Hero forced to: Carefully selected. Quietly sourced.
-- Removed old "Exceptional watches" copy
-- Removed Authentication wording
-- Brand Stories forced empty
-- Brand list updated
-- Contact page rebuilt
-- Footer rebuilt
-- New legal/disclaimer wording
-- Copyright added
-- Mobile and desktop CSS targeted
-
-## Old copy scan
-No old bad strings found.
+Old issue scan:
+No old critical strings found.

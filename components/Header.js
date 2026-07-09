@@ -10,7 +10,7 @@ export default function Header({ t }) {
   const nav = [
     ["/", "Home"],
     ["/collection", t.nav.collection],
-    ["/sell-your-watch", t.nav.sell],
+    ["/sell-your-watch", "Sell"],
     ["/services", t.nav.services],
     ["/about", t.nav.about],
     ["/contact", t.nav.contact]

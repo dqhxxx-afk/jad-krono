@@ -3,9 +3,21 @@
 import { useEffect, useState } from "react";
 import fallbackWatches from "../data/watches.json";
 import { supabase, isSupabaseConfigured } from "../lib/supabaseClient";
+import { getWatchCategory, getWatchId } from "../lib/watchUtils";
+
+function normalizeWatch(watch) {
+  return {
+    ...watch,
+    id: getWatchId(watch),
+    category: getWatchCategory(watch),
+    gallery: watch.gallery || [],
+    specs: watch.specs || { case: "", movement: "", material: "", bracelet: "" }
+  };
+}
 
 export function useWatches() {
-  const [watches, setWatches] = useState(fallbackWatches);
+  const fallback = fallbackWatches.map(normalizeWatch);
+  const [watches, setWatches] = useState(fallback);
   const [loading, setLoading] = useState(isSupabaseConfigured);
 
   useEffect(() => {
@@ -20,18 +32,10 @@ export function useWatches() {
         .select("*")
         .order("created_at", { ascending: false });
 
-      if (!error && data?.length) {
-        const normalized = data.map((watch) => ({
-          ...watch,
-          gallery: watch.gallery || [],
-          specs: watch.specs || {
-            case: "",
-            movement: "",
-            material: "",
-            bracelet: ""
-          }
-        }));
-        setWatches(normalized);
+      if (!error && Array.isArray(data) && data.length > 0) {
+        setWatches(data.map(normalizeWatch));
+      } else {
+        setWatches(fallback);
       }
 
       setLoading(false);

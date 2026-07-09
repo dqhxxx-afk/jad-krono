@@ -1,13 +1,15 @@
 import { site } from "../data/site";
+import { getWatchId } from "../lib/watchUtils";
 
 export default function WatchCard({ product, enquireText = "Enquire", large = false }) {
+  const watchId = getWatchId(product);
   const message = encodeURIComponent(
     `Hello JAD KRONO, I would like to enquire about ${product.brand} ${product.model} ${product.reference}.`
   );
 
   return (
     <article className={large ? "watch-card large" : "watch-card"}>
-      <a className="watch-image" href={`/collection/${product.id}`}>
+      <a className="watch-image" href={`/collection/${watchId}`}>
         {product.image ? (
           <img src={product.image} alt={`${product.brand} ${product.model}`} />
         ) : (
@@ -29,8 +31,8 @@ export default function WatchCard({ product, enquireText = "Enquire", large = fa
 
         <div className="watch-actions">
           <span>{product.price}</span>
-          <a href={`/collection/${product.id}`}>View</a>
-          <a href={`${site.whatsapp}?text=${message}`} target="_blank">{enquireText}</a>
+          <a href={`/collection/${watchId}`}>View</a>
+          <a href={`${site.whatsapp}?text=${message}`} target="_blank" rel="noreferrer">{enquireText}</a>
         </div>
       </div>
     </article>

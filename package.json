@@ -12,6 +12,6 @@
     "@supabase/supabase-js": "latest"
   },
   "devDependencies": {},
-  "name": "jad-krono-v2-4-live-reset",
-  "version": "2.4.0"
+  "name": "jad-krono-v2-5-final-fix",
+  "version": "2.5.0"
 }

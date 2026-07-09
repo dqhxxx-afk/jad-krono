@@ -42,7 +42,7 @@ export const t = {
     eyebrow: "Contact",
     title: "Private enquiries.",
     copy: "For buying, selling, sourcing, consignment or private viewing appointments, contact JAD KRONO directly.",
-    button: "Book Private Viewing"
+    button: "Enquire via WhatsApp"
   },
   footer: {
     line: "Independent Singapore Private Watch Dealer. Private Viewings by Appointment.",
