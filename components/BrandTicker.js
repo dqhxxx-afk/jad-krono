@@ -17,7 +17,7 @@ export const brandLinks = [
 
 export function BrandTicker({ activeBrand = "all" }) {
   return (
-    <section className="brand-strip" aria-label="Browse by brand">
+    <section className="brand-strip v27-brand-strip" aria-label="Browse by brand">
       {brandLinks.map((brand) => (
         <a key={brand.value} href={brand.href} className={activeBrand === brand.value ? "active" : ""}>
           {brandLabel(brand.value)}

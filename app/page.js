@@ -83,17 +83,17 @@ export default function Home() {
           <p>{t.about.copy}</p>
         </section>
 
-        <section className="home-contact-v25">
+        <section className="home-contact-v26">
           <div>
             <p className="eyebrow">Contact</p>
             <h2>Private enquiries.</h2>
             <p>For buying, selling, sourcing, consignment or private viewing appointments, contact JAD KRONO directly.</p>
           </div>
-          <div className="home-contact-v25-links">
-            <a href={site.whatsapp} target="_blank" rel="noreferrer">WhatsApp</a>
-            <a href="mailto:contact@jadkrono.com">Email</a>
-            <a href={site.instagram} target="_blank" rel="noreferrer">Instagram</a>
-            <a href={site.googleMaps} target="_blank" rel="noreferrer">Google Maps</a>
+          <div className="home-contact-v26-links">
+            <a href={site.whatsapp} target="_blank" rel="noreferrer"><span>Enquiry</span><strong>WhatsApp</strong></a>
+            <a href="mailto:contact@jadkrono.com"><span>Email</span><strong>contact@jadkrono.com</strong></a>
+            <a href={site.googleMaps} target="_blank" rel="noreferrer"><span>Visit</span><strong>Google Maps</strong></a>
+            <a href={site.instagram} target="_blank" rel="noreferrer"><span>Follow</span><strong>Instagram</strong></a>
           </div>
         </section>
       </main>

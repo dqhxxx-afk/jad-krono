@@ -12,12 +12,21 @@ export const metadata = {
     "Patek Philippe Singapore",
     "sell watch Singapore"
   ],
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" }
+    ],
+    apple: "/apple-touch-icon.png"
+  },
+  manifest: "/site.webmanifest",
   openGraph: {
     title: "JAD KRONO | Independent Singapore Private Watch Dealer",
     description: "Independent Singapore private watch dealer specialising in modern and collectible luxury timepieces. Private viewings by appointment only.",
     type: "website",
     url: "https://jadkrono.com",
-    images: ["/assets/jad-krono-logo.png"]
+    images: ["/icon.png"]
   }
 };
 

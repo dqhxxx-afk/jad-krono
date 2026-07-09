@@ -1,15 +1,13 @@
-# JAD KRONO V2.5 Final Fix
+# JAD KRONO V2.7 Final Mobile Tab + Favicon Fix
 
-Fixes requested from the desktop/mobile screenshots:
+## Fixed
 
-- Contact page redesigned into Enquiry / Visit / Follow blocks
-- Footer simplified and rebuilt
-- Brand tabs restyled as compact chips
-- Product View routing fixed with stable watch slugs
-- Brand filtering fixed with normalized category logic
-- Google Maps links fixed
-- Homepage contact section cleaned up
-- Terms disclaimer synchronized
+- Replaced old browser/tab favicon with JAD KRONO monogram icon.
+- Added favicon.ico, favicon-16x16, favicon-32x32, icon.png, apple-touch-icon.png, and site.webmanifest.
+- Updated Next metadata icons and Open Graph image.
+- Removed bulky boxed brand tabs on Collection.
+- Brand filter now uses elegant text tabs with underline.
+- Mobile brand filter is one horizontal scroll row, not a large wrapped grid.
+- Product detail routing remains stable using generated slugs.
 
-Old issue scan:
-No old critical strings found.
+Upload all files to GitHub repository root and redeploy.
