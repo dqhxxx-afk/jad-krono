@@ -5,7 +5,7 @@ export const site = {
   whatsapp: "https://wa.me/6586996868",
   email: "contact@jadkrono.com",
   instagram: "https://instagram.com/jadkrono",
-  facebook: "https://facebook.com/jadkrono",
+  facebook: "https://www.facebook.com/share/1BjRy9MPKg/?mibextid=wwXIfr",
   location: "Singapore",
   showroom: "Private showroom by appointment"
 };

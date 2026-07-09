@@ -1,25 +1,17 @@
-# JAD KRONO Next.js V8 Boutique Collection
+# JAD KRONO Next.js V9 Social Contact Upgrade
 
-V8 turns the website from a polished landing site into a stronger boutique dealer website.
+V9 updates the official social/contact links and improves the contact section.
 
-## New in V8
+## Updated
 
-- Individual watch detail pages
-- Product gallery layout
-- Related watch recommendations
-- Better inquiry flow per watch
-- Product pages generated from `data/site.js`
-- Stronger collection structure
-- SEO-ready product URLs
-- Keeps V7 luxury visual polish
-
-## Important URLs
-
-Collection:
-`/collection`
-
-Product example:
-`/collection/rolex-daytona-126500ln`
+- Facebook Page updated to:
+  https://www.facebook.com/share/1BjRy9MPKg/?mibextid=wwXIfr
+- No WeChat added
+- WhatsApp kept as primary enquiry channel
+- Instagram kept
+- Email kept
+- Contact panel upgraded
+- Structured data Facebook URL updated
 
 ## Upload to GitHub
 
@@ -36,35 +28,19 @@ Upload the contents of this folder to your GitHub repository root:
 
 Do not upload the parent folder itself.
 
-## Add or edit watches
+## Change social links later
 
 Edit:
 
 `data/site.js`
 
-Each product needs:
+Look for:
 
-- id
-- brand
-- model
-- reference
-- year
-- condition
-- set
-- status
-- price
-- category
-- image
-- gallery
-
-## Add product images
-
-Put images into:
-
-`public/products/`
-
-Then use paths like:
-
-`image: "/products/daytona-main.jpg"`
-
-`gallery: ["/products/daytona-main.jpg", "/products/daytona-side.jpg"]`
+```js
+export const site = {
+  whatsapp: "...",
+  email: "...",
+  instagram: "...",
+  facebook: "..."
+}
+```

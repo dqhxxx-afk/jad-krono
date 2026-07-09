@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
     areaServed: "Singapore",
     telephone: "+65 8699 6868",
     description: "Private luxury watch dealer in Singapore focused on buying, selling, consigning and sourcing important timepieces.",
-    sameAs: ["https://instagram.com/jadkrono", "https://facebook.com/jadkrono"]
+    sameAs: ["https://instagram.com/jadkrono", "https://www.facebook.com/share/1BjRy9MPKg/?mibextid=wwXIfr"]
   };
 
   return (

@@ -3,6 +3,7 @@ import { useMemo, useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import WatchCard from "../components/WatchCard";
+import SocialContactPanel from "../components/SocialContactPanel";
 import { useLanguage } from "../components/useLanguage";
 import { products, brandStories, insights, site } from "../data/site";
 
@@ -56,7 +57,7 @@ export default function Home() {
 
         <section className="insights-section"><div className="section-heading"><p className="eyebrow">{t.insights.eyebrow}</p><h2>{t.insights.title}</h2></div><div className="insight-grid">{insights.map((insight) => <article key={insight.tag}><span>{insight.tag}</span><h3>{insight.title[lang]}</h3><p>{insight.copy[lang]}</p></article>)}</div></section>
 
-        <section className="contact-section"><div><p className="eyebrow">{t.contact.eyebrow}</p><h2>{t.contact.title}</h2><p>{t.contact.copy}</p></div><div className="contact-card"><a href={site.whatsapp} target="_blank">WhatsApp: {site.phoneDisplay}</a><a href={`mailto:${site.email}`}>{site.email}</a><a href={site.instagram} target="_blank">Instagram</a><a href={site.facebook} target="_blank">Facebook</a><span>{site.showroom}</span><div className="map-card">Singapore Private Showroom</div><a className="btn gold" href={site.whatsapp} target="_blank">{t.contact.button}</a></div></section>
+        <section className="contact-section"><div><p className="eyebrow">{t.contact.eyebrow}</p><h2>{t.contact.title}</h2><p>{t.contact.copy}</p></div><div><SocialContactPanel t={t} /><div className="contact-card"><a href={site.whatsapp} target="_blank">WhatsApp: {site.phoneDisplay}</a><a href={`mailto:${site.email}`}>{site.email}</a><a href={site.instagram} target="_blank">Instagram</a><a href={site.facebook} target="_blank">Facebook</a><span>{site.showroom}</span><div className="map-card">Singapore Private Showroom</div><a className="btn gold" href={site.whatsapp} target="_blank">{t.contact.button}</a></div></div></section>
       </main>
       <Footer t={t} />
     </>
