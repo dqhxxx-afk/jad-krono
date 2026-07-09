@@ -1,14 +1,13 @@
 export const site = {
   name: "JAD KRONO",
   domain: "https://jadkrono.com",
-  phoneDisplay: "+65 8699 6868",
   whatsapp: "https://wa.me/6586996868",
   email: "contact@jadkrono.com",
   instagram: "https://instagram.com/jadkrono",
   facebook: "https://www.facebook.com/share/1BjRy9MPKg/?mibextid=wwXIfr",
+  googleMaps: "https://maps.app.goo.gl/CGgdPNjevd54Gdrm9?g_st=ic",
   location: "Singapore",
-  showroom: "Private showroom by appointment",
-  googleMaps: "https://maps.app.goo.gl/CGgdPNjevd54Gdrm9?g_st=ic"
+  showroom: "Private showroom by appointment"
 };
 
 export const products = [
@@ -24,14 +23,15 @@ export const products = [
     price: "Price on request",
     category: "rolex",
     featured: true,
-    hero: true,
     image: "",
     gallery: [],
-    specs: { case: "40mm", movement: "Automatic Chronograph", material: "Oystersteel", bracelet: "Oyster Bracelet" },
-    description: {
-      en: "A modern sports chronograph with strong global recognition, excellent liquidity and enduring collector appeal.",
-      vi: "Chronograph thể thao hiện đại với độ nhận diện toàn cầu, thanh khoản tốt và sức hút sưu tầm bền vững."
-    }
+    specs: {
+      case: "40mm",
+      movement: "Automatic Chronograph",
+      material: "Oystersteel",
+      bracelet: "Oyster Bracelet"
+    },
+    description: "A modern sports chronograph with strong global recognition and collector demand."
   },
   {
     id: "patek-nautilus-5711",
@@ -45,14 +45,15 @@ export const products = [
     price: "Price on request",
     category: "patek",
     featured: true,
-    hero: true,
     image: "",
     gallery: [],
-    specs: { case: "40mm", movement: "Automatic", material: "Stainless Steel", bracelet: "Integrated Bracelet" },
-    description: {
-      en: "An icon of the luxury sports category, known for refined proportions, scarcity and serious collector demand.",
-      vi: "Biểu tượng của luxury sports watch, nổi bật bởi tỷ lệ tinh tế, độ khan hiếm và nhu cầu sưu tầm cao."
-    }
+    specs: {
+      case: "40mm",
+      movement: "Automatic",
+      material: "Stainless Steel",
+      bracelet: "Integrated Bracelet"
+    },
+    description: "An icon of the luxury sports category, known for scarcity and collector appeal."
   },
   {
     id: "rolex-gmt-master-ii-batman",
@@ -66,14 +67,15 @@ export const products = [
     price: "Price on request",
     category: "rolex",
     featured: true,
-    hero: false,
     image: "",
     gallery: [],
-    specs: { case: "40mm", movement: "Automatic GMT", material: "Oystersteel", bracelet: "Jubilee / Oyster" },
-    description: {
-      en: "A highly wearable GMT reference with strong collector demand and excellent everyday versatility.",
-      vi: "Mẫu GMT dễ đeo, nhu cầu sưu tầm cao và rất hợp sử dụng hằng ngày."
-    }
+    specs: {
+      case: "40mm",
+      movement: "Automatic GMT",
+      material: "Oystersteel",
+      bracelet: "Jubilee / Oyster"
+    },
+    description: "A highly wearable GMT reference with strong everyday versatility."
   },
   {
     id: "patek-aquanaut-5167a",
@@ -87,14 +89,15 @@ export const products = [
     price: "Price on request",
     category: "patek",
     featured: true,
-    hero: false,
     image: "",
     gallery: [],
-    specs: { case: "40.8mm", movement: "Automatic", material: "Stainless Steel", bracelet: "Tropical Strap" },
-    description: {
-      en: "A clean modern Patek sports reference with understated presence and consistent global demand.",
-      vi: "Mẫu Patek thể thao hiện đại, tinh tế và có nhu cầu ổn định trên thị trường toàn cầu."
-    }
+    specs: {
+      case: "40.8mm",
+      movement: "Automatic",
+      material: "Stainless Steel",
+      bracelet: "Tropical Strap"
+    },
+    description: "A clean modern Patek sports reference with understated presence."
   },
   {
     id: "ap-royal-oak-15500st",
@@ -108,14 +111,15 @@ export const products = [
     price: "Price on request",
     category: "ap",
     featured: true,
-    hero: false,
     image: "",
     gallery: [],
-    specs: { case: "41mm", movement: "Automatic", material: "Stainless Steel", bracelet: "Integrated Bracelet" },
-    description: {
-      en: "A modern Royal Oak reference with unmistakable architecture and strong collector presence.",
-      vi: "Royal Oak hiện đại với thiết kế nhận diện mạnh và sức hút lớn trong giới sưu tầm."
-    }
+    specs: {
+      case: "41mm",
+      movement: "Automatic",
+      material: "Stainless Steel",
+      bracelet: "Integrated Bracelet"
+    },
+    description: "A modern Royal Oak reference with unmistakable architecture."
   },
   {
     id: "rm-010",
@@ -129,26 +133,40 @@ export const products = [
     price: "Price on request",
     category: "rm",
     featured: false,
-    hero: false,
     image: "",
     gallery: [],
-    specs: { case: "Tonneau", movement: "Automatic", material: "Titanium / Gold", bracelet: "Rubber Strap" },
-    description: {
-      en: "A high-impact collector piece for clients seeking distinctive modern watchmaking.",
-      vi: "Mẫu sưu tầm cá tính mạnh dành cho khách thích đồng hồ hiện đại nổi bật."
-    }
+    specs: {
+      case: "Tonneau",
+      movement: "Automatic",
+      material: "Titanium / Gold",
+      bracelet: "Rubber Strap"
+    },
+    description: "A distinctive modern collector piece with strong wrist presence."
+  }
+];
+
+export const services = [
+  {
+    title: "Authentication",
+    copy: "Independent inspection before every acquisition."
+  },
+  {
+    title: "Private Showroom",
+    copy: "Viewings by appointment in Singapore."
+  },
+  {
+    title: "Sourcing",
+    copy: "Rare references sourced through private channels."
+  },
+  {
+    title: "Consignment",
+    copy: "Confidential selling for selected timepieces."
   }
 ];
 
 export const brandStories = [
-  { name: "Rolex", slug: "rolex", title: { en: "Timeless professional icons.", vi: "Biểu tượng professional trường tồn." }, copy: { en: "From Daytona to GMT-Master II and Submariner, Rolex remains a benchmark for recognition, reliability and liquidity.", vi: "Từ Daytona đến GMT-Master II và Submariner, Rolex vẫn là chuẩn mực về nhận diện, độ tin cậy và thanh khoản." } },
-  { name: "Patek Philippe", slug: "patek", title: { en: "Heritage for serious collectors.", vi: "Di sản dành cho nhà sưu tầm nghiêm túc." }, copy: { en: "Scarcity, refinement and long-term desirability define the most important Patek references.", vi: "Độ khan hiếm, sự tinh tế và sức hút dài hạn định hình các reference Patek quan trọng." } },
-  { name: "Audemars Piguet", slug: "ap", title: { en: "Avant-garde architecture.", vi: "Kiến trúc avant-garde." }, copy: { en: "Royal Oak references remain central to modern collecting, blending sport, design and haute horlogerie.", vi: "Royal Oak vẫn là tâm điểm sưu tầm hiện đại, kết hợp thể thao, thiết kế và haute horlogerie." } },
-  { name: "Richard Mille", slug: "rm", title: { en: "Engineering as statement.", vi: "Kỹ thuật như một tuyên ngôn." }, copy: { en: "A category for collectors who value innovation, scarcity and unmistakable wrist presence.", vi: "Dành cho người sưu tầm coi trọng đổi mới, khan hiếm và độ hiện diện mạnh trên cổ tay." } }
-];
-
-export const insights = [
-  { tag: "Market", title: { en: "Liquidity starts with condition.", vi: "Thanh khoản bắt đầu từ tình trạng." }, copy: { en: "The cleanest watches with complete sets and coherent pricing continue to attract the best buyers.", vi: "Những chiếc đồng hồ đẹp, full set và giá hợp lý vẫn thu hút người mua chất lượng nhất." } },
-  { tag: "Sourcing", title: { en: "Rare references require patience.", vi: "Reference hiếm cần sự kiên nhẫn." }, copy: { en: "Private sourcing is less about speed and more about matching the right example with the right collector.", vi: "Sourcing riêng không chỉ là tốc độ, mà là tìm đúng chiếc phù hợp với đúng người sưu tầm." } },
-  { tag: "Consignment", title: { en: "Discretion protects value.", vi: "Sự kín đáo bảo vệ giá trị." }, copy: { en: "A controlled private sale process can preserve positioning for important watches.", vi: "Quy trình bán riêng được kiểm soát có thể giữ vị thế tốt cho những mẫu quan trọng." } }
+  { name: "Rolex", copy: "Professional icons with global recognition." },
+  { name: "Patek Philippe", copy: "Collector references with lasting appeal." },
+  { name: "Audemars Piguet", copy: "Modern haute horlogerie with architectural presence." },
+  { name: "Richard Mille", copy: "Contemporary watchmaking with unmistakable impact." }
 ];

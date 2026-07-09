@@ -8,17 +8,14 @@ export default function Header({ t }) {
   const [open, setOpen] = useState(false);
 
   const nav = [
-    ["/", t.nav.home],
     ["/collection", t.nav.collection],
-    ["/brands", t.nav.brands],
     ["/services", t.nav.services],
-    ["/sell-your-watch", t.nav.sell],
-    ["/market-insights", t.nav.insights],
+    ["/about", t.nav.about],
     ["/contact", t.nav.contact]
   ];
 
   return (
-    <header className="site-header clean-header">
+    <header className="site-header">
       <a className="brand" href="/">
         <img src="/assets/jad-krono-logo.png" alt="JAD KRONO" />
       </a>
@@ -29,11 +26,9 @@ export default function Header({ t }) {
         ))}
       </nav>
 
-      <div className="header-actions">
-        <button className="menu-btn" onClick={() => setOpen(true)} aria-label="Open menu">
-          <Menu size={22} />
-        </button>
-      </div>
+      <button className="menu-btn" onClick={() => setOpen(true)} aria-label="Open menu">
+        <Menu size={22} />
+      </button>
 
       <div className={open ? "mobile-panel open" : "mobile-panel"}>
         <button className="close-btn" onClick={() => setOpen(false)} aria-label="Close menu">
@@ -43,6 +38,7 @@ export default function Header({ t }) {
         <img src="/assets/jad-krono-logo.png" alt="JAD KRONO" />
 
         <nav>
+          <a href="/" onClick={() => setOpen(false)}>Home</a>
           {nav.map(([href, label]) => (
             <a key={href} href={href} onClick={() => setOpen(false)}>{label}</a>
           ))}

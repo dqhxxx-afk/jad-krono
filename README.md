@@ -1,23 +1,25 @@
-# JAD KRONO Next.js V13 English Only + Clean Header
+# JAD KRONO 2.0 Quiet Luxury
 
-V13 removes the Vietnamese language switcher and cleans the header.
+This version is rebuilt from the actual source currently running on GitHub.
 
-## Fixed
+## Main changes
 
-- Removed EN / VI language switcher from header
-- Website now runs English-only
-- Removed visible phone number from header
-- Header now shows only:
-  - Logo
-  - Navigation
-  - Mobile menu button
-- Floating WhatsApp remains
-- Contact page still contains full contact channels
-- Mobile menu includes WhatsApp, Instagram, Facebook and Google Maps
+- English only
+- Removed EN / VI language switcher
+- Removed phone number from header
+- Simplified header navigation
+- Reduced copy across the site
+- Removed duplicated contact blocks
+- Cleaner Contact section
+- Minimal footer
+- More boutique-style Collection
+- Product detail pages kept
+- Google Maps, Facebook, Instagram, WhatsApp retained
+- SEO sitemap and robots included
 
 ## Upload to GitHub
 
-Upload the contents of this folder to your GitHub repository root:
+Upload the contents of this folder to the repository root:
 
 - app/
 - components/
@@ -29,3 +31,20 @@ Upload the contents of this folder to your GitHub repository root:
 - .gitignore
 
 Do not upload the parent folder itself.
+
+## Update watches
+
+Edit:
+
+data/site.js
+
+## Add product images
+
+Upload images to:
+
+public/products/
+
+Then set product image paths in data/site.js:
+
+image: "/products/daytona.jpg"
+gallery: ["/products/daytona.jpg", "/products/daytona-side.jpg"]
