@@ -16,7 +16,7 @@ export default function WatchCard({ product, lang, enquireText, large = false })
         <div className="watch-meta"><em>{product.year}</em><em>{product.condition}</em><em>{product.set}</em></div>
         <p className="watch-copy">{product.description[lang]}</p>
         <div className="watch-specs"><small>{product.specs.case}</small><small>{product.specs.movement}</small><small>{product.specs.material}</small><small>{product.specs.bracelet}</small></div>
-        <div className="watch-actions"><span>{product.price}</span><a href={`${site.whatsapp}?text=${message}`} target="_blank">{enquireText}</a></div>
+        <div className="watch-actions"><span>{product.price}</span><a href={`/collection/${product.id}`}>View Details</a><a href={`${site.whatsapp}?text=${message}`} target="_blank">{enquireText}</a></div>
       </div>
     </article>
   );

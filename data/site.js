@@ -25,6 +25,7 @@ export const products = [
     featured: true,
     hero: true,
     image: "",
+    gallery: [],
     specs: { case: "40mm", movement: "Automatic Chronograph", material: "Oystersteel", bracelet: "Oyster Bracelet" },
     description: {
       en: "A modern sports chronograph with strong global recognition, excellent liquidity and enduring collector appeal.",
@@ -45,6 +46,7 @@ export const products = [
     featured: true,
     hero: true,
     image: "",
+    gallery: [],
     specs: { case: "40mm", movement: "Automatic", material: "Stainless Steel", bracelet: "Integrated Bracelet" },
     description: {
       en: "An icon of the luxury sports category, known for refined proportions, scarcity and serious collector demand.",
@@ -65,6 +67,7 @@ export const products = [
     featured: true,
     hero: false,
     image: "",
+    gallery: [],
     specs: { case: "40mm", movement: "Automatic GMT", material: "Oystersteel", bracelet: "Jubilee / Oyster" },
     description: {
       en: "A highly wearable GMT reference with strong collector demand and excellent everyday versatility.",
@@ -85,6 +88,7 @@ export const products = [
     featured: true,
     hero: false,
     image: "",
+    gallery: [],
     specs: { case: "40.8mm", movement: "Automatic", material: "Stainless Steel", bracelet: "Tropical Strap" },
     description: {
       en: "A clean modern Patek sports reference with understated presence and consistent global demand.",
@@ -105,6 +109,7 @@ export const products = [
     featured: true,
     hero: false,
     image: "",
+    gallery: [],
     specs: { case: "41mm", movement: "Automatic", material: "Stainless Steel", bracelet: "Integrated Bracelet" },
     description: {
       en: "A modern Royal Oak reference with unmistakable architecture and strong collector presence.",
@@ -125,6 +130,7 @@ export const products = [
     featured: false,
     hero: false,
     image: "",
+    gallery: [],
     specs: { case: "Tonneau", movement: "Automatic", material: "Titanium / Gold", bracelet: "Rubber Strap" },
     description: {
       en: "A high-impact collector piece for clients seeking distinctive modern watchmaking.",

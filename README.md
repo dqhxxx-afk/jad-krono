@@ -1,17 +1,25 @@
-# JAD KRONO Next.js V7 Luxury Polish
+# JAD KRONO Next.js V8 Boutique Collection
 
-This is the V7 Luxury Polish upgrade.
+V8 turns the website from a polished landing site into a stronger boutique dealer website.
 
-## What changed from V6
+## New in V8
 
-- More premium hero section
-- Cleaner mobile spacing
-- Improved luxury visual rhythm
-- Better CTA hierarchy
-- Stronger trust and dealer positioning
-- More polished product cards
-- Improved responsive behavior
-- README clearly identifies V7
+- Individual watch detail pages
+- Product gallery layout
+- Related watch recommendations
+- Better inquiry flow per watch
+- Product pages generated from `data/site.js`
+- Stronger collection structure
+- SEO-ready product URLs
+- Keeps V7 luxury visual polish
+
+## Important URLs
+
+Collection:
+`/collection`
+
+Product example:
+`/collection/rolex-daytona-126500ln`
 
 ## Upload to GitHub
 
@@ -28,18 +36,35 @@ Upload the contents of this folder to your GitHub repository root:
 
 Do not upload the parent folder itself.
 
-## Product editing
+## Add or edit watches
 
 Edit:
 
-data/site.js
+`data/site.js`
 
-## Product images
+Each product needs:
+
+- id
+- brand
+- model
+- reference
+- year
+- condition
+- set
+- status
+- price
+- category
+- image
+- gallery
+
+## Add product images
 
 Put images into:
 
-public/products/
+`public/products/`
 
-Then edit the product image path:
+Then use paths like:
 
-image: "/products/your-image.jpg"
+`image: "/products/daytona-main.jpg"`
+
+`gallery: ["/products/daytona-main.jpg", "/products/daytona-side.jpg"]`

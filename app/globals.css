@@ -242,3 +242,285 @@ body {
     padding: 10px 16px;
   }
 }
+
+
+/* V8 Boutique Collection */
+.product-detail-shell {
+  padding-top: 120px;
+}
+
+.product-detail-hero {
+  min-height: 92vh;
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 60px;
+  align-items: center;
+  padding: 70px 5.5% 90px;
+  background:
+    radial-gradient(circle at 18% 28%, rgba(198,161,91,.12), transparent 30%),
+    radial-gradient(circle at 80% 42%, rgba(239,209,138,.1), transparent 30%),
+    #050505;
+}
+
+.detail-gallery {
+  display: grid;
+  gap: 16px;
+}
+
+.main-watch-frame {
+  position: relative;
+  min-height: 620px;
+  border: 1px solid var(--line);
+  background:
+    radial-gradient(circle at center, rgba(198,161,91,.18), transparent 38%),
+    linear-gradient(145deg,#16120c,#050505);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.main-watch-frame:before {
+  content: "";
+  position: absolute;
+  inset: 20px;
+  border: 1px solid rgba(198,161,91,.16);
+  pointer-events: none;
+}
+
+.main-watch-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.large-watch-placeholder {
+  width: 240px;
+  height: 240px;
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 0 80px rgba(198,161,91,.16);
+}
+
+.large-watch-placeholder:after {
+  content: "";
+  position: absolute;
+  width: 92px;
+  height: 10px;
+  background: var(--gold);
+  left: 74px;
+  top: 116px;
+  transform: rotate(-30deg);
+}
+
+.thumb-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.thumb {
+  min-height: 126px;
+  border: 1px solid var(--line);
+  background: radial-gradient(circle at center, rgba(198,161,91,.08), transparent 42%), #090909;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumb div {
+  width: 45px;
+  height: 45px;
+  border: 1px solid rgba(198,161,91,.42);
+  border-radius: 50%;
+}
+
+.detail-info h1 {
+  font-size: clamp(58px, 7vw, 112px);
+  margin-bottom: 12px;
+}
+
+.detail-info h2 {
+  font-family: Inter, sans-serif;
+  color: var(--gold2);
+  font-size: clamp(24px, 3vw, 42px);
+  letter-spacing: 2px;
+  margin-bottom: 24px;
+}
+
+.detail-copy {
+  color: var(--muted);
+  font-size: 18px;
+  max-width: 680px;
+  margin-bottom: 28px;
+}
+
+.detail-status-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.035);
+  padding: 18px;
+  margin-bottom: 24px;
+}
+
+.detail-status-row span {
+  color: var(--gold2);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 12px;
+}
+
+.detail-status-row strong {
+  color: var(--ivory);
+}
+
+.detail-spec-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.detail-spec-list div {
+  border: 1px solid rgba(255,255,255,.09);
+  background: rgba(255,255,255,.025);
+  padding: 15px;
+}
+
+.detail-spec-list span {
+  display: block;
+  color: var(--muted);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  margin-bottom: 6px;
+}
+
+.detail-spec-list strong {
+  color: var(--ivory);
+}
+
+.detail-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 26px;
+}
+
+.detail-note {
+  border-left: 1px solid var(--gold);
+  padding-left: 18px;
+  color: var(--muted);
+}
+
+.detail-note strong {
+  color: var(--ivory);
+}
+
+.detail-note p {
+  margin-top: 6px;
+}
+
+.detail-editorial {
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: 60px;
+  padding: 95px 5.5%;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: linear-gradient(90deg, rgba(198,161,91,.08), transparent), #090909;
+}
+
+.detail-editorial p {
+  color: var(--muted);
+  font-size: 18px;
+  max-width: 780px;
+}
+
+.related-section {
+  padding: 100px 5.5%;
+}
+
+.watch-actions {
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.watch-actions a:first-of-type {
+  color: var(--ivory);
+}
+
+.watch-actions a:last-of-type {
+  color: var(--gold2);
+}
+
+@media(max-width:1080px) {
+  .product-detail-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .main-watch-frame {
+    min-height: 500px;
+  }
+
+  .detail-editorial {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media(max-width:720px) {
+  .product-detail-shell {
+    padding-top: 92px;
+  }
+
+  .product-detail-hero {
+    padding: 48px 5% 70px;
+    gap: 34px;
+  }
+
+  .main-watch-frame {
+    min-height: 330px;
+  }
+
+  .large-watch-placeholder {
+    width: 160px;
+    height: 160px;
+  }
+
+  .large-watch-placeholder:after {
+    width: 64px;
+    left: 48px;
+    top: 78px;
+  }
+
+  .thumb-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .thumb {
+    min-height: 82px;
+  }
+
+  .detail-spec-list {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-actions {
+    display: grid;
+  }
+
+  .detail-editorial,
+  .related-section {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
