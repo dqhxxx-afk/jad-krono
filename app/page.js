@@ -4,7 +4,6 @@ import { useMemo } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import WatchCard from "../components/WatchCard";
-import { BrandTicker } from "../components/BrandTicker";
 import { useLanguage } from "../components/useLanguage";
 import { useWatches } from "../components/useWatches";
 import { services, site } from "../data/site";
@@ -35,7 +34,6 @@ export default function Home() {
           </div>
         </section>
 
-        <BrandTicker />
 
         <section className="collection-section">
           <div className="section-heading">

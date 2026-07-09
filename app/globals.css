@@ -3375,3 +3375,119 @@ body:has(.mobile-menu) .wa-float {
     font-size:22px !important;
   }
 }
+
+/* JAD KRONO V2.8 - Clean Brand Filter
+   Fixes duplicate / oversized brand tabs under hero and makes collection tabs one calm row. */
+
+/* Remove homepage brand strip completely. Brand browsing belongs in Collection, not screaming below the hero. */
+body .hero + .brand-strip,
+body .hero + .brand-ticker-nav,
+body main > .brand-strip,
+body main > .brand-ticker-nav {
+  display: none !important;
+}
+
+/* Collection brand filter: single elegant rail, no chunky button grid. */
+.collection-page-final .collection-section.compact,
+.v27-collection-section {
+  padding-top: 30px !important;
+}
+
+.v27-filter-panel {
+  display: block !important;
+  margin: 0 0 34px 0 !important;
+}
+
+.v27-brand-rail {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  gap: clamp(22px, 2.4vw, 42px) !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  scrollbar-width: none !important;
+  border-top: 1px solid rgba(255,255,255,.10) !important;
+  border-bottom: 1px solid rgba(255,255,255,.10) !important;
+  padding: 16px 0 14px !important;
+  margin-bottom: 20px !important;
+}
+
+.v27-brand-rail::-webkit-scrollbar {
+  display: none !important;
+}
+
+.v27-brand-rail button {
+  flex: 0 0 auto !important;
+  border: 0 !important;
+  border-bottom: 1px solid transparent !important;
+  background: transparent !important;
+  padding: 0 0 5px 0 !important;
+  color: rgba(244,239,230,.50) !important;
+  font-family: Georgia, 'Times New Roman', serif !important;
+  font-size: clamp(18px, 1.35vw, 23px) !important;
+  font-weight: 500 !important;
+  line-height: 1.1 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  white-space: nowrap !important;
+  cursor: pointer !important;
+}
+
+.v27-brand-rail button.active,
+.v27-brand-rail button:hover {
+  color: var(--ivory) !important;
+  border-color: var(--gold) !important;
+}
+
+.v27-filter-panel input {
+  display: block !important;
+  width: min(100%, 420px) !important;
+  min-height: 44px !important;
+  border: 1px solid rgba(255,255,255,.12) !important;
+  background: #050505 !important;
+  color: var(--ivory) !important;
+  padding: 0 15px !important;
+  margin-left: auto !important;
+}
+
+@media (min-width: 1280px) {
+  .v27-filter-panel {
+    display: grid !important;
+    grid-template-columns: 1fr minmax(280px, 420px) !important;
+    gap: 32px !important;
+    align-items: start !important;
+  }
+
+  .v27-brand-rail {
+    margin-bottom: 0 !important;
+  }
+
+  .v27-filter-panel input {
+    margin-left: 0 !important;
+  }
+}
+
+@media (max-width: 720px) {
+  .collection-page-final .page-hero,
+  .collection-hero-final {
+    padding-bottom: 20px !important;
+  }
+
+  .v27-filter-panel {
+    margin-bottom: 28px !important;
+  }
+
+  .v27-brand-rail {
+    gap: 26px !important;
+    padding: 14px 0 13px !important;
+    margin-bottom: 18px !important;
+  }
+
+  .v27-brand-rail button {
+    font-size: 18px !important;
+  }
+
+  .v27-filter-panel input {
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+}

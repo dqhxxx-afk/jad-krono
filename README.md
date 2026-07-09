@@ -1,13 +1,16 @@
-# JAD KRONO V2.7 Final Mobile Tab + Favicon Fix
+# JAD KRONO V2.8 Clean Brand Filter
 
 ## Fixed
 
-- Replaced old browser/tab favicon with JAD KRONO monogram icon.
-- Added favicon.ico, favicon-16x16, favicon-32x32, icon.png, apple-touch-icon.png, and site.webmanifest.
-- Updated Next metadata icons and Open Graph image.
-- Removed bulky boxed brand tabs on Collection.
-- Brand filter now uses elegant text tabs with underline.
-- Mobile brand filter is one horizontal scroll row, not a large wrapped grid.
-- Product detail routing remains stable using generated slugs.
+- Removed the oversized brand strip directly under the homepage hero.
+- Collection now has only one brand filter area.
+- Brand filters are a single refined horizontal rail, not a chunky multi-row grid.
+- Mobile brand filter scrolls horizontally in one line.
+- Desktop brand filter is calmer and better proportioned.
+- Kept V2.7 favicon fixes and product routing fixes.
 
-Upload all files to GitHub repository root and redeploy.
+## Upload
+
+Upload all contents to GitHub repository root and redeploy on Vercel.
+
+After deployment, clear Safari cache or open a new private tab if old favicon/brand strip still appears.

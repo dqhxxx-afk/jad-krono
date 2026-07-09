@@ -12,6 +12,6 @@
     "@supabase/supabase-js": "latest"
   },
   "devDependencies": {},
-  "name": "jad-krono-v2-7-final-mobile-tab-fix",
-  "version": "2.7.0"
+  "name": "jad-krono-v2-8-clean-brand-filter",
+  "version": "2.8.0"
 }
