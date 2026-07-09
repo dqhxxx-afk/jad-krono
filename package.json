@@ -12,6 +12,6 @@
     "@supabase/supabase-js": "latest"
   },
   "devDependencies": {},
-  "name": "jad-krono-3-1-build-fixed",
-  "version": "3.1.0"
+  "name": "jad-krono-3-2-npm-install-fixed",
+  "version": "3.2.0"
 }
