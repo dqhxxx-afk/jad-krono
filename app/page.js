@@ -1,189 +1,63 @@
 "use client";
-
 import { useMemo, useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import ProductCard from "../components/ProductCard";
+import WatchCard from "../components/WatchCard";
 import { useLanguage } from "../components/useLanguage";
-import { products, brands, insights, socials } from "../data/products";
+import { products, brandStories, insights, site } from "../data/site";
 
 export default function Home() {
   const { lang, setLang, t } = useLanguage();
   const [filter, setFilter] = useState("all");
   const [query, setQuery] = useState("");
-
-  const featuredProducts = useMemo(() => {
-    return products
-      .filter((p) => p.featured)
-      .filter((p) => filter === "all" || p.category === filter)
-      .filter((p) => `${p.brand} ${p.model} ${p.reference}`.toLowerCase().includes(query.toLowerCase()));
-  }, [filter, query]);
+  const heroProducts = products.filter((p) => p.hero);
+  const shownProducts = useMemo(() => products.filter((p) => p.featured).filter((p) => filter === "all" || p.category === filter).filter((p) => `${p.brand} ${p.model} ${p.reference}`.toLowerCase().includes(query.toLowerCase())), [filter, query]);
 
   return (
     <>
-      <a className="floating-whatsapp" href={`${socials.whatsapp}?text=Hello%20JAD%20KRONO%2C%20I%20would%20like%20to%20enquire%20about%20a%20watch.`} target="_blank">WhatsApp</a>
+      <a className="wa-float" href={`${site.whatsapp}?text=Hello%20JAD%20KRONO%2C%20I%20would%20like%20to%20make%20a%20private%20enquiry.`} target="_blank"><span>Need assistance?</span>WhatsApp</a>
       <Header lang={lang} setLang={setLang} t={t} />
-
       <main>
-        <section className="hero">
-          <div className="hero-bg" />
-          <div className="hero-inner">
+        <section className="signature-hero">
+          <div className="hero-orbit" /><div className="hero-shade" />
+          <div className="hero-content">
             <p className="eyebrow">{t.hero.eyebrow}</p>
             <h1>{t.hero.title}</h1>
-            <p className="hero-copy">{t.hero.copy}</p>
-            <div className="hero-actions">
-              <a href="/collection" className="btn primary">{t.hero.primary}</a>
-              <a href="/sell-your-watch" className="btn secondary">{t.hero.secondary}</a>
-            </div>
+            <p>{t.hero.copy}</p>
+            <div className="hero-buttons"><a href="/collection" className="btn gold">{t.hero.primary}</a><a href={site.whatsapp} target="_blank" className="btn ghost">{t.hero.secondary}</a></div>
           </div>
-
-          <div className="hero-stats">
-            <div><strong>100%</strong><span>{t.stats.authentic}</span></div>
-            <div><strong>SG</strong><span>{t.stats.appointment}</span></div>
-            <div><strong>24h</strong><span>{t.stats.response}</span></div>
-          </div>
+          <div className="hero-feature">{heroProducts.map((product) => <div className="hero-watch" key={product.id}><span>{product.brand}</span><strong>{product.reference}</strong></div>)}</div>
         </section>
 
-        <section className="marquee">
-          {brands.map((brand) => <span key={brand.name}>{brand.name.toUpperCase()}</span>)}
+        <section className="brand-ticker">{["Rolex","Patek Philippe","Audemars Piguet","Richard Mille","Tudor","Hublot","Cartier","Omega"].map((b) => <span key={b}>{b}</span>)}</section>
+
+        <section className="collection-section">
+          <div className="section-heading"><p className="eyebrow">{t.collection.eyebrow}</p><h2>{t.collection.title}</h2><p>{t.collection.copy}</p></div>
+          <div className="collection-toolbar">
+            <div className="filters">{["all","rolex","patek","ap","rm","tudor","hublot"].map((item) => <button key={item} onClick={() => setFilter(item)} className={filter === item ? "active" : ""}>{item === "all" ? t.collection.all : item === "patek" ? "Patek Philippe" : item === "ap" ? "AP" : item === "rm" ? "RM" : item.toUpperCase()}</button>)}</div>
+            <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder={t.collection.search} />
+          </div>
+          <div className="watch-grid">{shownProducts.map((product, index) => <WatchCard key={product.id} product={product} lang={lang} enquireText={t.collection.enquire} large={index === 0} />)}</div>
+          {shownProducts.length === 0 ? <p className="empty">{t.collection.noResults}</p> : null}
         </section>
 
-        <section className="section">
-          <div className="section-head">
-            <p className="eyebrow">{t.collection.eyebrow}</p>
-            <h2>{t.collection.title}</h2>
-            <p>{t.collection.copy}</p>
-          </div>
-
-          <div className="toolbar">
-            <div className="filters">
-              {["all", "rolex", "patek", "ap", "rm", "tudor", "hublot"].map((item) => (
-                <button key={item} className={filter === item ? "filter active" : "filter"} onClick={() => setFilter(item)}>
-                  {item === "all" ? t.collection.all : item === "patek" ? "Patek Philippe" : item === "ap" ? "AP" : item === "rm" ? "RM" : item[0].toUpperCase() + item.slice(1)}
-                </button>
-              ))}
-            </div>
-            <input className="search-input" value={query} onChange={(e) => setQuery(e.target.value)} placeholder={t.collection.search} />
-          </div>
-
-          <div className="watch-grid">
-            {featuredProducts.map((product) => (
-              <ProductCard key={product.id} product={product} lang={lang} enquireText={t.collection.enquire} />
-            ))}
-          </div>
-          {featuredProducts.length === 0 ? <p className="empty-text">{t.collection.noResults}</p> : null}
+        <section className="trust-section">
+          <div><p className="eyebrow">JAD KRONO STANDARD</p><h2>{t.trust.title}</h2><p>{t.trust.copy}</p></div>
+          <div className="trust-list">{t.trust.points.map((point, index) => <article key={point}><span>{String(index + 1).padStart(2, "0")}</span><strong>{point}</strong></article>)}</div>
         </section>
 
-        <section className="services-strip">
-          {t.services.items.slice(0, 4).map(([title, copy]) => (
-            <article key={title}>
-              <h3>{title}</h3>
-              <p>{copy}</p>
-            </article>
-          ))}
-        </section>
+        <section className="brand-experience"><div className="section-heading"><p className="eyebrow">{t.brands.eyebrow}</p><h2>{t.brands.title}</h2></div><div className="brand-story-grid">{brandStories.map((brand) => <article key={brand.name}><span>{brand.name}</span><h3>{brand.title[lang]}</h3><p>{brand.copy[lang]}</p></article>)}</div></section>
 
-        <section className="split-section">
-          <div className="split-copy">
-            <p className="eyebrow">{t.why.eyebrow}</p>
-            <h2>{t.why.title}</h2>
-            <p>{t.why.copy}</p>
-          </div>
+        <section className="services-section"><div className="section-heading"><p className="eyebrow">{t.services.eyebrow}</p><h2>{t.services.title}</h2></div><div className="service-grid">{t.services.items.map(([title, copy]) => <article key={title}><h3>{title}</h3><p>{copy}</p></article>)}</div></section>
 
-          <div className="trust-grid">
-            {t.why.points.map((point, index) => (
-              <div key={point}><strong>{String(index + 1).padStart(2, "0")}</strong><span>{point}</span></div>
-            ))}
-          </div>
-        </section>
+        <section className="process-section"><div className="section-heading"><p className="eyebrow">{t.process.eyebrow}</p><h2>{t.process.title}</h2></div><div className="process-grid">{t.process.items.map(([title, copy], index) => <article key={title}><span>{String(index + 1).padStart(2, "0")}</span><h3>{title}</h3><p>{copy}</p></article>)}</div></section>
 
-        <section className="section dark-panel">
-          <div className="section-head">
-            <p className="eyebrow">{t.process.eyebrow}</p>
-            <h2>{t.process.title}</h2>
-          </div>
-          <div className="process-grid">
-            {t.process.items.map(([title, copy], index) => (
-              <div className="process-card" key={title}>
-                <span>{String(index + 1).padStart(2, "0")}</span>
-                <h3>{title}</h3>
-                <p>{copy}</p>
-              </div>
-            ))}
-          </div>
-        </section>
+        <section className="auth-section"><div className="auth-panel"><p className="eyebrow">{t.authenticity.eyebrow}</p><h2>{t.authenticity.title}</h2><p>{t.authenticity.copy}</p><div>{t.authenticity.items.map((item) => <span key={item}>{item}</span>)}</div></div></section>
 
-        <section className="auth-section">
-          <div className="auth-card">
-            <p className="eyebrow">{t.authenticity.eyebrow}</p>
-            <h2>{t.authenticity.title}</h2>
-            <p>{t.authenticity.copy}</p>
-            <ul>{t.authenticity.items.map((item) => <li key={item}>{item}</li>)}</ul>
-          </div>
-        </section>
+        <section className="insights-section"><div className="section-heading"><p className="eyebrow">{t.insights.eyebrow}</p><h2>{t.insights.title}</h2></div><div className="insight-grid">{insights.map((insight) => <article key={insight.tag}><span>{insight.tag}</span><h3>{insight.title[lang]}</h3><p>{insight.copy[lang]}</p></article>)}</div></section>
 
-        <section className="brands-section">
-          <div className="section-head">
-            <p className="eyebrow">{t.brands.eyebrow}</p>
-            <h2>{t.brands.title}</h2>
-          </div>
-          <div className="brand-wall">
-            {brands.map((brand) => <span key={brand.name}>{brand.name}</span>)}
-          </div>
-        </section>
-
-        <section className="section insights-preview">
-          <div className="section-head">
-            <p className="eyebrow">{t.insight.eyebrow}</p>
-            <h2>{t.insight.title}</h2>
-          </div>
-          <div className="insight-grid">
-            {insights.map((insight) => (
-              <article className="insight-card" key={insight.tag}>
-                <span>{insight.tag}</span>
-                <h3>{insight.title[lang]}</h3>
-                <p>{insight.copy[lang]}</p>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section className="contact-section">
-          <div className="contact-copy">
-            <p className="eyebrow">{t.appointment.eyebrow}</p>
-            <h2>{t.appointment.title}</h2>
-            <p>{t.appointment.copy}</p>
-          </div>
-
-          <div className="contact-panel">
-            <a href={socials.whatsapp} target="_blank">WhatsApp: +65 8699 6868</a>
-            <a href={`mailto:${socials.email}`}>{socials.email}</a>
-            <a href={socials.instagram} target="_blank">Instagram</a>
-            <a href={socials.facebook} target="_blank">Facebook</a>
-            <span>Singapore • Appointment Only</span>
-            <div className="map-placeholder">Singapore Private Showroom</div>
-            <a className="btn primary" href={`${socials.whatsapp}?text=Hello%20JAD%20KRONO%2C%20I%20would%20like%20to%20book%20a%20private%20viewing.`} target="_blank">
-              {t.appointment.button}
-            </a>
-          </div>
-        </section>
-
-        <section className="faq-section">
-          <div className="section-head">
-            <p className="eyebrow">FAQ</p>
-            <h2>{t.faq.title}</h2>
-          </div>
-          <div className="faq-grid">
-            {t.faq.items.map(([question, answer]) => (
-              <details key={question}>
-                <summary>{question}</summary>
-                <p>{answer}</p>
-              </details>
-            ))}
-          </div>
-        </section>
+        <section className="contact-section"><div><p className="eyebrow">{t.contact.eyebrow}</p><h2>{t.contact.title}</h2><p>{t.contact.copy}</p></div><div className="contact-card"><a href={site.whatsapp} target="_blank">WhatsApp: {site.phoneDisplay}</a><a href={`mailto:${site.email}`}>{site.email}</a><a href={site.instagram} target="_blank">Instagram</a><a href={site.facebook} target="_blank">Facebook</a><span>{site.showroom}</span><div className="map-card">Singapore Private Showroom</div><a className="btn gold" href={site.whatsapp} target="_blank">{t.contact.button}</a></div></section>
       </main>
-
       <Footer t={t} />
     </>
   );

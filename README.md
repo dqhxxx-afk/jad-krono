@@ -1,27 +1,25 @@
-# JAD KRONO Next.js Luxury Dealer V5
+# JAD KRONO Next.js Signature V6 Complete
 
-This is the fuller luxury dealer build.
+This is the complete V6 Signature Edition.
 
 ## Included
-- Home
-- Collection with search and brand filters
-- Brands
-- Services
-- Sell Your Watch
-- About
-- Contact
-- Market Insights
-- EN / VI bilingual UI
-- Instagram / Facebook / WhatsApp links
-- Google Maps placeholder
+
+- Private luxury dealer design
+- Mobile menu
+- EN / VI bilingual content
+- Collection search and filters
+- Brand stories
+- Services pages
+- Market insights
+- Sell your watch form
+- WhatsApp floating button
 - SEO metadata
 - JSON-LD structured data
-- Product data in one file
-- Product image folder
+- Easy product editing in `data/site.js`
 
 ## Upload to GitHub
 
-Keep this structure exactly:
+Upload the contents of this folder to your GitHub repository root:
 
 - app/
 - components/
@@ -32,35 +30,18 @@ Keep this structure exactly:
 - README.md
 - .gitignore
 
-## Add a watch
+Do not upload the parent folder itself.
 
-Edit:
+## Add product images
 
-`data/products.js`
+Put images into:
 
-## Add a product image
+public/products/
 
-Upload image to:
+Then edit product entries inside:
 
-`public/products/`
+data/site.js
 
-Then set the image path inside `data/products.js`:
+Example:
 
-`image: "/products/your-image.jpg"`
-
-## Social links
-
-Edit:
-
-`data/products.js`
-
-At the bottom:
-
-```js
-export const socials = {
-  instagram: "https://instagram.com/jadkrono",
-  facebook: "https://facebook.com/jadkrono",
-  whatsapp: "https://wa.me/6586996868",
-  email: "contact@jadkrono.com"
-};
-```
+image: "/products/daytona.jpg"
