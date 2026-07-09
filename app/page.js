@@ -35,10 +35,10 @@ export default function Home() {
         <section className="hero">
           <div className="hero-orbit" />
           <div className="hero-content">
-            <p className="eyebrow">{t.hero.eyebrow}</p>
-            <h1>{t.hero.title}</h1>
-            <p>{t.hero.copy}</p>
-            <a href="/collection" className="btn gold">{t.hero.primary}</a><p className="hero-note">{t.hero.note}</p>
+            <p className="eyebrow">SINGAPORE PRIVATE WATCH DEALER</p>
+            <h1>Carefully selected. Quietly sourced.</h1>
+            <p>Independent Singapore private watch dealer specialising in modern and collectible luxury timepieces. Viewing by appointment only.</p>
+            <a href="/collection" className="btn gold">View Collection</a><p className="hero-note">{t.hero.note}</p>
           </div>
         </section>
 

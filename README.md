@@ -1,20 +1,13 @@
-# JAD KRONO V2.1 Mobile Footer Fix
+# JAD KRONO V2.3 Contact + Footer Polish
 
-This version focuses only on mobile polish.
+## Changes
 
-## Fixed
-
-- Footer rewritten directly instead of relying only on CSS overrides
-- Mobile footer height reduced
-- Footer links arranged in 2 columns on mobile
-- Social links arranged in 2 columns on mobile
-- Disclaimer updated with stronger independent dealer/trademark wording
-- Legal links include FAQ
-- WhatsApp button moved up so it does not cover footer/legal links
-- Footer appointment wording changed to:
-  - Singapore
+- Contact page redesigned from 5 equal cards to a more luxury/private enquiry layout
+- Footer redesigned to a cleaner minimal boutique style
+- Added copyright
+- Updated disclaimer wording
+- Footer now states:
+  - Independent Singapore Private Watch Dealer
   - Private Viewings by Appointment
-
-## Desktop
-
-Desktop is intentionally left mostly unchanged.
+- Removed repeated footer navigation clutter
+- Desktop and mobile footer spacing improved

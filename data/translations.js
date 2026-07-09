@@ -45,6 +45,6 @@ export const t = {
   },
   footer: {
     line: "Based in Singapore. Built on discretion, authenticity, and long-term relationships with collectors.",
-    disclaimer: "JAD KRONO is an independent Singapore private watch dealer and is not affiliated with or endorsed by any watch manufacturer. All trademarks, brand names and model names remain the property of their respective owners and are used solely for identification purposes."
+    disclaimer: "JAD KRONO is an independent Singapore private watch dealer. We are not affiliated with or endorsed by Rolex, Patek Philippe, Audemars Piguet, Cartier or any other watch manufacturer. All trademarks remain the property of their respective owners and are used solely for identification purposes."
   }
 };
