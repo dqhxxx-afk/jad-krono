@@ -16,6 +16,8 @@ export default function RootLayout({ children }) {
     url: "https://jadkrono.com",
     areaServed: "Singapore",
     telephone: "+65 8699 6868",
+    hasMap: "https://maps.app.goo.gl/CGgdPNjevd54Gdrm9?g_st=ic",
+    address: { "@type": "PostalAddress", addressLocality: "Singapore", addressCountry: "SG" },
     description: "Private luxury watch dealer in Singapore focused on buying, selling, consigning and sourcing important timepieces.",
     sameAs: ["https://instagram.com/jadkrono", "https://www.facebook.com/share/1BjRy9MPKg/?mibextid=wwXIfr"]
   };

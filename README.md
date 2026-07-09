@@ -1,19 +1,17 @@
-# JAD KRONO Next.js V10 Smooth Contact Cleanup
+# JAD KRONO Next.js V11 Maps & Local Trust
 
-V10 cleans up the duplicated contact section and smooths the contact experience.
+V11 adds Google Maps and local trust information to the contact area.
 
-## Fixed
+## Added
 
-- Removed duplicated old contact card
-- Kept one clean Contact / Connect panel
-- Facebook page updated:
-  https://www.facebook.com/share/1BjRy9MPKg/?mibextid=wwXIfr
+- Google Maps link:
+  https://maps.app.goo.gl/CGgdPNjevd54Gdrm9?g_st=ic
+- Private showroom appointment card
+- View on Google Maps button
+- Book Private Viewing button
+- Local business schema map/address support
 - No WeChat
-- WhatsApp, Instagram, Facebook and Email are now displayed once
-- Added showroom appointment card
-- Added sitemap route
-- Added robots route
-- Better contact section mobile behavior
+- Keeps V10 contact cleanup
 
 ## Upload to GitHub
 
@@ -30,8 +28,14 @@ Upload the contents of this folder to your GitHub repository root:
 
 Do not upload the parent folder itself.
 
-## Change links later
+## Change maps link later
 
 Edit:
 
 `data/site.js`
+
+Look for:
+
+```js
+googleMaps: "..."
+```

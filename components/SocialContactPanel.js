@@ -38,9 +38,9 @@ export default function SocialContactPanel({ t }) {
       <div className="v10-showroom-card">
         <div>
           <span>Singapore</span>
-          <strong>Private showroom by appointment</strong>
+          <strong>Private showroom by appointment</strong><p>Singapore location available for scheduled private viewings.</p>
         </div>
-        <a href={site.whatsapp} target="_blank">Book Private Viewing</a>
+        <div className="v11-map-actions"><a href={site.googleMaps} target="_blank">View on Google Maps</a><a href={site.whatsapp} target="_blank">Book Private Viewing</a></div>
       </div>
     </div>
   );

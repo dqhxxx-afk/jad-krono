@@ -7,7 +7,8 @@ export const site = {
   instagram: "https://instagram.com/jadkrono",
   facebook: "https://www.facebook.com/share/1BjRy9MPKg/?mibextid=wwXIfr",
   location: "Singapore",
-  showroom: "Private showroom by appointment"
+  showroom: "Private showroom by appointment",
+  googleMaps: "https://maps.app.goo.gl/CGgdPNjevd54Gdrm9?g_st=ic"
 };
 
 export const products = [
