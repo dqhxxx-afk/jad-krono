@@ -1,19 +1,20 @@
-# JAD KRONO V2.0 Desktop & Mobile Collector Edition
+# JAD KRONO V2.1 Mobile Footer Fix
 
-## Main changes
+This version focuses only on mobile polish.
 
-- Desktop hero improved
-- Mobile hero spacing refined
-- Header logo slightly larger
-- Footer height reduced
-- Product card catalogue feel improved
-- Hover effects kept subtle
-- Brand filter mobile scrolling improved
-- Private Sourcing CTA added
-- Footer legal links include FAQ
-- Metadata refined
-- Copper brand colour aligned closer to logo
+## Fixed
 
-## Upload
+- Footer rewritten directly instead of relying only on CSS overrides
+- Mobile footer height reduced
+- Footer links arranged in 2 columns on mobile
+- Social links arranged in 2 columns on mobile
+- Disclaimer updated with stronger independent dealer/trademark wording
+- Legal links include FAQ
+- WhatsApp button moved up so it does not cover footer/legal links
+- Footer appointment wording changed to:
+  - Singapore
+  - Private Viewings by Appointment
 
-Upload all contents to GitHub repository root.
+## Desktop
+
+Desktop is intentionally left mostly unchanged.

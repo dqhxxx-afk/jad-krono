@@ -1,28 +1,56 @@
+"use client";
+
 import { site } from "../data/site";
 
 export default function Footer({ t }) {
+  const primaryLinks = [
+    ["Collection", "/collection"],
+    ["Sell Your Watch", "/sell-your-watch"],
+    ["Services", "/services"],
+    ["About", "/about"],
+    ["Contact", "/contact"]
+  ];
+
+  const socialLinks = [
+    ["WhatsApp", site.whatsapp],
+    ["Instagram", site.instagram],
+    ["Facebook", site.facebook],
+    ["Google Maps", site.maps]
+  ];
+
   return (
-    <footer className="site-footer">
-      <div>
-        <img src="/assets/jad-krono-logo.png" alt="JAD KRONO" />
-        <p>{t.footer.line}</p>
+    <footer className="site-footer jk-footer-compact">
+      <div className="footer-brand">
+        <a href="/" aria-label="JAD KRONO Home">
+          <img src="/assets/jad-krono-logo.png" alt="JAD KRONO" />
+        </a>
+        <p className="footer-location">Singapore</p>
+        <p className="footer-appointment">Private Viewings by Appointment</p>
       </div>
 
-      <div>
-        <a href="/collection">Collection</a>
-        <a href="/services">Services</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
-      </div>
+      <nav className="footer-nav" aria-label="Footer navigation">
+        {primaryLinks.map(([label, href]) => (
+          <a key={label} href={href}>{label}</a>
+        ))}
+      </nav>
 
-      <div>
-        <a href={site.whatsapp} target="_blank">WhatsApp</a>
-        <a href={site.instagram} target="_blank">Instagram</a>
-        <a href={site.facebook} target="_blank">Facebook</a>
-        <a href={site.googleMaps} target="_blank">Google Maps</a>
-      </div>
+      <nav className="footer-social" aria-label="Social links">
+        {socialLinks.map(([label, href]) => (
+          <a key={label} href={href} target="_blank" rel="noreferrer">{label}</a>
+        ))}
+      </nav>
 
-      <p className="disclaimer">{t.footer.disclaimer}</p><p className="legal-links"><a href="/privacy-policy">Privacy Policy</a> · <a href="/terms-conditions">Terms & Conditions</a> · <a href="/faq">FAQ</a></p>
+      <p className="disclaimer footer-disclaimer">
+        {t.footer.disclaimer}
+      </p>
+
+      <p className="legal-links footer-legal">
+        <a href="/privacy-policy">Privacy Policy</a>
+        <span>·</span>
+        <a href="/terms-conditions">Terms & Conditions</a>
+        <span>·</span>
+        <a href="/faq">FAQ</a>
+      </p>
     </footer>
   );
 }
