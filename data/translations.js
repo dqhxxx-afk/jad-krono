@@ -14,6 +14,7 @@ export const t = {
     title: "Carefully selected. Quietly sourced.",
     copy: "Independent Singapore private watch dealer specialising in modern and collectible luxury timepieces. Viewing by appointment only.",
     primary: "View Collection",
+    secondary: "Contact Us",
     note: "Available Inventory • Private Sourcing • Private Viewings by Appointment"
   },
   collection: {
@@ -25,7 +26,7 @@ export const t = {
     enquire: "Enquire",
     details: "Details",
     noResults: "Currently unavailable.",
-    sourcingCopy: "We regularly source exceptional references through our trusted international network.",
+    sourcingCopy: "Private sourcing available upon request.",
     sourcingButton: "Request Sourcing"
   },
   services: {
@@ -39,12 +40,12 @@ export const t = {
   },
   contact: {
     eyebrow: "Contact",
-    title: "Singapore • Private Viewings by Appointment",
-    copy: "For buying, selling, sourcing or consignment enquiries, contact JAD KRONO directly.",
+    title: "Private enquiries.",
+    copy: "For buying, selling, sourcing, consignment or private viewing appointments, contact JAD KRONO directly.",
     button: "Book Private Viewing"
   },
   footer: {
-    line: "Based in Singapore. Built on discretion, authenticity, and long-term relationships with collectors.",
+    line: "Independent Singapore Private Watch Dealer. Private Viewings by Appointment.",
     disclaimer: "JAD KRONO is an independent Singapore private watch dealer. We are not affiliated with or endorsed by Rolex, Patek Philippe, Audemars Piguet, Cartier or any other watch manufacturer. All trademarks remain the property of their respective owners and are used solely for identification purposes."
   }
 };

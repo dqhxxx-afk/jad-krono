@@ -7,8 +7,8 @@ export const brandLinks = [
   { label: "Tudor", value: "tudor", href: "/collection?brand=tudor" },
   { label: "IWC", value: "iwc", href: "/collection?brand=iwc" },
   { label: "Hublot", value: "hublot", href: "/collection?brand=hublot" },
-  { label: "Franck Muller", value: "franck-muller", href: "/collection?brand=franck-muller" },
   { label: "Breitling", value: "breitling", href: "/collection?brand=breitling" },
+  { label: "Franck Muller", value: "franck-muller", href: "/collection?brand=franck-muller" },
   { label: "Chopard", value: "chopard", href: "/collection?brand=chopard" },
   { label: "Sinn", value: "sinn", href: "/collection?brand=sinn" }
 ];

@@ -21,15 +21,15 @@ export const services = [
   },
   {
     title: "Private Sourcing",
-    copy: "We source exceptional timepieces through our trusted international network, including current production, discontinued and highly sought-after references."
+    copy: "Carefully selected references sourced through trusted international networks."
   },
   {
     title: "Sell Your Watch",
-    copy: "Receive a fair market valuation with complete discretion."
+    copy: "Fair market valuation with complete discretion."
   },
   {
     title: "Consignment",
-    copy: "Confidential consignment for carefully selected luxury timepieces."
+    copy: "Confidential sales for selected luxury timepieces."
   },
   {
     title: "Trade & Upgrade",
@@ -37,16 +37,4 @@ export const services = [
   }
 ];
 
-export const brandStories = [
-  { name: "Rolex", copy: "Selected professional and collectible references." },
-  { name: "Patek Philippe", copy: "Important modern and collectible timepieces." },
-  { name: "Audemars Piguet", copy: "Royal Oak and selected high horology references." },
-  { name: "Cartier", copy: "Elegant icons and modern collector pieces." },
-  { name: "Tudor", copy: "Strong value-driven sports references." },
-  { name: "IWC", copy: "Pilot, Portugieser and selected complications." },
-  { name: "Hublot", copy: "Bold modern luxury references." },
-  { name: "Franck Muller", copy: "Distinctive designs and collector favourites." },
-  { name: "Breitling", copy: "Professional aviation and sports watches." },
-  { name: "Chopard", copy: "Elegant luxury and selected sports pieces." },
-  { name: "Sinn", copy: "Tool watches with strong enthusiast appeal." }
-];
+export const brandStories = [];

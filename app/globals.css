@@ -2447,3 +2447,318 @@ body:has(.mobile-menu) .wa-float {
     gap: 7px;
   }
 }
+
+
+/* V2.4 LIVE RESET - contact/footer/hero hard cleanup */
+
+/* Hero final */
+.hero-content h1,
+.hero h1 {
+  max-width: 760px !important;
+}
+
+@media (max-width: 720px) {
+  .hero h1,
+  .hero-content h1 {
+    font-size: clamp(42px, 11.5vw, 56px) !important;
+    line-height: .98 !important;
+    letter-spacing: -1px !important;
+  }
+
+  .hero-content p:not(.eyebrow):not(.hero-note) {
+    font-size: 16px !important;
+    line-height: 1.7 !important;
+    max-width: 340px !important;
+  }
+}
+
+/* Contact final */
+.contact-page-final {
+  padding-bottom: 0 !important;
+}
+
+.contact-final {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 80px;
+  align-items: start;
+  padding: 120px 7% 92px;
+}
+
+.contact-final-copy h1 {
+  font-size: clamp(54px, 5.2vw, 86px);
+  line-height: .94;
+  max-width: 580px;
+}
+
+.contact-final-copy p:not(.eyebrow) {
+  color: var(--muted);
+  max-width: 520px;
+  margin: 24px 0 30px;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.contact-final-panel {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.contact-final-panel > a,
+.contact-final-socials {
+  border: 1px solid var(--line);
+  background: #070707;
+  padding: 28px;
+  min-height: 118px;
+  transition: border-color .2s ease, transform .2s ease;
+}
+
+.contact-final-panel > a:hover,
+.contact-final-socials a:hover {
+  border-color: rgba(203,135,107,.45);
+}
+
+.contact-final-panel span {
+  display: block;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.contact-final-panel strong {
+  color: var(--ivory);
+  font-size: clamp(22px, 2vw, 30px);
+  line-height: 1.2;
+}
+
+.contact-final-socials {
+  display: flex;
+  gap: 26px;
+  align-items: center;
+  min-height: auto;
+}
+
+.contact-final-socials a {
+  color: var(--muted);
+  font-size: 17px;
+}
+
+.final-sourcing-band {
+  margin: 0 7% 90px;
+  padding: 34px 38px;
+  border: 1px solid var(--line);
+  background:
+    radial-gradient(circle at 92% 0%, rgba(203,135,107,.10), transparent 30%),
+    #070707;
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  align-items: center;
+}
+
+.final-sourcing-band h2 {
+  font-size: clamp(32px, 3vw, 48px);
+}
+
+.final-sourcing-band p:not(.eyebrow) {
+  color: var(--muted);
+  margin-top: 12px;
+  max-width: 620px;
+}
+
+/* Footer final */
+.jk-footer-final.site-footer {
+  display: grid !important;
+  grid-template-columns: 1fr auto;
+  gap: 26px 56px;
+  padding: 42px 7% 34px !important;
+  border-top: 1px solid var(--line);
+  background: #050505;
+}
+
+.footer-final-brand img {
+  height: 38px;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.footer-final-brand p {
+  color: rgba(244,239,230,.70);
+  font-size: 14px;
+  margin: 0 0 5px 0;
+  line-height: 1.45;
+}
+
+.footer-final-contact {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.footer-final-contact a {
+  color: rgba(244,239,230,.72);
+  font-size: 14px;
+}
+
+.footer-final-disclaimer {
+  grid-column: 1 / -1;
+  max-width: 980px;
+  border-top: 1px solid rgba(255,255,255,.08);
+  padding-top: 18px;
+  color: rgba(244,239,230,.52);
+  font-size: 12.5px;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.footer-final-bottom {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  color: rgba(244,239,230,.58);
+  font-size: 12.5px;
+}
+
+.footer-final-bottom p {
+  margin: 0;
+  font-size: 12.5px;
+}
+
+.footer-final-bottom nav {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.footer-final-bottom a,
+.footer-final-bottom span {
+  color: rgba(244,239,230,.62);
+  font-size: 12.5px;
+}
+
+/* Hide old footer layouts if any survived. Because apparently websites enjoy haunting us. */
+.jk-footer-minimal:not(.jk-footer-final),
+.jk-footer-compact:not(.jk-footer-final) {
+  display: none !important;
+}
+
+/* Home private sourcing CTA */
+.sourcing-cta-section {
+  padding: 88px 5.5%;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background:
+    radial-gradient(circle at 82% 10%, rgba(203,135,107,.10), transparent 26%),
+    #070707;
+}
+
+.sourcing-cta-section > div {
+  max-width: 780px;
+}
+
+.sourcing-cta-section p {
+  color: var(--muted);
+  font-size: 18px;
+  max-width: 640px;
+  margin-top: 20px;
+}
+
+@media (max-width: 1080px) {
+  .contact-final {
+    grid-template-columns: 1fr;
+    gap: 42px;
+    padding: 90px 5.5% 70px;
+  }
+
+  .final-sourcing-band {
+    margin-left: 5.5%;
+    margin-right: 5.5%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .jk-footer-final.site-footer {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-final-contact {
+    justify-content: flex-start;
+  }
+
+  .footer-final-bottom {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 720px) {
+  .contact-final {
+    padding: 72px 5% 54px;
+    gap: 32px;
+  }
+
+  .contact-final-copy h1 {
+    font-size: 46px;
+  }
+
+  .contact-final-copy p:not(.eyebrow) {
+    font-size: 16px;
+  }
+
+  .contact-final-panel > a,
+  .contact-final-socials {
+    padding: 22px;
+    min-height: auto;
+  }
+
+  .contact-final-panel span {
+    font-size: 11px;
+    letter-spacing: 3px;
+  }
+
+  .contact-final-panel strong {
+    font-size: 22px;
+  }
+
+  .contact-final-socials {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .final-sourcing-band {
+    margin: 0 5% 64px;
+    padding: 24px;
+  }
+
+  .final-sourcing-band h2 {
+    font-size: 34px;
+  }
+
+  .jk-footer-final.site-footer {
+    padding: 32px 5% 92px !important;
+    gap: 20px;
+  }
+
+  .footer-final-brand img {
+    height: 34px;
+    margin-bottom: 14px;
+  }
+
+  .footer-final-contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 18px;
+  }
+
+  .footer-final-disclaimer {
+    font-size: 12.5px;
+    line-height: 1.7;
+  }
+}

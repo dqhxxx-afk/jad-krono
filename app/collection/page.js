@@ -40,7 +40,7 @@ export default function CollectionPage() {
         <section className="collection-section compact">
           <div className="collection-toolbar">
             <div className="filters">
-              {["all", "rolex", "patek", "ap", "cartier", "tudor", "iwc", "hublot", "franck-muller", "breitling", "chopard", "sinn"].map((item) => (
+              {["all", "rolex", "patek", "ap", "cartier", "tudor", "iwc", "hublot", "breitling", "franck-muller", "chopard", "sinn"].map((item) => (
                 <button key={item} onClick={() => setFilter(item)} className={filter === item ? "active" : ""}>
                   {item === "all" ? "All" : item === "patek" ? "Patek Philippe" : item === "ap" ? "AP" : item === "franck-muller" ? "Franck Muller" : item.toUpperCase()}
                 </button>

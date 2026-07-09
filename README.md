@@ -1,13 +1,19 @@
-# JAD KRONO V2.3 Contact + Footer Polish
+# JAD KRONO V2.4 Live Reset
 
-## Changes
+This is a hard reset patch intended to replace old live copy and redesign Contact/Footer.
 
-- Contact page redesigned from 5 equal cards to a more luxury/private enquiry layout
-- Footer redesigned to a cleaner minimal boutique style
-- Added copyright
-- Updated disclaimer wording
-- Footer now states:
-  - Independent Singapore Private Watch Dealer
-  - Private Viewings by Appointment
-- Removed repeated footer navigation clutter
-- Desktop and mobile footer spacing improved
+## Key fixes
+
+- Hero forced to: Carefully selected. Quietly sourced.
+- Removed old "Exceptional watches" copy
+- Removed Authentication wording
+- Brand Stories forced empty
+- Brand list updated
+- Contact page rebuilt
+- Footer rebuilt
+- New legal/disclaimer wording
+- Copyright added
+- Mobile and desktop CSS targeted
+
+## Old copy scan
+No old bad strings found.
