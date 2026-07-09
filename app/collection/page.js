@@ -5,21 +5,19 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import WatchCard from "../../components/WatchCard";
 import { useLanguage } from "../../components/useLanguage";
-import { useSearchParams } from "next/navigation";
 import { BrandTicker } from "../../components/BrandTicker";
 import { useWatches } from "../../components/useWatches";
 
 export default function CollectionPage() {
   const { t } = useLanguage();
   const { watches, loading } = useWatches();
-  const searchParams = useSearchParams();
-  const brandFromUrl = searchParams.get("brand") || "all";
-  const [filter, setFilter] = useState(brandFromUrl);
+  const [filter, setFilter] = useState("all");
   const [query, setQuery] = useState("");
 
   useEffect(() => {
-    setFilter(brandFromUrl);
-  }, [brandFromUrl]);
+    const params = new URLSearchParams(window.location.search);
+    setFilter(params.get("brand") || "all");
+  }, []);
 
   const shownProducts = useMemo(() => {
     return watches

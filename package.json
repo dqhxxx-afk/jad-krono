@@ -12,6 +12,6 @@
     "@supabase/supabase-js": "latest"
   },
   "devDependencies": {},
-  "name": "jad-krono-3-4-brand-navigation",
-  "version": "3.4.0"
+  "name": "jad-krono-3-5-build-safe-brand-nav",
+  "version": "3.5.0"
 }
