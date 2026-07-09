@@ -7,14 +7,14 @@ import { useLanguage } from "../../components/useLanguage";
 import { products } from "../../data/site";
 
 export default function CollectionPage() {
-  const { lang, setLang, t } = useLanguage();
+  const { lang, t } = useLanguage();
   const [filter, setFilter] = useState("all");
   const [query, setQuery] = useState("");
   const shownProducts = useMemo(() => products.filter((p) => filter === "all" || p.category === filter).filter((p) => `${p.brand} ${p.model} ${p.reference}`.toLowerCase().includes(query.toLowerCase())), [filter, query]);
 
   return (
     <>
-      <Header lang={lang} setLang={setLang} t={t} />
+      <Header t={t} />
       <main className="page-shell">
         <section className="page-hero"><p className="eyebrow">{t.collection.eyebrow}</p><h1>{t.collection.title}</h1><p>{t.collection.copy}</p></section>
         <section className="collection-section compact">

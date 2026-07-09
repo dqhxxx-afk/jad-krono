@@ -7,13 +7,13 @@ import { useLanguage } from "../../../components/useLanguage";
 import { products, site } from "../../../data/site";
 
 export default function WatchDetailPage({ params }) {
-  const { lang, setLang, t } = useLanguage();
+  const { lang, t } = useLanguage();
   const product = products.find((item) => item.id === params.id);
 
   if (!product) {
     return (
       <>
-        <Header lang={lang} setLang={setLang} t={t} />
+        <Header t={t} />
         <main className="page-shell">
           <section className="page-hero">
             <p className="eyebrow">JAD KRONO</p>
@@ -44,7 +44,7 @@ export default function WatchDetailPage({ params }) {
 
   return (
     <>
-      <Header lang={lang} setLang={setLang} t={t} />
+      <Header t={t} />
 
       <main className="product-detail-shell">
         <section className="product-detail-hero">

@@ -1,17 +1,19 @@
-# JAD KRONO Next.js V11 Maps & Local Trust
+# JAD KRONO Next.js V13 English Only + Clean Header
 
-V11 adds Google Maps and local trust information to the contact area.
+V13 removes the Vietnamese language switcher and cleans the header.
 
-## Added
+## Fixed
 
-- Google Maps link:
-  https://maps.app.goo.gl/CGgdPNjevd54Gdrm9?g_st=ic
-- Private showroom appointment card
-- View on Google Maps button
-- Book Private Viewing button
-- Local business schema map/address support
-- No WeChat
-- Keeps V10 contact cleanup
+- Removed EN / VI language switcher from header
+- Website now runs English-only
+- Removed visible phone number from header
+- Header now shows only:
+  - Logo
+  - Navigation
+  - Mobile menu button
+- Floating WhatsApp remains
+- Contact page still contains full contact channels
+- Mobile menu includes WhatsApp, Instagram, Facebook and Google Maps
 
 ## Upload to GitHub
 
@@ -27,15 +29,3 @@ Upload the contents of this folder to your GitHub repository root:
 - .gitignore
 
 Do not upload the parent folder itself.
-
-## Change maps link later
-
-Edit:
-
-`data/site.js`
-
-Look for:
-
-```js
-googleMaps: "..."
-```

@@ -8,7 +8,7 @@ import { useLanguage } from "../components/useLanguage";
 import { products, brandStories, insights, site } from "../data/site";
 
 export default function Home() {
-  const { lang, setLang, t } = useLanguage();
+  const { lang, t } = useLanguage();
   const [filter, setFilter] = useState("all");
   const [query, setQuery] = useState("");
   const heroProducts = products.filter((p) => p.hero);
@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <>
       <a className="wa-float" href={`${site.whatsapp}?text=Hello%20JAD%20KRONO%2C%20I%20would%20like%20to%20make%20a%20private%20enquiry.`} target="_blank"><span>Need assistance?</span>WhatsApp</a>
-      <Header lang={lang} setLang={setLang} t={t} />
+      <Header t={t} />
       <main>
         <section className="signature-hero">
           <div className="hero-orbit" /><div className="hero-shade" />
