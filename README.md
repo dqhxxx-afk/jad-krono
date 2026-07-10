@@ -1,27 +1,29 @@
-# JAD KRONO V2.12 Mobile Hero Final Patch
+# JAD KRONO 1.0
 
-This patch combines the remaining visual fixes after reviewing V2.11 on mobile and desktop.
+A polished, responsive website foundation for JAD KRONO, a Singapore private watch dealer.
 
-## Hero
-- Removed "Singapore Private Watch Dealer" eyebrow completely
-- Rewrote supporting copy without repeating "private watch dealer"
-- Reduced excess vertical empty space on mobile
-- Raised the hero content on mobile
-- Reduced orbit visibility and moved it partly off-screen on mobile
-- Tightened transition from Hero to Collection
+## Run locally
 
-## Homepage consistency
-- Services heading forced to "Private services for collectors."
-- About copy forced to the final concise version
+```bash
+npm install
+npm run dev
+```
 
-## Floating WhatsApp
-- Reduced further on desktop and mobile
-- Positioned above the mobile browser controls
+Open `http://localhost:3000`.
 
-## Retained
-- Sitewide Footer
-- Facebook
-- Clickable Google Maps
-- Product routing
-- Brand filtering
-- Favicon and Apple Touch Icon
+## Production check
+
+```bash
+npm run build
+npm start
+```
+
+## Main edit points
+
+- Inventory: `data/watches.ts`
+- Phone / WhatsApp links: search for `6586996868`
+- Global styling: `app/globals.css`
+- Homepage sections: `app/page.tsx`
+- Shared header and footer: `components/Header.tsx`, `components/Footer.tsx`
+
+The watch visuals are original inline SVG illustrations, so the project has no third-party image licensing or hotlinking dependency. Replace them with real inventory photography whenever product images are ready.
