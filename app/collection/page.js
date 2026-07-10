@@ -54,16 +54,27 @@ export default function CollectionPage() {
   return (
     <>
       <Header t={t} />
-      <main className="page-shell collection-page-v29">
-        <section className="page-hero collection-hero-v29">
+      <main className="page-shell collection-page-v210">
+        <section className="page-hero collection-hero-v210">
           <p className="eyebrow">{t.collection.eyebrow}</p>
           <h1>{t.collection.title}</h1>
           <p>{loading ? "Loading collection..." : t.collection.copy}</p>
         </section>
 
-        <section className="collection-section compact collection-v29-section">
-          <div className="collection-toolbar-v29">
-            <nav className="brand-filter-v29" aria-label="Filter by brand">
+        <section className="collection-section compact collection-v210-section">
+          <div className="collection-toolbar-v210">
+            <div className="collection-search-row-v210">
+              <label htmlFor="collection-search">Search collection</label>
+              <input
+                id="collection-search"
+                className="collection-search-v210"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                placeholder={t.collection.search}
+              />
+            </div>
+
+            <nav className="brand-filter-v210" aria-label="Filter by brand">
               {brands.map((item) => (
                 <button
                   key={item}
@@ -75,13 +86,6 @@ export default function CollectionPage() {
                 </button>
               ))}
             </nav>
-
-            <input
-              className="collection-search-v29"
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              placeholder={t.collection.search}
-            />
           </div>
 
           <div className="watch-grid final-watch-grid">

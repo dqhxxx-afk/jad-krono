@@ -3906,3 +3906,536 @@ main > .brand-ticker-nav,
     transform: scale(.88) !important;
   }
 }
+
+
+/* ==========================================================
+   JAD KRONO V2.10 FINAL POLISH
+   Desktop and mobile finishing pass
+   ========================================================== */
+
+/* HERO */
+.hero .btn.gold,
+.hero-content .btn.gold {
+  min-height: 48px !important;
+  padding: 0 24px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* COLLECTION: tighter heading rhythm */
+.collection-hero-v210 {
+  padding-bottom: 34px !important;
+}
+
+.collection-hero-v210 h1 {
+  max-width: 720px !important;
+}
+
+.collection-hero-v210 > p:last-child {
+  margin-top: 20px !important;
+}
+
+.collection-v210-section {
+  padding-top: 18px !important;
+}
+
+/* Search above filter, no lonely box drifting on the right */
+.collection-toolbar-v210 {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 18px !important;
+  margin-bottom: 34px !important;
+}
+
+.collection-search-row-v210 {
+  display: grid !important;
+  grid-template-columns: 150px minmax(260px, 440px) !important;
+  gap: 18px !important;
+  align-items: center !important;
+}
+
+.collection-search-row-v210 label {
+  color: rgba(244,239,230,.48) !important;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: 2.2px !important;
+  text-transform: uppercase !important;
+}
+
+.collection-search-v210 {
+  width: 100% !important;
+  min-height: 46px !important;
+  border: 1px solid rgba(255,255,255,.11) !important;
+  background: #050505 !important;
+  color: #f4efe6 !important;
+  padding: 0 16px !important;
+  outline: none !important;
+  transition: border-color .2s ease, background .2s ease !important;
+}
+
+.collection-search-v210:focus {
+  border-color: rgba(203,135,107,.56) !important;
+  background: #070707 !important;
+}
+
+.collection-search-v210::placeholder {
+  color: rgba(244,239,230,.42) !important;
+}
+
+/* Brand filter: generous spacing, subtle active state */
+.brand-filter-v210 {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 0 26px !important;
+  align-items: center !important;
+  border-top: 1px solid rgba(255,255,255,.08) !important;
+  border-bottom: 1px solid rgba(255,255,255,.08) !important;
+  padding: 12px 0 11px !important;
+}
+
+.brand-filter-v210 button {
+  position: relative !important;
+  min-height: 38px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  color: rgba(244,239,230,.54) !important;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 12px !important;
+  line-height: 38px !important;
+  letter-spacing: .05px !important;
+  text-transform: none !important;
+  white-space: nowrap !important;
+}
+
+.brand-filter-v210 button::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 50% !important;
+  bottom: 0 !important;
+  width: 0 !important;
+  height: 1px !important;
+  background: var(--gold) !important;
+  transform: translateX(-50%) !important;
+  transition: width .2s ease !important;
+}
+
+.brand-filter-v210 button:hover,
+.brand-filter-v210 button.active {
+  color: #f4efe6 !important;
+}
+
+.brand-filter-v210 button.active::after {
+  width: 28px !important;
+}
+
+/* Cards: clearer badge and softer hover */
+.watch-card {
+  transition: transform .25s ease, border-color .25s ease !important;
+}
+
+.watch-card:hover {
+  transform: translateY(-3px) !important;
+  border-color: rgba(203,135,107,.30) !important;
+}
+
+.status-badge {
+  min-height: 30px !important;
+  padding: 0 11px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 11px !important;
+  letter-spacing: 1.4px !important;
+  line-height: 1 !important;
+}
+
+/* CONTACT: cleaner hierarchy */
+.contact-page-v210 {
+  padding-bottom: 0 !important;
+}
+
+.contact-v210 {
+  display: grid !important;
+  grid-template-columns: .82fr 1.18fr !important;
+  gap: 72px !important;
+  align-items: start !important;
+  padding: 96px 7% 68px !important;
+}
+
+.contact-v210-copy {
+  position: sticky !important;
+  top: 130px !important;
+}
+
+.contact-v210-copy h1 {
+  font-size: clamp(52px, 4.5vw, 76px) !important;
+  line-height: .96 !important;
+  max-width: 560px !important;
+}
+
+.contact-v210-copy p:not(.eyebrow) {
+  color: var(--muted) !important;
+  max-width: 520px !important;
+  margin: 22px 0 28px !important;
+  font-size: 16.5px !important;
+  line-height: 1.7 !important;
+}
+
+.contact-v210-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 14px !important;
+}
+
+.contact-v210-card {
+  border: 1px solid rgba(255,255,255,.10) !important;
+  background:
+    radial-gradient(circle at 88% 0%, rgba(203,135,107,.065), transparent 34%),
+    #070707 !important;
+  min-height: 220px !important;
+  padding: 28px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  transition: border-color .22s ease, transform .22s ease !important;
+}
+
+.contact-v210-card:hover {
+  border-color: rgba(203,135,107,.30) !important;
+  transform: translateY(-2px) !important;
+}
+
+.contact-v210-card.enquiry {
+  grid-column: 1 / -1 !important;
+  min-height: 285px !important;
+}
+
+.contact-v210-card span {
+  color: var(--gold) !important;
+  letter-spacing: 4px !important;
+  text-transform: uppercase !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+}
+
+.contact-v210-card h2 {
+  font-size: clamp(34px, 3vw, 48px) !important;
+  line-height: 1.02 !important;
+  max-width: 580px !important;
+}
+
+.contact-v210-card h3 {
+  font-size: 27px !important;
+  line-height: 1.15 !important;
+}
+
+.contact-v210-card p {
+  color: var(--muted) !important;
+  line-height: 1.65 !important;
+  max-width: 540px !important;
+}
+
+.contact-v210-actions,
+.inline-links {
+  display: flex !important;
+  gap: 12px !important;
+  flex-wrap: wrap !important;
+}
+
+.contact-v210-card a:not(.btn),
+.inline-links a {
+  color: var(--gold) !important;
+  font-weight: 700 !important;
+}
+
+.sourcing-v210-band {
+  margin: 0 7% 82px !important;
+  padding: 30px 34px !important;
+  border: 1px solid rgba(255,255,255,.10) !important;
+  background:
+    radial-gradient(circle at 92% 0%, rgba(203,135,107,.08), transparent 30%),
+    #070707 !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  gap: 28px !important;
+  align-items: center !important;
+}
+
+.sourcing-v210-band h2 {
+  font-size: clamp(30px, 2.6vw, 44px) !important;
+  line-height: 1.05 !important;
+}
+
+.sourcing-v210-band p:not(.eyebrow) {
+  color: var(--muted) !important;
+  margin-top: 10px !important;
+  max-width: 620px !important;
+}
+
+/* HOMEPAGE CONTACT */
+.home-contact-v210 {
+  display: grid !important;
+  grid-template-columns: .9fr 1.1fr !important;
+  gap: 56px !important;
+  padding: 76px 7% !important;
+  border-top: 1px solid var(--line) !important;
+  background: #050505 !important;
+}
+
+.home-contact-v210 p:not(.eyebrow) {
+  color: var(--muted) !important;
+  max-width: 600px !important;
+  margin-top: 18px !important;
+}
+
+.home-contact-v210-links {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 12px !important;
+}
+
+.home-contact-v210-links a {
+  border: 1px solid rgba(255,255,255,.10) !important;
+  background: #070707 !important;
+  padding: 22px !important;
+  color: var(--ivory) !important;
+}
+
+/* FOOTER: social links in a deliberate vertical list */
+.jk-footer-v210.site-footer {
+  display: block !important;
+  padding: 34px 7% 30px !important;
+  border-top: 1px solid var(--line) !important;
+  background: #050505 !important;
+}
+
+.footer-v210-main {
+  display: flex !important;
+  justify-content: space-between !important;
+  gap: 48px !important;
+  align-items: flex-start !important;
+}
+
+.footer-v210-brand img {
+  height: 34px !important;
+  display: block !important;
+  margin-bottom: 12px !important;
+}
+
+.footer-v210-brand p {
+  color: rgba(244,239,230,.68) !important;
+  font-size: 13px !important;
+  line-height: 1.45 !important;
+  margin: 0 0 3px !important;
+}
+
+.footer-v210-social {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 8px !important;
+  min-width: 130px !important;
+  justify-items: start !important;
+}
+
+.footer-v210-social a {
+  color: rgba(244,239,230,.70) !important;
+  font-size: 13px !important;
+  transition: color .2s ease !important;
+}
+
+.footer-v210-social a:hover {
+  color: var(--ivory) !important;
+}
+
+.footer-v210-disclaimer {
+  border-top: 1px solid rgba(255,255,255,.08) !important;
+  margin: 20px 0 14px !important;
+  padding-top: 16px !important;
+  max-width: 980px !important;
+  color: rgba(244,239,230,.48) !important;
+  font-size: 11.5px !important;
+  line-height: 1.65 !important;
+}
+
+.footer-v210-bottom {
+  display: flex !important;
+  justify-content: space-between !important;
+  gap: 24px !important;
+  color: rgba(244,239,230,.56) !important;
+  font-size: 11.5px !important;
+}
+
+.footer-v210-bottom p {
+  margin: 0 !important;
+  font-size: 11.5px !important;
+}
+
+.footer-v210-bottom nav {
+  display: flex !important;
+  gap: 8px !important;
+  flex-wrap: wrap !important;
+}
+
+.footer-v210-bottom a,
+.footer-v210-bottom span {
+  color: rgba(244,239,230,.60) !important;
+  font-size: 11.5px !important;
+}
+
+/* FLOATING WHATSAPP */
+.wa-float {
+  right: 28px !important;
+  bottom: 30px !important;
+  transform: scale(.84) !important;
+  transform-origin: right bottom !important;
+}
+
+/* TABLET */
+@media (max-width: 1080px) {
+  .collection-search-row-v210 {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+
+  .collection-search-v210 {
+    max-width: 520px !important;
+  }
+
+  .contact-v210 {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+    padding: 84px 5.5% 64px !important;
+  }
+
+  .contact-v210-copy {
+    position: static !important;
+  }
+
+  .sourcing-v210-band {
+    margin-left: 5.5% !important;
+    margin-right: 5.5% !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  .footer-v210-main,
+  .footer-v210-bottom {
+    flex-direction: column !important;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 720px) {
+  .hero .btn.gold,
+  .hero-content .btn.gold {
+    min-height: 46px !important;
+    padding: 0 22px !important;
+  }
+
+  .collection-hero-v210 {
+    padding-bottom: 24px !important;
+  }
+
+  .collection-v210-section {
+    padding-top: 12px !important;
+  }
+
+  .collection-toolbar-v210 {
+    gap: 14px !important;
+    margin-bottom: 28px !important;
+  }
+
+  .collection-search-row-v210 label {
+    display: none !important;
+  }
+
+  .collection-search-v210 {
+    max-width: none !important;
+    min-height: 46px !important;
+  }
+
+  .brand-filter-v210 {
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    gap: 0 22px !important;
+    padding: 10px 0 !important;
+  }
+
+  .brand-filter-v210::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .brand-filter-v210 button {
+    flex: 0 0 auto !important;
+    min-height: 40px !important;
+    line-height: 40px !important;
+    font-size: 13px !important;
+  }
+
+  .contact-v210 {
+    padding: 68px 5% 52px !important;
+  }
+
+  .contact-v210-copy h1 {
+    font-size: 44px !important;
+  }
+
+  .contact-v210-copy p:not(.eyebrow) {
+    font-size: 16px !important;
+  }
+
+  .contact-v210-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .contact-v210-card,
+  .contact-v210-card.enquiry {
+    grid-column: auto !important;
+    min-height: auto !important;
+    padding: 22px !important;
+    gap: 20px !important;
+  }
+
+  .contact-v210-card h2 {
+    font-size: 32px !important;
+  }
+
+  .contact-v210-card h3 {
+    font-size: 23px !important;
+  }
+
+  .sourcing-v210-band {
+    margin: 0 5% 60px !important;
+    padding: 24px !important;
+  }
+
+  .home-contact-v210 {
+    grid-template-columns: 1fr !important;
+    gap: 26px !important;
+    padding: 62px 5% !important;
+  }
+
+  .home-contact-v210-links {
+    grid-template-columns: 1fr !important;
+  }
+
+  .jk-footer-v210.site-footer {
+    padding: 30px 5% 92px !important;
+  }
+
+  .footer-v210-social {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10px 18px !important;
+  }
+
+  .wa-float {
+    right: 16px !important;
+    bottom: 76px !important;
+    transform: scale(.80) !important;
+  }
+}

@@ -1,20 +1,31 @@
-# JAD KRONO V2.9 Brand Contact Footer Fix
+# JAD KRONO V2.10 Final Polish
 
-This version fixes the latest issues reported from desktop and mobile checks.
+Final visual polish based on desktop MacBook and mobile screenshots.
 
-## Fixed
+## Collection
+- Reduced excess vertical spacing
+- Search placed above brand filters
+- Brand filters use subtle short underline
+- Desktop filter spacing improved
+- Mobile remains a single horizontal scrolling row
+- Search input height and focus state refined
 
-- Collection brand tabs no longer use the oversized serif strip
-- Collection brand tabs are now compact text filters
-- Brand filters appear only once on Collection
-- Mobile brand filters stay in one horizontal scroll row
-- Facebook added back to Contact page and Footer
-- Footer has WhatsApp, Instagram, Facebook and Google Maps
-- Homepage oversized brand strip under Hero remains removed
-- Contact page keeps Enquiry / Visit / Follow structure
-- Product routing and brand filtering fixes retained
-- Favicon fixes retained from previous version
+## Product Cards
+- Status badges are clearer
+- Card hover is more restrained and premium
 
-## Upload
+## Contact
+- Enquiry card spans full width
+- Visit and Follow sit below as smaller cards
+- Desktop hierarchy is more balanced
+- Mobile remains single-column
 
-Upload all files to GitHub repository root and redeploy on Vercel.
+## Footer
+- Social links arranged vertically on desktop
+- Legal and disclaimer typography refined
+- Facebook retained
+
+## Global
+- Hero CTA slightly larger
+- Floating WhatsApp reduced by about 10–15%
+- Existing routing, filtering, favicon, Google Maps and Facebook fixes retained

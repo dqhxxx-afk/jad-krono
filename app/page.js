@@ -81,13 +81,13 @@ export default function Home() {
           <p>{t.about.copy}</p>
         </section>
 
-        <section className="home-contact-v29">
+        <section className="home-contact-v210">
           <div>
             <p className="eyebrow">Contact</p>
             <h2>Private enquiries.</h2>
             <p>For buying, selling, sourcing, consignment or private viewing appointments, contact JAD KRONO directly.</p>
           </div>
-          <div className="home-contact-v29-links">
+          <div className="home-contact-v210-links">
             <a href={site.whatsapp} target="_blank" rel="noreferrer">WhatsApp</a>
             <a href="mailto:contact@jadkrono.com">Email</a>
             <a href={site.instagram} target="_blank" rel="noreferrer">Instagram</a>
