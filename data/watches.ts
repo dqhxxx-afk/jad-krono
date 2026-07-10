@@ -1,13 +1,3 @@
-export type WatchTone =
-  | "onyx"
-  | "forest"
-  | "navy"
-  | "silver"
-  | "burgundy"
-  | "champagne"
-  | "ice"
-  | "slate";
-
 export type Watch = {
   slug: string;
   brand: string;
@@ -18,7 +8,6 @@ export type Watch = {
   caseSize: string;
   material: string;
   status: "Available" | "Sourcing" | "Reserved";
-  tone: WatchTone;
   featured?: boolean;
 };
 
@@ -33,7 +22,6 @@ export const watches: Watch[] = [
     caseSize: "40 mm",
     material: "Oystersteel",
     status: "Available",
-    tone: "navy",
     featured: true,
   },
   {
@@ -46,7 +34,6 @@ export const watches: Watch[] = [
     caseSize: "40.8 mm",
     material: "Stainless steel",
     status: "Available",
-    tone: "forest",
     featured: true,
   },
   {
@@ -59,7 +46,6 @@ export const watches: Watch[] = [
     caseSize: "41 mm",
     material: "Stainless steel",
     status: "Reserved",
-    tone: "slate",
     featured: true,
   },
   {
@@ -72,7 +58,6 @@ export const watches: Watch[] = [
     caseSize: "40 mm",
     material: "Oystersteel",
     status: "Available",
-    tone: "ice",
     featured: true,
   },
   {
@@ -85,7 +70,6 @@ export const watches: Watch[] = [
     caseSize: "39 mm",
     material: "Stainless steel",
     status: "Available",
-    tone: "onyx",
     featured: true,
   },
   {
@@ -98,7 +82,6 @@ export const watches: Watch[] = [
     caseSize: "45 mm",
     material: "Titanium",
     status: "Sourcing",
-    tone: "champagne",
     featured: true,
   },
   {
@@ -111,7 +94,6 @@ export const watches: Watch[] = [
     caseSize: "40 mm",
     material: "Stainless steel",
     status: "Sourcing",
-    tone: "navy",
   },
   {
     slug: "audemars-piguet-royal-oak-chronograph-26331st",
@@ -123,7 +105,6 @@ export const watches: Watch[] = [
     caseSize: "41 mm",
     material: "Stainless steel",
     status: "Sourcing",
-    tone: "burgundy",
   },
 ];
 

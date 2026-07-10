@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowIcon } from "@/components/Icons";
 import { PageHero } from "@/components/PageHero";
-import { WatchArtwork } from "@/components/WatchArtwork";
 
 export const metadata: Metadata = {
   title: "About",
@@ -22,10 +21,16 @@ export default function AboutPage() {
 
       <section className="section about-story">
         <div className="container about-story__grid">
-          <div className="about-story__visual">
+          <aside className="about-story__panel" aria-label="JAD KRONO operating standard">
             <span className="about-story__stamp">Singapore · 2026</span>
-            <WatchArtwork id="about-watch" tone="champagne" label="Champagne dial watch illustration" />
-          </div>
+            <p className="eyebrow">Operating standard</p>
+            <p className="about-story__panel-title">Select carefully.<br />Describe clearly.<br />Handle discreetly.</p>
+            <ol className="about-story__panel-list">
+              <li><span>01</span>Condition and reference first</li>
+              <li><span>02</span>Market-aware expectations</li>
+              <li><span>03</span>Private, direct communication</li>
+            </ol>
+          </aside>
           <div className="about-story__copy">
             <p className="eyebrow">Why JAD KRONO</p>
             <h2>Because buying a watch should not require decoding a sales performance.</h2>

@@ -26,4 +26,4 @@ npm start
 - Homepage sections: `app/page.tsx`
 - Shared header and footer: `components/Header.tsx`, `components/Footer.tsx`
 
-The watch visuals are original inline SVG illustrations, so the project has no third-party image licensing or hotlinking dependency. Replace them with real inventory photography whenever product images are ready.
+The current presentation is intentionally text-only. No watch photography, generated watch artwork or third-party image assets are included.

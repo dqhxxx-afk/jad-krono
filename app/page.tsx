@@ -2,7 +2,6 @@ import Link from "next/link";
 import { ArrowIcon, WhatsAppIcon } from "@/components/Icons";
 import { SectionHeader } from "@/components/SectionHeader";
 import { ServiceGlyph } from "@/components/ServiceGlyph";
-import { WatchArtwork } from "@/components/WatchArtwork";
 import { WatchCard } from "@/components/WatchCard";
 import { watches } from "@/data/watches";
 
@@ -45,17 +44,30 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="home-hero__visual" aria-label="Featured timepiece illustration">
-            <div className="home-hero__visual-label home-hero__visual-label--top">
-              <span>Featured selection</span>
-              <strong>Private inventory</strong>
+          <aside className="home-hero__brief" aria-label="JAD KRONO service overview">
+            <div className="home-hero__brief-heading">
+              <span>JAD KRONO / Private inventory</span>
+              <strong>01</strong>
             </div>
-            <WatchArtwork id="hero-watch" tone="onyx" label="Black dial luxury watch illustration" hero />
-            <div className="home-hero__visual-label home-hero__visual-label--bottom">
-              <span>Enquiries</span>
-              <strong>+65 8699 6868</strong>
+            <div className="home-hero__brief-main">
+              <p>Current focus</p>
+              <h2>Selected with purpose.</h2>
             </div>
-          </div>
+            <dl className="home-hero__brief-list">
+              <div>
+                <dt>Categories</dt>
+                <dd>Modern · Collectible · Neo-vintage</dd>
+              </div>
+              <div>
+                <dt>Access</dt>
+                <dd>Private viewing by appointment</dd>
+              </div>
+              <div>
+                <dt>Enquiries</dt>
+                <dd>+65 8699 6868</dd>
+              </div>
+            </dl>
+          </aside>
         </div>
 
         <div className="home-hero__brand-bar">
@@ -167,11 +179,26 @@ export default function Home() {
 
       <section className="section section--editorial">
         <div className="container-wide editorial-grid">
-          <div className="editorial-visual">
-            <div className="editorial-visual__frame">
-              <WatchArtwork id="editorial-watch" tone="forest" label="Green dial collectible watch illustration" />
+          <div className="editorial-note">
+            <div className="editorial-note__topline">
+              <span>Private viewing</span>
+              <span>Singapore</span>
             </div>
-            <p>Private viewing · Singapore</p>
+            <p className="editorial-note__statement">Quiet selection.<br />Clear information.<br />Personal service.</p>
+            <dl>
+              <div>
+                <dt>01</dt>
+                <dd>By appointment</dd>
+              </div>
+              <div>
+                <dt>02</dt>
+                <dd>Direct enquiries</dd>
+              </div>
+              <div>
+                <dt>03</dt>
+                <dd>Discreet handling</dd>
+              </div>
+            </dl>
           </div>
           <div className="editorial-copy">
             <p className="eyebrow">JAD KRONO</p>

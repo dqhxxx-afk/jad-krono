@@ -1,10 +1,8 @@
 import { ArrowIcon } from "@/components/Icons";
-import { WatchArtwork } from "@/components/WatchArtwork";
 import type { Watch } from "@/data/watches";
 
 type WatchCardProps = {
   watch: Watch;
-  priority?: boolean;
 };
 
 export function WatchCard({ watch }: WatchCardProps) {
@@ -14,21 +12,18 @@ export function WatchCard({ watch }: WatchCardProps) {
 
   return (
     <article className="watch-card">
-      <div className="watch-card__visual">
+      <div className="watch-card__body">
         <div className="watch-card__status-row">
           <span className={`status-badge status-badge--${watch.status.toLowerCase()}`}>{watch.status}</span>
           <span>{watch.year}</span>
         </div>
-        <WatchArtwork
-          id={watch.slug}
-          tone={watch.tone}
-          label={`${watch.brand} ${watch.model} watch illustration`}
-        />
-      </div>
-      <div className="watch-card__body">
-        <p className="watch-card__brand">{watch.brand}</p>
-        <h3>{watch.model}</h3>
-        <p className="watch-card__reference">Ref. {watch.reference}</p>
+
+        <div className="watch-card__identity">
+          <p className="watch-card__brand">{watch.brand}</p>
+          <h3>{watch.model}</h3>
+          <p className="watch-card__reference">Ref. {watch.reference}</p>
+        </div>
+
         <dl className="watch-card__specs">
           <div>
             <dt>Set</dt>
@@ -43,6 +38,7 @@ export function WatchCard({ watch }: WatchCardProps) {
             <dd>{watch.material}</dd>
           </div>
         </dl>
+
         <a
           href={`https://wa.me/6586996868?text=${message}`}
           target="_blank"
