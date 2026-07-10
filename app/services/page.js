@@ -13,11 +13,12 @@ export default function ServicesPage() {
       <Header t={t} />
       <main className="page-shell">
         <section className="page-hero">
-          <p className="eyebrow">{t.services.eyebrow}</p>
-          <h1>{t.services.title}</h1>
+          <p className="eyebrow">Services</p>
+          <h1>Private services for collectors.</h1>
+          <p>Personal assistance for buying, selling, sourcing, consignment and trade enquiries in Singapore.</p>
         </section>
 
-        <section className="services-section compact">
+        <section className="services-section page-services-final">
           <div className="service-grid">
             {services.map((service) => (
               <article key={service.title}>

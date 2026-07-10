@@ -12,6 +12,6 @@
     "@supabase/supabase-js": "latest"
   },
   "devDependencies": {},
-  "name": "jad-krono-v2-10-final-polish",
-  "version": "2.10.0"
+  "name": "jad-krono-v2-11-sitewide-consistency-patch",
+  "version": "2.11.0"
 }

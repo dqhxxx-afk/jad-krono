@@ -1,31 +1,21 @@
-# JAD KRONO V2.10 Final Polish
+# JAD KRONO V2.11 Sitewide Consistency Patch
 
-Final visual polish based on desktop MacBook and mobile screenshots.
+## Fixed sitewide
 
-## Collection
-- Reduced excess vertical spacing
-- Search placed above brand filters
-- Brand filters use subtle short underline
-- Desktop filter spacing improved
-- Mobile remains a single horizontal scrolling row
-- Search input height and focus state refined
+- One consistent Footer component across all routes
+- Facebook added across all footers
+- Google Maps uses a real clickable link
+- Services heading changed to "Private services for collectors."
+- Removed "exceptional" wording from sourcing copy
+- About page copy updated to the final concise wording
+- Terms disclaimer synced with Footer
 
-## Product Cards
-- Status badges are clearer
-- Card hover is more restrained and premium
+## Recommended checks after deploy
 
-## Contact
-- Enquiry card spans full width
-- Visit and Follow sit below as smaller cards
-- Desktop hierarchy is more balanced
-- Mobile remains single-column
-
-## Footer
-- Social links arranged vertically on desktop
-- Legal and disclaimer typography refined
-- Facebook retained
-
-## Global
-- Hero CTA slightly larger
-- Floating WhatsApp reduced by about 10–15%
-- Existing routing, filtering, favicon, Google Maps and Facebook fixes retained
+- /services
+- /about
+- /sell-your-watch
+- /faq
+- /privacy-policy
+- /terms-conditions
+- Footer Facebook and Google Maps links on desktop and mobile
