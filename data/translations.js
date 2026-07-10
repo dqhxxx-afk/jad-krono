@@ -10,9 +10,9 @@ export const t = {
     contact: "Contact"
   },
   hero: {
-    eyebrow: "Singapore Private Watch Dealer",
+    eyebrow: "",
     title: "Carefully selected. Quietly sourced.",
-    copy: "Independent Singapore private watch dealer specialising in modern and collectible luxury timepieces. Viewing by appointment only.",
+    copy: "Modern and collectible luxury timepieces, carefully sourced and privately offered. Viewings by appointment in Singapore.",
     primary: "View Collection",
     secondary: "Contact Us",
     note: "Available Inventory • Private Sourcing • Private Viewings by Appointment"

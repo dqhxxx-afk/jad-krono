@@ -27,9 +27,8 @@ export default function Home() {
         <section className="hero">
           <div className="hero-orbit" />
           <div className="hero-content">
-            <p className="eyebrow">SINGAPORE PRIVATE WATCH DEALER</p>
             <h1>Carefully selected. Quietly sourced.</h1>
-            <p>Independent Singapore private watch dealer specialising in modern and collectible luxury timepieces. Viewing by appointment only.</p>
+            <p>Modern and collectible luxury timepieces, carefully sourced and privately offered. Viewings by appointment in Singapore.</p>
             <a href="/collection" className="btn gold">View Collection</a><p className="hero-note">{t.hero.note}</p>
           </div>
         </section>
@@ -60,7 +59,7 @@ export default function Home() {
         <section className="services-section">
           <div className="section-heading small">
             <p className="eyebrow">{t.services.eyebrow}</p>
-            <h2>{t.services.title}</h2>
+            <h2>Private services for collectors.</h2>
           </div>
 
           <div className="service-grid">
@@ -78,7 +77,7 @@ export default function Home() {
             <p className="eyebrow">{t.about.eyebrow}</p>
             <h2>{t.about.title}</h2>
           </div>
-          <p>{t.about.copy}</p>
+          <p>Based in Singapore. Built on discretion, authenticity and long-term relationships with collectors.</p>
         </section>
 
         <section className="home-contact-v210">

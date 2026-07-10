@@ -1,21 +1,27 @@
-# JAD KRONO V2.11 Sitewide Consistency Patch
+# JAD KRONO V2.12 Mobile Hero Final Patch
 
-## Fixed sitewide
+This patch combines the remaining visual fixes after reviewing V2.11 on mobile and desktop.
 
-- One consistent Footer component across all routes
-- Facebook added across all footers
-- Google Maps uses a real clickable link
-- Services heading changed to "Private services for collectors."
-- Removed "exceptional" wording from sourcing copy
-- About page copy updated to the final concise wording
-- Terms disclaimer synced with Footer
+## Hero
+- Removed "Singapore Private Watch Dealer" eyebrow completely
+- Rewrote supporting copy without repeating "private watch dealer"
+- Reduced excess vertical empty space on mobile
+- Raised the hero content on mobile
+- Reduced orbit visibility and moved it partly off-screen on mobile
+- Tightened transition from Hero to Collection
 
-## Recommended checks after deploy
+## Homepage consistency
+- Services heading forced to "Private services for collectors."
+- About copy forced to the final concise version
 
-- /services
-- /about
-- /sell-your-watch
-- /faq
-- /privacy-policy
-- /terms-conditions
-- Footer Facebook and Google Maps links on desktop and mobile
+## Floating WhatsApp
+- Reduced further on desktop and mobile
+- Positioned above the mobile browser controls
+
+## Retained
+- Sitewide Footer
+- Facebook
+- Clickable Google Maps
+- Product routing
+- Brand filtering
+- Favicon and Apple Touch Icon
