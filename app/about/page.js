@@ -1,0 +1,4 @@
+"use client";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
+export default function AboutPage(){return <><Header/><main id="main-content" className="page-shell"><section className="page-hero"><p className="eyebrow">About</p><h1>A private dealer for collectors.</h1><p>Based in Singapore. Built on discretion, authenticity and long-term relationships with collectors.</p></section><section className="section about-page"><div><p className="eyebrow">Our Approach</p><h2>Clear information. Personal service.</h2></div><div><p>JAD KRONO offers modern and collectible timepieces through private appointments, sourcing networks and direct client communication.</p><p>Descriptions focus on the details that matter: reference, condition, completeness and availability.</p></div></section></main><Footer/></>}

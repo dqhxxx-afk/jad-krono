@@ -1,0 +1,1 @@
+export const metadata={title:"Watch Details",description:"Watch specifications and private enquiry details from JAD KRONO.",robots:{index:true,follow:true}};export default function Layout({children}){return children;}

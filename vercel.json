@@ -1,5 +1,0 @@
-{
-  "$schema": "https://openapi.vercel.sh/vercel.json",
-  "installCommand": "npm ci --registry=https://registry.npmjs.org/ --cache=/tmp/npm-cache --prefer-online --no-audit --no-fund",
-  "buildCommand": "npm run build"
-}

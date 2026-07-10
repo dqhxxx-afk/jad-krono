@@ -1,0 +1,5 @@
+"use client";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
+import { site } from "../../data/site";
+export default function SellPage(){return <><Header/><main id="main-content" className="page-shell"><section className="page-hero"><p className="eyebrow">Sell</p><h1>Sell Your Watch.</h1><p>Send the watch details and photographs for an initial assessment.</p><a className="btn gold" href={`${site.whatsapp}?text=Hello%20JAD%20KRONO%2C%20I%20would%20like%20to%20sell%20a%20watch.`} target="_blank" rel="noreferrer">Request a Valuation</a></section><section className="section sell-steps"><article><span>01</span><h3>Watch details</h3><p>Brand, model, reference, year and current condition.</p></article><article><span>02</span><h3>Set and photographs</h3><p>Include the box, papers, accessories and clear photographs where available.</p></article><article><span>03</span><h3>Private response</h3><p>We will reply with the next practical step based on the information provided.</p></article></section></main><Footer/></>}

@@ -1,29 +1,17 @@
-# JAD KRONO 1.0
+# JAD KRONO 1.0 Release
 
-A polished, responsive website foundation for JAD KRONO, a Singapore private watch dealer.
+Production-ready website release.
 
-## Run locally
+## Included
+- Final copy across all public pages
+- Official JAD KRONO logo and monogram assets
+- Correct favicon, Apple Touch Icon, manifest and Open Graph image
+- Responsive desktop, tablet and mobile layouts
+- Collection search and brand filtering
+- Product routes and WhatsApp enquiries
+- Facebook and Google Maps links
+- Route metadata, sitemap, robots and JSON-LD schema
+- Hidden no-index inventory admin
 
-```bash
-npm install
-npm run dev
-```
-
-Open `http://localhost:3000`.
-
-## Production check
-
-```bash
-npm run build
-npm start
-```
-
-## Main edit points
-
-- Inventory: `data/watches.ts`
-- Phone / WhatsApp links: search for `6586996868`
-- Global styling: `app/globals.css`
-- Homepage sections: `app/page.tsx`
-- Shared header and footer: `components/Header.tsx`, `components/Footer.tsx`
-
-The current presentation is intentionally text-only. No watch photography, generated watch artwork or third-party image assets are included.
+## Deploy
+Upload all files to the GitHub repository root, then confirm the latest Vercel deployment is Ready.
