@@ -1,4 +1,50 @@
 "use client";
+
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-export default function AboutPage(){return <><Header/><main id="main-content" className="page-shell"><section className="page-hero"><p className="eyebrow">About</p><h1>A private dealer for collectors.</h1><p>Based in Singapore. Built on discretion, authenticity and long-term relationships with collectors.</p></section><section className="section about-page"><div><p className="eyebrow">Our Approach</p><h2>Clear information. Personal service.</h2></div><div><p>JAD KRONO offers modern and collectible timepieces through private appointments, sourcing networks and direct client communication.</p><p>Descriptions focus on the details that matter: reference, condition, completeness and availability.</p></div></section></main><Footer/></>}
+
+const approach = [
+  {
+    number: "01",
+    title: "Details",
+    copy: "Reference, condition, set and availability are stated clearly."
+  },
+  {
+    number: "02",
+    title: "Contact",
+    copy: "Enquiries and appointments are handled directly by JAD KRONO."
+  },
+  {
+    number: "03",
+    title: "Next steps",
+    copy: "We confirm what happens next after reviewing the details."
+  }
+];
+
+export default function AboutPage() {
+  return (
+    <>
+      <Header />
+      <main id="main-content" className="page-shell">
+        <section className="page-hero">
+          <p className="eyebrow">About</p>
+          <h1>About JAD KRONO.</h1>
+          <p>
+            JAD KRONO is an independent watch dealer based in Singapore. We work directly with clients buying, selling and sourcing modern and collectible watches.
+          </p>
+        </section>
+
+        <section className="section guide-section approach-cards">
+          {approach.map((item) => (
+            <article key={item.number}>
+              <span>{item.number}</span>
+              <h3>{item.title}</h3>
+              <p>{item.copy}</p>
+            </article>
+          ))}
+        </section>
+      </main>
+      <Footer />
+    </>
+  );
+}

@@ -15,22 +15,22 @@
     "gallery": [],
     "specs": {
       "case": "40mm",
-      "movement": "Automatic Chronograph",
+      "movement": "Automatic chronograph",
       "material": "Oystersteel",
-      "bracelet": "Oyster Bracelet"
+      "bracelet": "Oyster bracelet"
     },
-    "description": "A current-generation steel chronograph with a 40 mm case and automatic movement."
+    "description": "Current-generation Daytona in Oystersteel with a 40 mm case and automatic chronograph movement."
   },
   {
     "id": "patek-nautilus-5711",
     "brand": "Patek Philippe",
     "model": "Nautilus",
     "reference": "5711/1A",
-    "year": "Discontinued",
-    "condition": "Collector Grade",
-    "set": "Full Set",
+    "year": "",
+    "condition": "",
+    "set": "",
     "status": "Sourcing",
-    "price": "Price on request",
+    "price": "Contact us",
     "category": "patek",
     "featured": true,
     "image": "",
@@ -38,21 +38,21 @@
     "specs": {
       "case": "40mm",
       "movement": "Automatic",
-      "material": "Stainless Steel",
-      "bracelet": "Integrated Bracelet"
+      "material": "Stainless steel",
+      "bracelet": "Integrated bracelet"
     },
-    "description": "A discontinued steel sports watch with an integrated bracelet and slim profile."
+    "description": "Discontinued Nautilus reference in stainless steel with an integrated bracelet."
   },
   {
     "id": "rolex-gmt-master-ii-batman",
     "brand": "Rolex",
     "model": "GMT-Master II Batman",
     "reference": "126710BLNR",
-    "year": "2024",
-    "condition": "Excellent",
-    "set": "Full Set",
+    "year": "",
+    "condition": "",
+    "set": "",
     "status": "Sourcing",
-    "price": "Price on request",
+    "price": "Contact us",
     "category": "rolex",
     "featured": true,
     "image": "",
@@ -61,8 +61,8 @@
       "case": "40mm",
       "movement": "Automatic GMT",
       "material": "Oystersteel",
-      "bracelet": "Jubilee / Oyster"
+      "bracelet": "Jubilee or Oyster"
     },
-    "description": "A steel GMT watch with a blue-and-black bezel and automatic dual-time movement."
+    "description": "GMT-Master II in Oystersteel with a blue-and-black bezel."
   }
 ]

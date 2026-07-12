@@ -5,15 +5,15 @@
     "start": "next start"
   },
   "dependencies": {
-    "next": "latest",
-    "react": "latest",
-    "react-dom": "latest",
-    "lucide-react": "latest",
-    "@supabase/supabase-js": "latest"
+    "next": "16.2.10",
+    "react": "19.2.7",
+    "react-dom": "19.2.7",
+    "lucide-react": "1.23.0",
+    "@supabase/supabase-js": "2.110.1"
   },
   "devDependencies": {},
-  "name": "jad-krono-1-0-release",
-  "version": "1.0.0",
+  "name": "jad-krono-1-0-1-copy-search-fix",
+  "version": "1.0.1",
   "overrides": {
     "postcss": "8.5.10"
   }

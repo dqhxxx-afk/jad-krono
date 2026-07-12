@@ -1,17 +1,60 @@
-# JAD KRONO 1.0 Release
+# JAD KRONO 1.0.1 — Copy & Search Fix
 
-Production-ready website release.
+This release focuses on two issues reported on the live website:
 
-## Included
-- Final copy across all public pages
-- Official JAD KRONO logo and monogram assets
-- Correct favicon, Apple Touch Icon, manifest and Open Graph image
-- Responsive desktop, tablet and mobile layouts
-- Collection search and brand filtering
-- Product routes and WhatsApp enquiries
-- Facebook and Google Maps links
-- Route metadata, sitemap, robots and JSON-LD schema
-- Hidden no-index inventory admin
+1. Mobile search appeared not to work when a brand filter was already selected.
+2. Several English phrases sounded repetitive, overly formal or AI-written.
 
-## Deploy
-Upload all files to the GitHub repository root, then confirm the latest Vercel deployment is Ready.
+## Collection search
+
+- Typing a search now automatically switches the brand filter to **All Watches**.
+- Search ignores spaces, slashes and hyphens when matching references.
+- Selecting a brand clears the previous search.
+- Added a visible **Clear** action.
+- Added separate empty states for:
+  - no search matches;
+  - no watches available for a selected brand;
+  - no watches listed at all.
+- Search field uses 16 px text on mobile to avoid Safari zoom behaviour.
+
+## Copy rewrite
+
+Rewritten across:
+
+- Home
+- Collection
+- Services
+- About
+- Sell Your Watch
+- Contact
+- FAQ
+- Privacy Policy
+- Terms & Conditions
+- Product details
+- 404 page
+- SEO metadata
+
+Removed wording such as:
+
+- Private services for collectors
+- Private response
+- Searches for specific references...
+- Private enquiries
+- Private sourcing
+- Direct response
+
+The replacement copy is shorter and more practical.
+
+## Product data
+
+- Sourcing references no longer display a specific year, condition or set.
+- Sourcing cards show only factual reference information.
+- Status options in Admin are now:
+  - Available
+  - Reserved
+  - Sourcing
+  - Archived
+
+## Build
+
+Production build completed successfully with Next.js 16.2.10.

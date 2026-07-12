@@ -1,5 +1,57 @@
 "use client";
+
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import { site } from "../../data/site";
-export default function SellPage(){return <><Header/><main id="main-content" className="page-shell"><section className="page-hero"><p className="eyebrow">Sell</p><h1>Sell Your Watch.</h1><p>Send the watch details and photographs for an initial assessment.</p><a className="btn gold" href={`${site.whatsapp}?text=Hello%20JAD%20KRONO%2C%20I%20would%20like%20to%20sell%20a%20watch.`} target="_blank" rel="noreferrer">Request a Valuation</a></section><section className="section sell-steps"><article><span>01</span><h3>Watch details</h3><p>Brand, model, reference, year and current condition.</p></article><article><span>02</span><h3>Set and photographs</h3><p>Include the box, papers, accessories and clear photographs where available.</p></article><article><span>03</span><h3>Private response</h3><p>We will reply with the next practical step based on the information provided.</p></article></section></main><Footer/></>}
+
+const steps = [
+  {
+    number: "01",
+    title: "Watch details",
+    copy: "Brand, model, reference, year and condition."
+  },
+  {
+    number: "02",
+    title: "Box, papers and photos",
+    copy: "Include the box, papers, accessories and recent photos."
+  },
+  {
+    number: "03",
+    title: "Review",
+    copy: "We will review the information and contact you directly."
+  }
+];
+
+export default function SellPage() {
+  return (
+    <>
+      <Header />
+      <main id="main-content" className="page-shell">
+        <section className="page-hero">
+          <p className="eyebrow">Sell</p>
+          <h1>Sell Your Watch.</h1>
+          <p>Send the watch details and recent photos for review.</p>
+          <a
+            className="btn gold"
+            href={`${site.whatsapp}?text=Hello%20JAD%20KRONO%2C%20I%20would%20like%20to%20sell%20a%20watch.%0A%0ABrand%3A%0AModel%20%2F%20Reference%3A%0AYear%3A%0ACondition%3A%0ABox%20%26%20Papers%3A%0AExpected%20Price%3A`}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Request a Valuation
+          </a>
+        </section>
+
+        <section className="section sell-steps">
+          {steps.map((step) => (
+            <article key={step.number}>
+              <span>{step.number}</span>
+              <h3>{step.title}</h3>
+              <p>{step.copy}</p>
+            </article>
+          ))}
+        </section>
+      </main>
+      <Footer />
+    </>
+  );
+}

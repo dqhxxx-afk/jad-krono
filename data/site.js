@@ -13,9 +13,24 @@ import watches from "./watches.json";
 export const products = watches;
 
 export const services = [
-  { title: "Private Viewings", copy: "Private viewings by appointment in Singapore." },
-  { title: "Private Sourcing", copy: "Searches for specific references, years, configurations and condition." },
-  { title: "Sell Your Watch", copy: "A direct assessment based on condition, completeness and current market demand." },
-  { title: "Consignment", copy: "Private presentation and buyer communication for selected timepieces." },
-  { title: "Trade & Upgrade", copy: "Selected trade opportunities for clients changing or refining a collection." }
+  {
+    title: "Viewings",
+    copy: "Viewings are arranged by appointment in Singapore."
+  },
+  {
+    title: "Sourcing",
+    copy: "Tell us the reference, preferred year, condition and budget."
+  },
+  {
+    title: "Sell Your Watch",
+    copy: "Send the watch details and recent photos for review."
+  },
+  {
+    title: "Consignment",
+    copy: "Selected watches may be offered on consignment after review."
+  },
+  {
+    title: "Trade",
+    copy: "Trades are considered on a case-by-case basis."
+  }
 ];

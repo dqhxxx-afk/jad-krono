@@ -1,2 +1,2 @@
-export const metadata = { title: "Sell Your Watch", description: "Send your watch details to JAD KRONO for an initial assessment.", alternates: { canonical: "/sell-your-watch" } };
-export default function Layout({children}){return children;}
+export const metadata = { title: "Sell Your Watch", description: "Send watch details and recent photos to JAD KRONO for review.", alternates: { canonical: "/sell-your-watch" } };
+export default function Layout({ children }) { return children; }

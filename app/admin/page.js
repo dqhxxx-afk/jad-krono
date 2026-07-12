@@ -241,9 +241,8 @@ export default function AdminPage() {
             <select value={form.status} onChange={(e) => updateField("status", e.target.value)}>
               <option>Available</option>
               <option>Reserved</option>
-              <option>Sold</option>
               <option>Sourcing</option>
-              <option>Private Enquiry</option>
+              <option>Archived</option>
             </select>
             <input value={form.price} onChange={(e) => updateField("price", e.target.value)} placeholder="Price" />
             <select value={form.category} onChange={(e) => updateField("category", e.target.value)}>
@@ -293,7 +292,7 @@ export default function AdminPage() {
               </div>
               <div className="admin-actions">
                 <button onClick={() => editWatch(watch)}>Edit</button>
-                <button onClick={() => quickStatus(watch, "Sold")}>Sold</button>
+                <button onClick={() => quickStatus(watch, "Archived")}>Archive</button>
                 <button onClick={() => quickStatus(watch, "Reserved")}>Reserved</button>
                 <button onClick={() => deleteWatch(watch.id)}>Delete</button>
               </div>

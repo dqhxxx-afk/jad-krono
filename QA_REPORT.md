@@ -1,72 +1,45 @@
-# JAD KRONO 1.0 QA Report
+# QA Report — JAD KRONO 1.0.1
 
 ## Production build
 
-- Next.js production build: passed
-- TypeScript validation: passed
-- Static pages generated: passed
-- Dynamic product route: passed
-- npm production audit: 0 known vulnerabilities
+- Result: PASS
+- Routes generated: 14
+- Dynamic product route: PASS
 
-## Routes checked
+## Search checks
 
-- `/`
-- `/collection`
-- `/collection/rolex-daytona-126500ln`
-- `/collection/patek-nautilus-5711`
-- `/collection/rolex-gmt-master-ii-batman`
-- `/sell-your-watch`
-- `/services`
-- `/about`
-- `/contact`
-- `/faq`
-- `/privacy-policy`
-- `/terms-conditions`
-- `/robots.txt`
-- `/sitemap.xml`
-- Custom 404 response
+- `126500LN` → Rolex Cosmograph Daytona
+- `5711/1A` → Patek Philippe Nautilus
+- `batman` → Rolex GMT-Master II Batman
+- `Patek Philippe` → Patek Philippe Nautilus
 
-All expected routes returned the correct status. No broken internal links were found in the public pages checked.
+## Search interaction logic
 
-## Responsive review
+- Typing a query while a brand is selected resets the filter to All Watches.
+- Selecting a brand clears the current query.
+- Reference matching ignores punctuation and spaces.
+- Clear Search button is shown for zero-result searches.
 
-Reviewed at:
+## Copy audit
 
-- Desktop: 1440 × 1000
-- Mobile: 390 × 844
+No remaining occurrences found for:
 
-The review covered Home, Collection, Contact, Services, About and the site Footer.
+- Private services
+- Private response
+- Private enquiries
+- Private sourcing
+- Direct response
+- Searches for specific references
+- Trusted networks
+- Exceptional
+- Carefully selected
+- Private Enquiry status
 
-## Copy review
+## Internal links
 
-Removed or replaced earlier wording that sounded repetitive or overly promotional. Final Hero copy:
+- No invalid static internal links detected.
 
-- `Modern and collectible timepieces.`
-- `Private viewings by appointment in Singapore.`
+## NPM registry
 
-## Logo and browser icons
-
-Rebuilt from the official JAD KRONO brand artwork:
-
-- Tightly cropped transparent Header/Footer logo
-- JAD KRONO monogram for product placeholders
-- `favicon.ico`
-- 16 px and 32 px favicons
-- Apple Touch Icon
-- 192 px and 512 px manifest icons
-- 1200 × 630 Open Graph image
-
-Safari may retain an older favicon until its website cache or old tab is cleared.
-
-## Accessibility checks
-
-- One H1 per public route checked
-- Image alternative text checked
-- External links opening new tabs include `noreferrer`
-- Skip link added
-- Navigation uses active-page state
-- Mobile menu has accessible open/close labels
-
-## Deployment note
-
-Upload the contents of this folder to the GitHub repository root. Confirm the new Vercel deployment is marked `Ready`, then test `jadkrono.com` in a fresh private/incognito tab.
+- `.npmrc` points to `https://registry.npmjs.org/`
+- No internal OpenAI registry URLs remain in `package-lock.json`.
