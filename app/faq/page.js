@@ -6,7 +6,7 @@ import Footer from "../../components/Footer";
 const faqs = [
   [
     "Are viewings by appointment only?",
-    "Yes. Viewings are arranged by appointment in Singapore."
+    "Yes. Viewings are by appointment in Singapore."
   ],
   [
     "Do you buy watches?",
@@ -14,11 +14,11 @@ const faqs = [
   ],
   [
     "Do you accept consignments?",
-    "Yes. Selected watches may be offered on consignment after an initial review."
+    "Yes. We consider selected watches for consignment after review."
   ],
   [
     "Can I trade my watch?",
-    "Yes. Trades are considered on a case-by-case basis."
+    "Trades are considered individually."
   ],
   [
     "Can you source a specific reference?",
@@ -26,11 +26,11 @@ const faqs = [
   ],
   [
     "How are watches assessed?",
-    "We review the watch, its condition, set and current market demand. Further details can be provided on request."
+    "We review the watch, its condition, accompanying items and current market demand."
   ],
   [
     "Do you ship internationally?",
-    "International delivery may be available depending on the destination and insurance options."
+    "International delivery may be arranged depending on the destination and insurance availability."
   ],
   [
     "How do I enquire?",

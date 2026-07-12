@@ -6,8 +6,8 @@ export default function Footer() {
       <div className="footer-main">
         <div className="footer-brand">
           <a href="/" aria-label="JAD KRONO home"><img src="/assets/jad-krono-logo.png" alt="JAD KRONO" /></a>
-          <p>Independent Watch Dealer</p>
           <p>Singapore</p>
+          <p>Viewings by appointment</p>
         </div>
         <nav className="footer-social" aria-label="Contact links">
           <a href={site.whatsapp} target="_blank" rel="noreferrer">WhatsApp</a>

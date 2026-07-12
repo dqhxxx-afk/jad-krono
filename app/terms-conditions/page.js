@@ -17,8 +17,8 @@ export default function TermsPage() {
         <section className="legal-copy">
           <h2>Availability</h2>
           <p>
-            Watches are subject to prior sale, reservation or withdrawal. Website
-            availability may not reflect the latest inventory change.
+            Watches are subject to prior sale, reservation or withdrawal. The website
+            may not reflect the latest inventory changes.
           </p>
 
           <h2>Pricing</h2>

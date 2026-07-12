@@ -15,11 +15,11 @@ export const products = watches;
 export const services = [
   {
     title: "Viewings",
-    copy: "Viewings are arranged by appointment in Singapore."
+    copy: "Available by appointment in Singapore."
   },
   {
     title: "Sourcing",
-    copy: "Tell us the reference, preferred year, condition and budget."
+    copy: "Send us the reference and your preferred year, condition and budget."
   },
   {
     title: "Sell Your Watch",
@@ -27,10 +27,10 @@ export const services = [
   },
   {
     title: "Consignment",
-    copy: "Selected watches may be offered on consignment after review."
+    copy: "We consider selected watches for consignment."
   },
   {
     title: "Trade",
-    copy: "Trades are considered on a case-by-case basis."
+    copy: "Trades are considered individually."
   }
 ];

@@ -13,12 +13,12 @@ const steps = [
   {
     number: "02",
     title: "Box, papers and photos",
-    copy: "Include the box, papers, accessories and recent photos."
+    copy: "Include any box, papers, accessories and recent photos."
   },
   {
     number: "03",
     title: "Review",
-    copy: "We will review the information and contact you directly."
+    copy: "We review the information and reply directly."
   }
 ];
 

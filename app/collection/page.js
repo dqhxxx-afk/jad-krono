@@ -73,8 +73,12 @@ export default function CollectionPage() {
 
   const hasSearch = Boolean(query.trim());
   const filteredBrand = filter !== "all" ? brandLabel(filter) : "";
+  const sourcingSubject = filteredBrand
+    ? " a " + filteredBrand
+    : " a watch";
+
   const sourcingText = encodeURIComponent(
-    `Hello JAD KRONO, I would like help sourcing${filteredBrand ? ` a ${filteredBrand}` : " a watch"}.`
+    "Hello JAD KRONO, I would like help sourcing" + sourcingSubject + "."
   );
 
   return (
@@ -84,7 +88,7 @@ export default function CollectionPage() {
         <section className="page-hero">
           <p className="eyebrow">Collection</p>
           <h1>Current collection.</h1>
-          <p>{loading ? "Loading collection…" : "Availability changes regularly. Contact us for the latest details."}</p>
+          <p>{loading ? "Loading collection…" : "Availability changes regularly. Contact us for current availability."}</p>
         </section>
 
         <section className="collection-body">
@@ -138,20 +142,20 @@ export default function CollectionPage() {
             <div className="empty-state">
               {hasSearch ? (
                 <>
-                  <h2>No matches found.</h2>
+                  <h2>No results.</h2>
                   <p>Try another brand, model or reference.</p>
                   <button className="btn outline" type="button" onClick={() => setQuery("")}>Clear Search</button>
                 </>
               ) : filteredBrand ? (
                 <>
-                  <h2>No {filteredBrand} watches are currently available.</h2>
-                  <p>Contact us if you would like help sourcing one.</p>
+                  <h2>{filteredBrand} is not currently listed.</h2>
+                  <p>Contact us about sourcing.</p>
                   <a className="btn gold" href={`${site.whatsapp}?text=${sourcingText}`} target="_blank" rel="noreferrer">Request Sourcing</a>
                 </>
               ) : (
                 <>
                   <h2>No watches are currently listed.</h2>
-                  <p>Contact us for the latest availability.</p>
+                  <p>Contact us for current availability.</p>
                   <a className="btn gold" href={site.whatsapp} target="_blank" rel="noreferrer">Contact JAD KRONO</a>
                 </>
               )}

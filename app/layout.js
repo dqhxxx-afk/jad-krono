@@ -12,7 +12,7 @@ export const metadata = {
     template: "%s | JAD KRONO"
   },
   description:
-    "Watch dealer in Singapore offering modern and collectible timepieces. Viewings by appointment.",
+    "Modern and collectible watches in Singapore. Viewings by appointment.",
   keywords: [
     "JAD KRONO",
     "watch dealer Singapore",
@@ -35,7 +35,7 @@ export const metadata = {
   manifest: "/site.webmanifest",
   openGraph: {
     title: "JAD KRONO | Modern & Collectible Timepieces",
-    description: "Watch dealer in Singapore. Viewings by appointment.",
+    description: "Modern and collectible watches in Singapore. Viewings by appointment.",
     type: "website",
     url: "https://jadkrono.com",
     siteName: "JAD KRONO",
@@ -46,7 +46,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "JAD KRONO | Modern & Collectible Timepieces",
-    description: "Watch dealer in Singapore. Viewings by appointment.",
+    description: "Modern and collectible watches in Singapore. Viewings by appointment.",
     images: ["/og-image.jpg"]
   }
 };

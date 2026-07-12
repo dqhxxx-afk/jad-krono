@@ -42,7 +42,7 @@ export default function Home() {
           <div className="section-heading">
             <p className="eyebrow">Collection</p>
             <h2>Current collection.</h2>
-            <p>Availability changes regularly. Contact us for the latest details.</p>
+            <p>Availability changes regularly. Contact us for current availability.</p>
           </div>
 
           <div className="watch-grid">
@@ -58,7 +58,7 @@ export default function Home() {
           <div>
             <p className="eyebrow">Sourcing</p>
             <h2>Looking for a specific watch?</h2>
-            <p>Tell us the reference, preferred year, condition and budget.</p>
+            <p>Send us the reference and your preferred year, condition and budget.</p>
           </div>
           <a
             className="btn outline"
@@ -89,20 +89,19 @@ export default function Home() {
         <section className="section about-home">
           <div>
             <p className="eyebrow">About</p>
-            <h2>About JAD KRONO.</h2>
+            <h2>JAD KRONO.</h2>
           </div>
           <p>
-            An independent watch dealer based in Singapore, working directly with
-            clients buying, selling and sourcing modern and collectible watches.
+            JAD KRONO is an independent watch dealer in Singapore, dealing in modern and collectible watches.
           </p>
         </section>
 
         <section className="section contact-home">
           <div>
             <p className="eyebrow">Contact</p>
-            <h2>Contact JAD KRONO.</h2>
+            <h2>Get in touch.</h2>
             <p>
-              Get in touch about inventory, sourcing, consignment, trade or an appointment.
+              Ask about a listed watch, sourcing, selling, consignment, trade or an appointment.
             </p>
           </div>
 
