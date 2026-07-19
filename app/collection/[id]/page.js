@@ -6,7 +6,11 @@ import Footer from "../../../components/Footer";
 import WatchCard from "../../../components/WatchCard";
 import { useWatches } from "../../../components/useWatches";
 import { site } from "../../../data/site";
-import { getWatchId } from "../../../lib/watchUtils";
+import { getWatchCategory, getWatchId, sameWatchText } from "../../../lib/watchUtils";
+
+function byCardDateDesc(first, second) {
+  return String(second.cardDate || "").localeCompare(String(first.cardDate || ""));
+}
 
 export default function WatchDetailPage() {
   const params = useParams();
@@ -37,7 +41,7 @@ export default function WatchDetailPage() {
           <section className="page-hero">
             <p className="eyebrow">Collection</p>
             <h1>This watch is not currently listed.</h1>
-            <p>Contact us if you would like help sourcing it.</p>
+            <p>Contact us if you would like us to source one.</p>
             <a
               className="btn gold"
               href={`${site.whatsapp}?text=Hello%20JAD%20KRONO%2C%20I%20would%20like%20to%20request%20sourcing.`}
@@ -58,27 +62,40 @@ export default function WatchDetailPage() {
     : product.image
       ? [product.image]
       : [];
+
+  const productCategory = getWatchCategory(product);
   const related = watches
     .filter((watch) => getWatchId(watch) !== getWatchId(product))
+    .sort((first, second) => {
+      const firstSameBrand = getWatchCategory(first) === productCategory ? 1 : 0;
+      const secondSameBrand = getWatchCategory(second) === productCategory ? 1 : 0;
+      if (firstSameBrand !== secondSameBrand) return secondSameBrand - firstSameBrand;
+      return byCardDateDesc(first, second);
+    })
     .slice(0, 3);
+
   const message = encodeURIComponent(
     `Hello JAD KRONO, I would like to enquire about ${product.brand} ${product.model}, ref. ${product.reference}.`
   );
+  const showReference = product.reference && !sameWatchText(product.model, product.reference);
+  const productName = showReference
+    ? `${product.brand} ${product.model}, ref. ${product.reference}`
+    : `${product.brand} ${product.model}`;
 
   const schema = {
     "@context": "https://schema.org",
     "@type": "Product",
-    name: `${product.brand} ${product.model}`,
+    name: productName,
     sku: product.reference,
-    description: product.description,
+    description: product.description || `${productName}. ${product.condition}, dated ${product.year}.`,
     brand: { "@type": "Brand", name: product.brand },
     url: `${site.domain}/collection/${getWatchId(product)}`
   };
 
   const details = [
     ["Reference", product.reference],
-    ["Year", product.year],
-    ["Overall condition", product.condition],
+    ["Dated", product.year],
+    ["Condition", product.condition],
     ["Box & papers", product.set],
     ["Case", product.specs?.case],
     ["Movement", product.specs?.movement],
@@ -127,12 +144,12 @@ export default function WatchDetailPage() {
           <div className="product-info">
             <p className="eyebrow">{product.brand}</p>
             <h1>{product.model}</h1>
-            <h2>Ref. {product.reference}</h2>
-            <p>{product.description}</p>
+            {showReference ? <h2>Ref. {product.reference}</h2> : null}
+            {product.description ? <p>{product.description}</p> : null}
 
             <div className="product-status">
               <span>{product.status}</span>
-              <strong>{product.price}</strong>
+              <strong>{product.price || "Price on request"}</strong>
             </div>
 
             <div className="detail-list">

@@ -7,17 +7,17 @@ const approach = [
   {
     number: "01",
     title: "Listings",
-    copy: "Each listing shows the reference, condition, set and availability."
+    copy: "Each listing includes the reference, condition and availability."
   },
   {
     number: "02",
-    title: "Appointments",
-    copy: "Viewings are arranged directly with JAD KRONO."
+    title: "Viewings",
+    copy: "Viewings are arranged by appointment."
   },
   {
     number: "03",
     title: "Transactions",
-    copy: "Terms are confirmed before payment, collection or delivery."
+    copy: "Payment, collection and delivery terms are confirmed before completion."
   }
 ];
 
@@ -28,10 +28,8 @@ export default function AboutPage() {
       <main id="main-content" className="page-shell">
         <section className="page-hero">
           <p className="eyebrow">About</p>
-          <h1>About JAD KRONO.</h1>
-          <p>
-            JAD KRONO is an independent watch dealer in Singapore. We deal in modern and collectible watches and work directly with every client.
-          </p>
+          <h1>Independent watch dealer.</h1>
+          <p>We buy, sell and source modern and collectible watches.</p>
         </section>
 
         <section className="section guide-section approach-cards">

@@ -8,7 +8,7 @@ const steps = [
   {
     number: "01",
     title: "Watch details",
-    copy: "Brand, model, reference, year and condition."
+    copy: "Brand, model, reference, dated year and condition."
   },
   {
     number: "02",
@@ -18,7 +18,7 @@ const steps = [
   {
     number: "03",
     title: "Review",
-    copy: "We review the information and reply directly."
+    copy: "We review the details and get back to you."
   }
 ];
 
@@ -33,7 +33,7 @@ export default function SellPage() {
           <p>Send the watch details and recent photos for review.</p>
           <a
             className="btn gold"
-            href={`${site.whatsapp}?text=Hello%20JAD%20KRONO%2C%20I%20would%20like%20to%20sell%20a%20watch.%0A%0ABrand%3A%0AModel%20%2F%20Reference%3A%0AYear%3A%0ACondition%3A%0ABox%20%26%20Papers%3A%0AExpected%20Price%3A`}
+            href={`${site.whatsapp}?text=Hello%20JAD%20KRONO%2C%20I%20would%20like%20to%20sell%20a%20watch.%0A%0ABrand%3A%0AModel%20%2F%20Reference%3A%0ADated%20Year%3A%0ACondition%3A%0ABox%20%26%20Papers%3A%0AExpected%20Price%3A`}
             target="_blank"
             rel="noreferrer"
           >

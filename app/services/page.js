@@ -12,7 +12,7 @@ export default function ServicesPage() {
         <section className="page-hero">
           <p className="eyebrow">Services</p>
           <h1>Services.</h1>
-          <p>Viewings, sourcing, watch sales, consignment and trades.</p>
+          <p>Viewings, sourcing, selling, consignment and trade enquiries.</p>
         </section>
 
         <section className="section services-page">

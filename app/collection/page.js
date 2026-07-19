@@ -12,19 +12,18 @@ const brands = [
   "all",
   "rolex",
   "patek",
-  "ap",
-  "cartier",
-  "tudor",
-  "iwc",
   "hublot",
-  "breitling",
   "franck-muller",
-  "chopard",
-  "sinn"
+  "tudor",
+  "mb-and-f"
 ];
 
 function normalizeSearch(value = "") {
   return String(value).toLowerCase().replace(/[^a-z0-9]/g, "");
+}
+
+function byCardDateDesc(first, second) {
+  return String(second.cardDate || "").localeCompare(String(first.cardDate || ""));
 }
 
 export default function CollectionPage() {
@@ -52,8 +51,6 @@ export default function CollectionPage() {
   function updateSearch(value) {
     setQuery(value);
 
-    // A typed search always checks the full collection. This prevents a
-    // previously selected brand from hiding a valid reference on mobile.
     if (value.trim()) {
       setFilter("all");
       window.history.replaceState(null, "", "/collection");
@@ -63,20 +60,26 @@ export default function CollectionPage() {
   const normalizedQuery = normalizeSearch(query);
 
   const shown = useMemo(() => {
-    return watches
+    return [...watches]
+      .sort(byCardDateDesc)
       .filter((watch) => filter === "all" || getWatchCategory(watch) === filter)
       .filter((watch) => {
         if (!normalizedQuery) return true;
-        return normalizeSearch(`${watch.brand} ${watch.model} ${watch.reference}`).includes(normalizedQuery);
+        const searchable = [
+          watch.brand,
+          watch.model,
+          watch.reference,
+          watch.description,
+          watch.condition,
+          watch.year
+        ].filter(Boolean).join(" ");
+        return normalizeSearch(searchable).includes(normalizedQuery);
       });
   }, [watches, filter, normalizedQuery]);
 
   const hasSearch = Boolean(query.trim());
   const filteredBrand = filter !== "all" ? brandLabel(filter) : "";
-  const sourcingSubject = filteredBrand
-    ? " a " + filteredBrand
-    : " a watch";
-
+  const sourcingSubject = filteredBrand ? " a " + filteredBrand : " a watch";
   const sourcingText = encodeURIComponent(
     "Hello JAD KRONO, I would like help sourcing" + sourcingSubject + "."
   );
@@ -88,7 +91,7 @@ export default function CollectionPage() {
         <section className="page-hero">
           <p className="eyebrow">Collection</p>
           <h1>Current collection.</h1>
-          <p>{loading ? "Loading collection…" : "Availability changes regularly. Contact us for current availability."}</p>
+          <p>{loading ? "Loading collection…" : "Inventory changes regularly. Contact us to confirm availability."}</p>
         </section>
 
         <section className="collection-body">
@@ -142,21 +145,21 @@ export default function CollectionPage() {
             <div className="empty-state">
               {hasSearch ? (
                 <>
-                  <h2>No results.</h2>
+                  <h2>No matching watches found.</h2>
                   <p>Try another brand, model or reference.</p>
                   <button className="btn outline" type="button" onClick={() => setQuery("")}>Clear Search</button>
                 </>
               ) : filteredBrand ? (
                 <>
-                  <h2>{filteredBrand} is not currently listed.</h2>
-                  <p>Contact us about sourcing.</p>
+                  <h2>No {filteredBrand} watches are currently listed.</h2>
+                  <p>Contact us if you would like us to source one.</p>
                   <a className="btn gold" href={`${site.whatsapp}?text=${sourcingText}`} target="_blank" rel="noreferrer">Request Sourcing</a>
                 </>
               ) : (
                 <>
                   <h2>No watches are currently listed.</h2>
-                  <p>Contact us for current availability.</p>
-                  <a className="btn gold" href={site.whatsapp} target="_blank" rel="noreferrer">Contact JAD KRONO</a>
+                  <p>Contact us to confirm availability.</p>
+                  <a className="btn gold" href={site.whatsapp} target="_blank" rel="noreferrer">WhatsApp</a>
                 </>
               )}
             </div>

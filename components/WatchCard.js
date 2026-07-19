@@ -1,5 +1,5 @@
 import { site } from "../data/site";
-import { getWatchId } from "../lib/watchUtils";
+import { getWatchId, sameWatchText } from "../lib/watchUtils";
 
 export default function WatchCard({ product, enquireText = "Enquire" }) {
   const id = getWatchId(product);
@@ -9,7 +9,8 @@ export default function WatchCard({ product, enquireText = "Enquire" }) {
   const statusClass = String(product.status || "")
     .toLowerCase()
     .replace(/\s+/g, "-");
-  const meta = [product.year, product.condition, product.set].filter(Boolean);
+  const datedMeta = [product.condition, product.year].filter(Boolean).join(" · ");
+  const showReference = product.reference && !sameWatchText(product.model, product.reference);
 
   return (
     <article className="watch-card">
@@ -35,16 +36,16 @@ export default function WatchCard({ product, enquireText = "Enquire" }) {
       <div className="watch-info">
         <p className="watch-brand">{product.brand}</p>
         <h3>{product.model}</h3>
-        <strong>Ref. {product.reference}</strong>
+        {showReference ? <strong>Ref. {product.reference}</strong> : null}
 
-        {meta.length ? (
+        {datedMeta ? (
           <div className="watch-meta">
-            {meta.map((item) => <span key={item}>{item}</span>)}
+            <span>{datedMeta}</span>
           </div>
         ) : null}
 
         <div className="watch-actions">
-          <span>{product.price}</span>
+          <span>{product.price || "Price on request"}</span>
           <div>
             <a href={`/collection/${id}`}>View</a>
             <a

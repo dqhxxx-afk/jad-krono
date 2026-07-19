@@ -1,5 +1,5 @@
 import watches from "../../../data/watches.json";
-import { getWatchId } from "../../../lib/watchUtils";
+import { getWatchId, sameWatchText } from "../../../lib/watchUtils";
 
 export async function generateMetadata({ params }) {
   const { id } = await params;
@@ -13,13 +13,19 @@ export async function generateMetadata({ params }) {
     };
   }
 
+  const showReference = watch.reference && !sameWatchText(watch.model, watch.reference);
+  const title = showReference
+    ? `${watch.brand} ${watch.model} ${watch.reference}`
+    : `${watch.brand} ${watch.model}`;
+  const description = `${watch.condition}, dated ${watch.year}. Price on request.`;
+
   return {
-    title: `${watch.brand} ${watch.model} ${watch.reference}`,
-    description: `${watch.brand} ${watch.model}, ref. ${watch.reference}. ${watch.status}. Contact JAD KRONO for details.`,
+    title,
+    description,
     alternates: { canonical: `/collection/${getWatchId(watch)}` },
     openGraph: {
-      title: `${watch.brand} ${watch.model} ${watch.reference} | JAD KRONO`,
-      description: `${watch.status}. Contact JAD KRONO for details.`,
+      title: `${title} | JAD KRONO`,
+      description,
       images: watch.image ? [watch.image] : ["/og-image.jpg"]
     }
   };

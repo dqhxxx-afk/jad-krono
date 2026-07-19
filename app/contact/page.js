@@ -14,7 +14,7 @@ export default function ContactPage() {
             <p className="eyebrow">Contact</p>
             <h1>Get in touch.</h1>
             <p>
-              Ask about a listed watch, sourcing, selling, consignment, trade or an appointment.
+              For enquiries about listed watches, sourcing, selling, consignment, trades or viewing appointments.
             </p>
             <a className="btn gold" href={site.whatsapp} target="_blank" rel="noreferrer">
               Enquire via WhatsApp
@@ -26,11 +26,10 @@ export default function ContactPage() {
               <p className="eyebrow">Enquiry</p>
               <h2>Send us the details.</h2>
               <p>
-                For a listed watch, include the model or reference. For sourcing, add your preferred year, condition and budget.
+                For a listed watch, include the model or reference. For sourcing, add the preferred year, condition and budget.
               </p>
               <div className="button-row">
                 <a className="btn gold" href={site.whatsapp} target="_blank" rel="noreferrer">WhatsApp</a>
-                <a className="btn outline" href={`mailto:${site.email}`}>Email</a>
               </div>
             </article>
 
@@ -43,8 +42,8 @@ export default function ContactPage() {
 
             <article className="contact-card">
               <p className="eyebrow">Follow</p>
-              <h3>JAD KRONO</h3>
-              <p>New listings and updates.</p>
+              <h3>Instagram &amp; Facebook</h3>
+              <p>New listings and occasional updates.</p>
               <div className="inline-links">
                 <a href={site.instagram} target="_blank" rel="noreferrer">Instagram</a>
                 <a href={site.facebook} target="_blank" rel="noreferrer">Facebook</a>

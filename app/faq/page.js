@@ -10,15 +10,15 @@ const faqs = [
   ],
   [
     "Do you buy watches?",
-    "Yes. We review watches based on condition, set and current demand."
+    "Yes. We review watches based on condition, accompanying items and current demand."
   ],
   [
     "Do you accept consignments?",
-    "Yes. We consider selected watches for consignment after review."
+    "Yes. Selected watches may be accepted after review."
   ],
   [
     "Can I trade my watch?",
-    "Trades are considered individually."
+    "Yes. Contact us with the watch you would like to trade."
   ],
   [
     "Can you source a specific reference?",
@@ -34,7 +34,7 @@ const faqs = [
   ],
   [
     "How do I enquire?",
-    "Contact JAD KRONO through WhatsApp, email, Instagram or Facebook."
+    "Send us a message via WhatsApp, Instagram or Facebook."
   ]
 ];
 

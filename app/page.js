@@ -8,10 +8,14 @@ import { useWatches } from "../components/useWatches";
 import { services, site } from "../data/site";
 import { getWatchId } from "../lib/watchUtils";
 
+function byCardDateDesc(first, second) {
+  return String(second.cardDate || "").localeCompare(String(first.cardDate || ""));
+}
+
 export default function Home() {
   const { watches } = useWatches();
   const featured = useMemo(
-    () => watches.filter((watch) => watch.featured).slice(0, 6),
+    () => [...watches].sort(byCardDateDesc).slice(0, 6),
     [watches]
   );
 
@@ -42,7 +46,7 @@ export default function Home() {
           <div className="section-heading">
             <p className="eyebrow">Collection</p>
             <h2>Current collection.</h2>
-            <p>Availability changes regularly. Contact us for current availability.</p>
+            <p>Inventory changes regularly. Contact us to confirm availability.</p>
           </div>
 
           <div className="watch-grid">
@@ -58,7 +62,7 @@ export default function Home() {
           <div>
             <p className="eyebrow">Sourcing</p>
             <h2>Looking for a specific watch?</h2>
-            <p>Send us the reference and your preferred year, condition and budget.</p>
+            <p>Send us the reference, preferred year, condition and budget.</p>
           </div>
           <a
             className="btn outline"
@@ -89,20 +93,16 @@ export default function Home() {
         <section className="section about-home">
           <div>
             <p className="eyebrow">About</p>
-            <h2>JAD KRONO.</h2>
+            <h2>Independent watch dealer.</h2>
           </div>
-          <p>
-            JAD KRONO is an independent watch dealer in Singapore, dealing in modern and collectible watches.
-          </p>
+          <p>Based in Singapore.</p>
         </section>
 
         <section className="section contact-home">
           <div>
             <p className="eyebrow">Contact</p>
             <h2>Get in touch.</h2>
-            <p>
-              Ask about a listed watch, sourcing, selling, consignment, trade or an appointment.
-            </p>
+            <p>Message us about a listed watch, sourcing or a viewing appointment.</p>
           </div>
 
           <div className="contact-groups">
@@ -110,7 +110,6 @@ export default function Home() {
               <span>Enquiry</span>
               <div>
                 <a href={site.whatsapp} target="_blank" rel="noreferrer">WhatsApp</a>
-                <a href={`mailto:${site.email}`}>{site.email}</a>
               </div>
             </div>
 
