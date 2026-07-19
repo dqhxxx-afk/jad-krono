@@ -1,0 +1,117 @@
+/* JAD KRONO 1.1.7 — sitewide page and copy audit */
+
+.home-copy-section .section-heading {
+  margin-bottom: 34px;
+}
+
+.home-copy-section h2,
+.home-sourcing-clean h2 {
+  font-size: clamp(36px, 4vw, 58px);
+  line-height: 1.03;
+}
+
+.home-sourcing-clean p {
+  margin-top: 14px;
+}
+
+.about-minimal {
+  min-height: 68svh;
+  display: flex;
+  align-items: center;
+}
+
+.about-minimal .page-hero {
+  max-width: 760px;
+  margin-bottom: 0;
+}
+
+.about-minimal .page-hero h1,
+.contact-intro h1,
+.page-hero h1 {
+  font-size: clamp(48px, 5.4vw, 76px);
+  letter-spacing: -1.5px;
+}
+
+.contact-intro > p {
+  margin-top: 18px !important;
+}
+
+.services-page .service-grid {
+  align-items: stretch;
+}
+
+.services-page .service-grid article {
+  min-height: 190px;
+}
+
+.product-info > p:not(.eyebrow) {
+  max-width: 620px;
+}
+
+@media (max-width: 760px) {
+  .home-copy-section {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  .home-copy-section .section-heading {
+    margin-bottom: 26px;
+  }
+
+  .home-copy-section h2,
+  .home-sourcing-clean h2 {
+    max-width: 345px;
+    font-size: clamp(38px, 10.5vw, 46px);
+    line-height: 1.01;
+    letter-spacing: -0.8px;
+  }
+
+  .home-sourcing-clean {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .about-minimal {
+    min-height: auto;
+    padding-top: 148px;
+    padding-bottom: 88px;
+  }
+
+  .about-minimal .page-hero h1,
+  .contact-intro h1,
+  .page-hero h1 {
+    max-width: 350px;
+    font-size: clamp(42px, 11.5vw, 50px);
+    line-height: 1;
+    letter-spacing: -0.9px;
+  }
+
+  .about-minimal .page-hero > p,
+  .contact-intro > p:not(.eyebrow),
+  .page-hero > p:not(.eyebrow) {
+    max-width: 345px;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .contact-layout {
+    gap: 30px;
+  }
+
+  .contact-card {
+    min-height: auto;
+    gap: 22px;
+  }
+
+  .contact-card.enquiry {
+    min-height: auto;
+  }
+
+  .services-page .service-grid article {
+    min-height: auto;
+  }
+
+  .sell-steps article {
+    min-height: auto;
+  }
+}

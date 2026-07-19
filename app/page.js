@@ -9,7 +9,9 @@ import { services, site } from "../data/site";
 import { getWatchId } from "../lib/watchUtils";
 
 function byCardDateDesc(first, second) {
-  return String(second.cardDate || "").localeCompare(String(first.cardDate || ""));
+  return String(second.cardDate || "").localeCompare(
+    String(first.cardDate || "")
+  );
 }
 
 export default function Home() {
@@ -38,15 +40,18 @@ export default function Home() {
           <div className="hero-content">
             <h1>Modern and collectible timepieces.</h1>
             <p>Viewings by appointment.</p>
-            <a href="/collection" className="btn gold">View Collection</a>
+            <a href="/collection" className="btn gold">
+              View Collection
+            </a>
           </div>
         </section>
 
-        <section className="section collection-preview">
+        <section className="section collection-preview home-copy-section">
           <div className="section-heading">
-            <p className="eyebrow">Collection</p>
             <h2>Latest listings.</h2>
-            <p>Inventory changes regularly. Contact us to confirm availability.</p>
+            <p>
+              Inventory changes regularly. Contact us to confirm availability.
+            </p>
           </div>
 
           <div className="watch-grid">
@@ -55,12 +60,13 @@ export default function Home() {
             ))}
           </div>
 
-          <a className="text-link section-link" href="/collection">View all watches</a>
+          <a className="text-link section-link" href="/collection">
+            View all watches
+          </a>
         </section>
 
-        <section className="sourcing-band">
+        <section className="sourcing-band home-sourcing-clean">
           <div>
-            <p className="eyebrow">Sourcing</p>
             <h2>Looking for a specific watch?</h2>
             <p>Send us the reference, preferred year, condition and budget.</p>
           </div>
@@ -74,9 +80,8 @@ export default function Home() {
           </a>
         </section>
 
-        <section className="section services-home">
+        <section className="section services-home home-copy-section">
           <div className="section-heading">
-            <p className="eyebrow">Services</p>
             <h2>Buying, selling and sourcing.</h2>
           </div>
 
@@ -90,41 +95,49 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section about-home">
+        <section className="section about-home home-copy-section">
           <div>
-            <p className="eyebrow">About</p>
             <h2>Based in Singapore.</h2>
           </div>
           <p>We buy, sell and source modern and collectible watches.</p>
         </section>
 
-        <section className="section contact-home">
+        <section className="section contact-home home-copy-section">
           <div>
-            <p className="eyebrow">Contact</p>
             <h2>Get in touch.</h2>
-            <p>Message us about a listed watch, sourcing or a viewing appointment.</p>
+            <p>
+              Message us about a listed watch, sourcing or a viewing appointment.
+            </p>
           </div>
 
           <div className="contact-groups">
             <div className="contact-group">
               <span>Enquiry</span>
               <div>
-                <a href={site.whatsapp} target="_blank" rel="noreferrer">WhatsApp</a>
+                <a href={site.whatsapp} target="_blank" rel="noreferrer">
+                  WhatsApp
+                </a>
               </div>
             </div>
 
             <div className="contact-group">
               <span>Follow</span>
               <div>
-                <a href={site.instagram} target="_blank" rel="noreferrer">Instagram</a>
-                <a href={site.facebook} target="_blank" rel="noreferrer">Facebook</a>
+                <a href={site.instagram} target="_blank" rel="noreferrer">
+                  Instagram
+                </a>
+                <a href={site.facebook} target="_blank" rel="noreferrer">
+                  Facebook
+                </a>
               </div>
             </div>
 
             <div className="contact-group">
               <span>Visit</span>
               <div>
-                <a href={site.googleMaps} target="_blank" rel="noreferrer">Google Maps</a>
+                <a href={site.googleMaps} target="_blank" rel="noreferrer">
+                  Google Maps
+                </a>
               </div>
             </div>
           </div>

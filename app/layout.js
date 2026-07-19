@@ -1,4 +1,5 @@
 import "./globals.css";
+import "./site-audit.css";
 
 export const viewport = {
   themeColor: "#050505",
@@ -35,7 +36,8 @@ export const metadata = {
   manifest: "/site.webmanifest",
   openGraph: {
     title: "JAD KRONO | Modern & Collectible Timepieces",
-    description: "Modern and collectible watches in Singapore. Viewings by appointment.",
+    description:
+      "Modern and collectible watches in Singapore. Viewings by appointment.",
     type: "website",
     url: "https://www.jadkrono.com",
     siteName: "JAD KRONO",
@@ -46,7 +48,8 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "JAD KRONO | Modern & Collectible Timepieces",
-    description: "Modern and collectible watches in Singapore. Viewings by appointment.",
+    description:
+      "Modern and collectible watches in Singapore. Viewings by appointment.",
     images: ["/og-image.jpg"]
   }
 };

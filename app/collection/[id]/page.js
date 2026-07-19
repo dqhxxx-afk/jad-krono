@@ -92,8 +92,21 @@ export default function WatchDetailPage() {
     url: `${site.domain}/collection/${getWatchId(product)}`
   };
 
+  const normalizedDescription = String(product.description || "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]/g, "");
+  const genericDescriptions = [
+    `${product.brand} ${product.model}`,
+    `${product.brand} ${product.model} ${product.reference}`,
+    `${product.brand} ${product.model} reference ${product.reference}`,
+    `${product.brand} M.A.D.Editions ${product.model}`
+  ].map((value) => value.toLowerCase().replace(/[^a-z0-9]/g, ""));
+  const showDescription =
+    Boolean(product.description) &&
+    !genericDescriptions.includes(normalizedDescription);
+
   const details = [
-    ["Reference", product.reference],
+    ["Reference", showReference ? product.reference : ""],
     ["Dated", product.year],
     ["Condition", product.condition],
     ["Box & papers", product.set],
@@ -145,7 +158,7 @@ export default function WatchDetailPage() {
             <p className="eyebrow">{product.brand}</p>
             <h1>{product.model}</h1>
             {showReference ? <h2>Ref. {product.reference}</h2> : null}
-            {product.description ? <p>{product.description}</p> : null}
+            {showDescription ? <p>{product.description}</p> : null}
 
             <div className="product-status">
               <span>{product.status}</span>
@@ -178,7 +191,6 @@ export default function WatchDetailPage() {
         {related.length ? (
           <section className="section related-section">
             <div className="section-heading">
-              <p className="eyebrow">Related</p>
               <h2>Other watches.</h2>
             </div>
             <div className="watch-grid">

@@ -10,15 +10,15 @@ const faqs = [
   ],
   [
     "Do you buy watches?",
-    "Yes. We review watches based on condition, accompanying items and current demand."
+    "Yes. Send us the reference, condition and details of any box and papers."
   ],
   [
     "Do you accept consignments?",
-    "Yes. Selected watches may be accepted after review."
+    "Yes. We accept selected watches after review."
   ],
   [
     "Can I trade my watch?",
-    "Yes. Contact us with the watch you would like to trade."
+    "Yes. Send us the details of the watch you would like to trade."
   ],
   [
     "Can you source a specific reference?",
@@ -26,7 +26,7 @@ const faqs = [
   ],
   [
     "How are watches assessed?",
-    "We review the watch, its condition, accompanying items and current market demand."
+    "We consider condition, accompanying items and current demand."
   ],
   [
     "Do you ship internationally?",
@@ -43,7 +43,7 @@ export default function FAQPage() {
     <>
       <Header />
       <main id="main-content" className="page-shell">
-        <section className="page-hero single-page-hero">
+        <section className="page-hero">
           <h1>Frequently asked questions.</h1>
         </section>
 

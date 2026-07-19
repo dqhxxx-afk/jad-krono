@@ -8,12 +8,12 @@ const steps = [
   {
     number: "01",
     title: "Watch details",
-    copy: "Brand, model, reference, dated year and condition."
+    copy: "Brand, model, reference, date on the card or papers, and condition."
   },
   {
     number: "02",
     title: "Box, papers and photos",
-    copy: "Include any box, papers, accessories and recent photos."
+    copy: "Include the box, papers, accessories and recent photos, where available."
   },
   {
     number: "03",
@@ -27,12 +27,12 @@ export default function SellPage() {
     <>
       <Header />
       <main id="main-content" className="page-shell">
-        <section className="page-hero single-page-hero">
+        <section className="page-hero">
           <h1>Sell Your Watch.</h1>
-          <p>Send the watch details and recent photos for review.</p>
+          <p>Send us the watch details and recent photos.</p>
           <a
             className="btn gold"
-            href={`${site.whatsapp}?text=Hello%20JAD%20KRONO%2C%20I%20would%20like%20to%20sell%20a%20watch.%0A%0ABrand%3A%0AModel%20%2F%20Reference%3A%0ADated%20Year%3A%0ACondition%3A%0ABox%20%26%20Papers%3A%0AExpected%20Price%3A`}
+            href={`${site.whatsapp}?text=Hello%20JAD%20KRONO%2C%20I%20would%20like%20to%20sell%20a%20watch.%0A%0ABrand%3A%0AModel%20%2F%20Reference%3A%0ACard%20%2F%20Papers%20Date%3A%0ACondition%3A%0ABox%20%26%20Papers%3A%0AExpected%20Price%3A`}
             target="_blank"
             rel="noreferrer"
           >
