@@ -27,8 +27,7 @@ export default function SellPage() {
     <>
       <Header />
       <main id="main-content" className="page-shell">
-        <section className="page-hero">
-          <p className="eyebrow">Sell</p>
+        <section className="page-hero single-page-hero">
           <h1>Sell Your Watch.</h1>
           <p>Send the watch details and recent photos for review.</p>
           <a

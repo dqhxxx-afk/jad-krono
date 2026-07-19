@@ -6,7 +6,7 @@ export const viewport = {
 };
 
 export const metadata = {
-  metadataBase: new URL("https://jadkrono.com"),
+  metadataBase: new URL("https://www.jadkrono.com"),
   title: {
     default: "JAD KRONO | Modern & Collectible Timepieces | Singapore",
     template: "%s | JAD KRONO"
@@ -37,7 +37,7 @@ export const metadata = {
     title: "JAD KRONO | Modern & Collectible Timepieces",
     description: "Modern and collectible watches in Singapore. Viewings by appointment.",
     type: "website",
-    url: "https://jadkrono.com",
+    url: "https://www.jadkrono.com",
     siteName: "JAD KRONO",
     images: [
       { url: "/og-image.jpg", width: 1200, height: 630, alt: "JAD KRONO" }
@@ -56,8 +56,8 @@ export default function RootLayout({ children }) {
     "@context": "https://schema.org",
     "@type": "Store",
     name: "JAD KRONO",
-    url: "https://jadkrono.com",
-    image: "https://jadkrono.com/og-image.jpg",
+    url: "https://www.jadkrono.com",
+    image: "https://www.jadkrono.com/og-image.jpg",
     telephone: "+65 8699 6868",
     email: "contact@jadkrono.com",
     address: {

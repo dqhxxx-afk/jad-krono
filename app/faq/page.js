@@ -43,8 +43,7 @@ export default function FAQPage() {
     <>
       <Header />
       <main id="main-content" className="page-shell">
-        <section className="page-hero">
-          <p className="eyebrow">FAQ</p>
+        <section className="page-hero single-page-hero">
           <h1>Frequently asked questions.</h1>
         </section>
 

@@ -45,7 +45,7 @@ export default function Home() {
         <section className="section collection-preview">
           <div className="section-heading">
             <p className="eyebrow">Collection</p>
-            <h2>Current collection.</h2>
+            <h2>Latest listings.</h2>
             <p>Inventory changes regularly. Contact us to confirm availability.</p>
           </div>
 
@@ -93,9 +93,9 @@ export default function Home() {
         <section className="section about-home">
           <div>
             <p className="eyebrow">About</p>
-            <h2>Independent watch dealer.</h2>
+            <h2>Based in Singapore.</h2>
           </div>
-          <p>Based in Singapore.</p>
+          <p>We buy, sell and source modern and collectible watches.</p>
         </section>
 
         <section className="section contact-home">

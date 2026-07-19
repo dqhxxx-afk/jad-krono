@@ -9,9 +9,8 @@ export default function PrivacyPage() {
     <>
       <Header />
       <main id="main-content" className="page-shell legal-page">
-        <section className="page-hero">
-          <p className="eyebrow">Privacy Policy</p>
-          <h1>Privacy Policy.</h1>
+        <section className="page-hero single-page-hero legal-page-hero">
+          <h1>Privacy Policy</h1>
           <p>This policy explains how JAD KRONO handles information submitted through the website and enquiry channels.</p>
         <small className="legal-updated">Last updated: 11 July 2026</small>
         </section>

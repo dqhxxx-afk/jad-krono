@@ -88,9 +88,8 @@ export default function CollectionPage() {
     <>
       <Header />
       <main id="main-content" className="page-shell collection-page">
-        <section className="page-hero">
-          <p className="eyebrow">Collection</p>
-          <h1>Current collection.</h1>
+        <section className="page-hero single-page-hero collection-page-hero">
+          <h1>Collection.</h1>
           <p>{loading ? "Loading collection…" : "Inventory changes regularly. Contact us to confirm availability."}</p>
         </section>
 

@@ -1,6 +1,6 @@
 export const site = {
   name: "JAD KRONO",
-  domain: "https://jadkrono.com",
+  domain: "https://www.jadkrono.com",
   whatsapp: "https://wa.me/6586996868",
   email: "contact@jadkrono.com",
   instagram: "https://instagram.com/jadkrono",

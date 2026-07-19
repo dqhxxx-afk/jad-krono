@@ -9,8 +9,7 @@ export default function ServicesPage() {
     <>
       <Header />
       <main id="main-content" className="page-shell">
-        <section className="page-hero">
-          <p className="eyebrow">Services</p>
+        <section className="page-hero single-page-hero">
           <h1>Services.</h1>
           <p>Viewings, sourcing, selling, consignment and trade enquiries.</p>
         </section>

@@ -8,9 +8,8 @@ export default function TermsPage() {
     <>
       <Header />
       <main id="main-content" className="page-shell legal-page">
-        <section className="page-hero">
-          <p className="eyebrow">Terms & Conditions</p>
-          <h1>Terms & Conditions.</h1>
+        <section className="page-hero single-page-hero legal-page-hero">
+          <h1>Terms & Conditions</h1>
         <small className="legal-updated">Last updated: 11 July 2026</small>
         </section>
 

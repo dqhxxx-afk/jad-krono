@@ -10,8 +10,7 @@ export default function ContactPage() {
       <Header />
       <main id="main-content" className="page-shell contact-page">
         <section className="contact-layout">
-          <div className="contact-intro">
-            <p className="eyebrow">Contact</p>
+          <div className="contact-intro single-page-hero">
             <h1>Get in touch.</h1>
             <p>
               For enquiries about listed watches, sourcing, selling, consignment, trades or viewing appointments.

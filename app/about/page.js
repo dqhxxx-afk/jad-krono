@@ -26,8 +26,7 @@ export default function AboutPage() {
     <>
       <Header />
       <main id="main-content" className="page-shell">
-        <section className="page-hero">
-          <p className="eyebrow">About</p>
+        <section className="page-hero single-page-hero">
           <h1>Independent watch dealer.</h1>
           <p>We buy, sell and source modern and collectible watches.</p>
         </section>
