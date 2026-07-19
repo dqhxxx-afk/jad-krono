@@ -1,27 +1,24 @@
-JAD KRONO 1.1.4 — Hierarchy Audit Patch
+JAD KRONO 1.1.7 SITEWIDE AUDIT PATCH
 
-Fixes:
-- One clear title on each internal page.
-- Collection page: “Collection.” only.
-- Removed duplicated labels from About, Contact, Services, Sell, FAQ,
-  Privacy Policy and Terms & Conditions.
-- Reduced internal-page heading sizes on desktop and mobile.
-- Home Collection preview now says “Latest listings.”
-- Reduced Home About/Contact/Collection preview heading sizes.
-- Tightened mobile spacing for About, Contact and Collection.
-- Updated canonical, Open Graph, sitemap and robots URLs to www.jadkrono.com.
+Changes:
+- Home: removes redundant small section labels and keeps one headline per section.
+- About: removes the numbered Listings / Viewings / Transactions template cards.
+- Contact: removes the duplicate WhatsApp button from the intro and simplifies the copy.
+- Services: replaces passive, template-like wording with direct dealer language.
+- Sell Your Watch: clarifies that the date is the date on the card or papers.
+- FAQ: shortens repetitive and passive answers.
+- Product detail: hides generic descriptions and duplicate reference rows.
+- SEO/schema: standardises the primary domain to https://www.jadkrono.com.
+- Adds site-audit.css as a separate override file for safer merging.
 
 Not changed:
 - data/watches.json
-- Product names or stock quantities
+- stock list, product names, prices or quantities
 - MB&F
 - Admin or Supabase
-- Images
-- DNS or SSL
+- DNS, SSL, favicon or images
 
-IMPORTANT:
-When copying folders into the repository, choose MERGE, not Replace.
-Safest option: replace each listed file individually.
-
-Commit message:
-Fix page hierarchy across the site
+Safe deploy:
+Copy the listed files into the matching folders in the repository.
+Replace individual files only. Do not Replace the whole app folder.
+Commit: Apply sitewide copy and page audit
